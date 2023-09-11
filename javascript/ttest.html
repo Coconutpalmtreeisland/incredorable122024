@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        table {
+            width: 100%;
+            border-top: 1px solid #dcdcdc;
+            border-spacing: 0;
+        }
+        table td {
+            border-bottom: 1px solid #dcdcdc;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        // 1부터 100까지 출력(for)
+        {
+            for(let i=1; i<=100; i++){
+               console.log(i);
+            }
+        }
+        // 1부터 100까지 합 구하기
+        {
+            let sum = 0;
+            for(let i=1; i<=100; i++){
+               sum += i; //sum = sum + i 약식 표현
+            }
+            console.log(sum);
+        }
+        // 5단 출력하기
+        {
+            for(let i=5; i<=5; i++){
+                for(let j=1; j<=9; j++){
+                    console.log(i + "X" + j + "=" + i*j)
+                }
+            }
+        }
+        // 구구단 출력하기
+        {
+            for(let i=2; i<=9; i++){
+                for(let j=1; j<=9; j++){
+                    console.log(i + "X" + j + "=" + i*j);
+                }
+            }
+        }
+        // 중첩 for()으로 테이블 만들기 (5*5 25칸)
+        {
+            let table = "<table>";
+            
+            for(let i=1; i<=5; i++){
+                table += "<tr>";
+
+                    for(let j=1; j<=5; j++){
+                        table += "<td>1</td>";
+                    }
+
+                table += "</tr>";
+            };
+            table += "</table>";
+            
+            document.write(table);
+        }
+        // 중첩 for()으로 테이블 만들기 (5*10 1-50숫자까지 출력)
+        {
+            let table = "<table class='table'>"
+            let num = 1
+            
+            for(i=1; i<=10; i++){
+                table += "<tr>";
+                
+                for(let j=1; j<=5; j++){
+                    table += "<td>" + num + "</td>";
+                    num++;
+                }
+
+                table += "</tr>";
+            }
+            table += "</table>";
+
+            document.write(table);
+        }
+        // 중첩 for()으로 테이블 만들기 (5*10 1-50숫자까지 중 짝수 출력)
+        {
+            let table2 = "<table class='table'>"
+            let num = 2;
+
+            for(i=1; i<=5; i++){
+                table2 += "<tr>";
+                
+                for(let j=1; j<=5; j++){
+                    table2 += "<td>" + num + "</td>"
+                    num += 2;
+                }
+
+                table2 += "</tr>";
+            }
+            table2 += "</table>";
+
+            document.write(table2);
+        }
+        //테이블 출력하기 (10*10, 짝수는 빨간색, 홀수는 파란색 출력하기)
+        {
+            let table3 = "<table class='table'>"
+            let num = 1;
+
+            for(i=1; i<=10; i++){
+                table3 += "<tr>";
+                
+                for(let j=1; j<=10; j++){
+                    let textColor = num % 2 === 0 ? "red" : "blue";
+                    table3 += `<td style='color:${textColor}'>${num}</td>`;
+
+                    num++;
+                }
+
+                table3 += "</tr>";
+            }
+            table3 += "</table>";
+
+            document.write(table3);
+        }
+    </script>
+</body>
+</html>

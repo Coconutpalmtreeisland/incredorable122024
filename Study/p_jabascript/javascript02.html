@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>데이터 불러오기</title>
+
+    <link rel="stylesheet" href="https://webfontworld.github.io/gmarket/GmarketSans.css">
+    <link rel="stylesheet" href="https://websfont.github.io/nanumSquareNeo/nanumSquareNeo.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../assets/css/default.min.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1>
+                <a href="index.html">javascript</a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="javascript01.html">데이터 저장하기</a></li>
+                    <li class="active"><a href="javascript02.html">데이터 불러오기</a></li>
+                    <li><a href="javascript03.html">데이터 실행하기</a></li>
+                    <li><a href="javascript04.html">데이터 제어하기</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascript05.html">문자열 객체</a></li>
+                    <li><a href="javascript06.html">배열 객체</a></li>
+                    <li><a href="javascript07.html">수학 객체</a></li>
+                    <li><a href="javascript08.html">브라우저 객체</a></li>
+                    <li><a href="javascript09.html">요소 객체</a></li>
+                    <li><a href="javascript10.html">이벤트 객체</a></li>
+                </ul>
+                <ul>
+                    <li><a href="javascrip11.html">데이터 효과</a></li>
+                    <li><a href="javascrip12.html">퀴즈 효과</a></li>
+                    <li><a href="javascrip13.html">마우스 효과</a></li>
+                    <li><a href="javascrip14.html">슬라이드 효과</a></li>
+                </ul>
+            </nav>
+        </header>
+        <!-- //header -->
+
+        <main id="main">
+            <div class="main__menu">
+                <ul>
+                    <li><a href="#samole01">01. 변수 : 데이터 불러오기</a></li>
+                    <li><a href="#samole02">02. 상수 : 데이터 불러오기</a></li>
+                    <li><a href="#samole03">03. 배열 : 데이터 불러오기</a></li>
+                    <li><a href="#samole04">04. 배열 : 데이터 불러오기 + 갯수</a></li>
+                    <li><a href="#samole05">05. 배열 : 데이터 불러오기 : for()</a></li>
+                    <li><a href="#samole06">06. 배열 : 데이터 불러오기 : 중첩 for()</a></li>
+                    <li><a href="#samole07">07. 배열 : 데이터 불러오기 : forEach()</a></li>
+                    <li><a href="#samole08">08. 배열 : 데이터 불러오기 : for of</a></li>
+                    <li><a href="#samole09">09. 배열 : 데이터 불러오기 : for in</a></li>
+                    <li><a href="#samole10">10. 배열 : 데이터 불러오기 : map()</a></li>
+                </ul>
+            </div>
+            <!-- //main__menu -->
+            <div class="main__sample">
+                <div id="sample01" class="sample">
+                    <h3>제목</h3>
+                    <p>설명</p>
+<pre><code class="language-js">{
+    코드첨부
+}
+</code></pre>
+                    <p class="desc">추가 설명</p>
+                        <div class="result">
+                            <details>
+                                <summary>결과 확인하기</summary>
+                                <div>
+                                    결과값 출력
+                                </div>
+                            </details>
+                        </div>
+                    </div>
+                    <!-- //sample01 -->
+
+                    <div id="sample02" class="sample">
+                        <h3>제목</h3>
+                        <p>설명</p>
+    <pre><code class="language-js">{
+        코드첨부
+    }
+    </code></pre>
+                        <p class="desc">추가 설명</p>
+                            <div class="result">
+                                <details>
+                                    <summary>결과 확인하기</summary>
+                                    <div>
+                                        결과값 출력
+                                    </div>
+                                </details>
+                            </div>
+                    </div>
+                    <!-- //sample02 -->
+            </div>
+            <!-- //main__sample -->
+        </main>
+        <!-- //main -->
+
+        <footer id="footer">
+            <a href="mailto:webstoryboy@naver.com">webstoryboy@naver.com</a>
+        </footer>
+        <!-- //footer -->
+    </div>
+
+    <!-- //script -->
+    <script src="../assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+    
+    <script>
+        // 01. 변수 : 데이터 불러오기
+        {
+            let x = 100, y = 200, z = "javascript";  //;은 종결의 의미이기 때문에 쉼표를 사용하여 중복되는 let을 삭제할 수 있다.
+
+            console.log(x, y, z);
+        }
+        // 02. 상수 : 데이터 불러오기
+        {
+            const x = 100, y = 200, z = "javascript";
+
+            console.log(x, y, z);
+        }
+        // 03. 배열 : 데이터 불러오기
+        {
+            const arr = [100, 200, "javascript"];
+
+            console.log(arr[0], arr[1], arr[2]);
+
+        }
+        // 04. 배열 : 데이터 갯수 구하기
+        {
+            const arr = [100, 200, "javascript"];
+
+            console.log(arr.length);
+        }
+        // 05. 배열 : 데이터 불러오기 : for()
+        {
+            const arr = [100, 200, 300, 400, 500, 600, 700, 800, 900];
+
+            //console.log(arr[0]);
+            //console.log(arr[1]);
+            //console.log(arr[2]);
+            //console.log(arr[3]);
+            //console.log(arr[4]);
+            //console.log(arr[5]);
+            //console.log(arr[6]);
+            //console.log(arr[7]);
+            //console.log(arr[8]);
+            //console.log(arr[9]);
+
+            //for문 구조 (초기값 설정; 조건식; 증감값)
+            for(let i =0; i<9; i++){
+                console.log(arr[i]);
+            }  //let 생략 가능, 초기값이 조건식에 맞는지 확인 후 실행문을 실행, 데이터 값이 증감값에 증감되고 let이 없어져 값이 변경됨, 다시 조건식에 맞는지 확인 후 실행문 반복 과정이 조건식이 맞지 않을 때까지 반복됨. 데이터 변경
+        }
+        // 06. 배열 : 데이터 불러오기 : 중첩 for()
+        {
+            for(let i=0; i<10; i++){
+                for(let j=0; j<10; j++){
+                    console.log(i, j);
+                }
+            } //for i 초기값 -> 조건식 -> for j 초기값 -> 조건식 -> 출력 -> for j + 1값 -> 조건식 -> 출력 -> for j 값이 10이 되면 종료(for i 1번에 for j 10번씩 반복) -> for i 값 + 1 -> 이후 반복
+        }
+        {
+            //2단
+            //i = 2~9
+            //j = 1~9
+            //j * j
+            //2 * 1 = 2;
+            //2 * 2 = 4;
+            //2 * 3 = 6;
+            //2 * 4 = 8;
+            //2 * 5 = 10;
+            //2 * 6 = 12;
+            //2 * 7 = 14;
+            //2 * 8 = 16;
+            //2 * 9 = 19;
+
+            for(let i=2; i<=9; i++){
+                console.log(i+"단");
+
+                for(let j=1; j<=9; j++){
+                    console.log(i + " * " + j + " = " + i*j);
+                }
+            }
+        }
+        // 07. 배열 : 데이터 불러오기 : forEach()
+        // 08. 배열 : 데이터 불러오기 : for of
+        // 09. 배열 : 데이터 불러오기 : for in
+        // 10. 배열 : 데이터 불러오기 : map()
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<li>문제 정보</li>
+                    <p>문제 정보 부분은 퀴즈의 출력과 정답 확인을 위해 각 정보를 잘 표현하는 이름을 가진 변수에 필요한 정보를 저장합니다.</p>
+                    ✔ const infoDate = "2021년 10월";: infoDate 변수에 날짜를 저장합니다.<br>
+                    ✔ const infoType = "정보처리 기능사";: infoType 변수에 유형을 저장합니다.<br>
+                    ✔ const infoNum ="1";: infoNum 변수에 문제 번호를 저장합니다.<br>
+                    ✔ const infoQuestion = "CPU의 정보처리 속도 단위 중 초당 100만 개의 연산을 수행한다는 의미의 단위는?": infoQuestion변수에 질문을 저장합니다.<br>
+                    ✔ const infoAnswer = "MIPS": infoAnswer 변수에 정답을 저장합니다.<br>
+                    ✔ const infoDesc = "LIPS는 초당 1개, KIPS는 초당 1000개, MIPS 초당 100만개의 연산을 수행하는 것을 의미합니다.":infoDesc 변수에 설명을 저장합니다.<br>
+            
+                    <li>선택자</li>
+                    <p>문서 내의 요소를 선택하기 위해 querySelector 메서드를 사용하여 필요한 요소를 선택하고 변수에 저장합니다.</p>
+                    ✔ const quizWrap = document.querySelector(".quiz__wrap");: html 파일 안에서 quiz__wrap 요소를 선택하기 위해quizWrap 변수에 할당합니다.<br>
+                    ✔ const quizDate = quizWrap.querySelector(".quiz__date");: quizWrap 요소 안에서 quiz__date 요소를 선택하기 위해quizDate 변수에 할당합니다.<br>
+                    ✔ const quizType = quizWrap.querySelector(".quiz__type");: quizWrap 요소 안에서 quiz__type 요소를 선택하기 위해quizType 변수에 할당합니다.<br>
+                    ✔ const quizNum = quizWrap.querySelector(".quiz__question em");: quizWrap 요소 안에서 quiz__question em 요소를선택하기 위해 quizNum 변수에 할당합니다.<br>
+                    ✔ const quizQuestion = quizWrap.querySelector(".quiz__question span");: quizWrap 요소 안에서 .quiz__questionspan 요소를 선택하기 위해 quizQuestion 변수에 할당합니다.<br>
+                    ✔ const quizAnswer = quizWrap.querySelector(".quiz__answer");: quizWrap 요소 안에서 quiz__answer 요소를 선택하기위해 quizAnswer 변수에 할당합니다.<br>
+                    ✔ const quizDesc = quizWrap.querySelector(".quiz__desc");: quizWrap 요소 안에서 quiz__desc 요소를 선택하기 위해quizDesc 변수에 할당합니다.<br>
+                    ✔ const quizInput = quizWrap.querySelector(".quiz__input input");: quizWrap 요소 안에서 .quiz__input input 요소를선택하기 위해 quizInput 변수에 할당합니다.<br>
+                    ✔ const quizConfirm = quizWrap.querySelector(".quiz__confirm");: quizConfirm 요소 안에서 quiz__confirm 요소를선택하기 위해 quizWrap 변수에 할당합니다.<br>
+                    ✔ const quizAnimaition = quizWrap.querySelector(".quiz__animaition");: quizWrap 요소 안에서 quiz__animaition요소를 선택하기 위해 quizAnimaition 변수에 할당합니다.<br>
+      
+                    <li>문제 출력</li>
+                    <p>
+                      innerText 속성을 통해 해당 요소의 텍스트 내용이 변경된 퀴즈의 정보를 출력합니다.
+                    </p>
+                    ✔ quizDate.innerText = infoDate;: quizDate 변수가 quiz__date 요소를 선택해서 텍스트 내용을 infoDate 변수에 저장된 문자열로 변경됩니다.<br>
+                    ✔ quizType.innerText = infoType;: quizType 변수가 quiz__type 요소를 선택해서 텍스트 내용을 infoType 변수에 저장된 문자열로 변경됩니다.<br>
+                    ✔ quizNum.innerText = infoNum;: quizNum 변수가 quiz__question em 요소를 선택해서 텍스트 내용을 infoNum 변수에 저장된 문자열로 변경됩니다.<br>
+                    ✔ quizQuestion.innerText = infoQuestion;: quizQuestion 변수가 quiz__question span 요소를 선택해서 텍스트 내용을 infoQuestion 변수에 저장된 문자열로 변경됩니다.<br>
+                    ✔ quizAnswer.innerText = infoAnswer;: quizAnswer 변수가 quiz__answer 요소를 선택해서 텍스트 내용을 infoAnswer 변수에 저장된 문자열로 변경됩니다.<br>
+                    ✔ quizDesc.innerText = infoDesc;: quizDesc 변수가 quiz__desc 요소를 선택해서 텍스트 내용을 infoDesc 변수에 저장된 문자열로 변경됩니다.<br>
+
+                    <li>정답 해설 숨기기</li>
+                    <p>
+                      classList는 클래스를 추가하거나 제거하고, 클래스의 존재 여부를 확인할 수 있습니다.
+                    </p>
+                    ✔ quizAnswer.classList.add("none");: quizAnswer 변수가 가리키는 클래스 목록에 none을 추가하여 화면에 표시되지 않도록 합니다.<br>
+                    ✔ quizDesc.classList.add("none");: quizDesc 변수가 가리키는 클래스 목록에 none을 추가하여 화면에 표시되지 않도록 합니다.<br>
+                    
+                    <li>정답 확인하기</li>
+                    <p>
+                      "정답 확인하기" 버튼을 클릭했을 때 실행되는 이벤트 함수입니다. 사용자가 입력한 답을 확인하고, 그에 따라 화면을 업데이트하여 정답과 오답에 따른 피드백을 보여줍니다.
+                    </p>
+
+<div>
+<pre class="line-numbers"><code class="language-js">{
+  quizConfirm.addEventListener("click", () => {
+    const userAnswer = quizInput.value;
+    
+    if(infoAnswer == userAnswer) {
+        quizAnimaition.classList.add("like");
+    } else {
+        quizAnimaition.classList.add("dislike");
+    }
+    quizAnswer.classList.remove("none");
+    quizDesc.classList.remove("none");
+    quizConfirm.classList.add("none");
+    quizInput.classList.add("none");
+  });
+}</code></pre>
+</div>
+
+                    ✔ quizConfirm.addEventListener("click", () => { ... });: 정답 확인하기" 버튼(quizConfirm)이 클릭되면 이벤트 함수가 실행됩니다.<br>
+                    ✔ const userAnswer = quizInput.value;: 사용자가 입력한 답변을 quizInput 요소의 value 속성에서 가져와 userAnswer 변수에 저장합니다.<br>
+                    ✔ if (infoAnswer == userAnswer) { ... } else { ... }: 사용자의 답변(userAnswer)과 정답(infoAnswer)을 비교합니다. 만약 두 값이 일치한다면 정답 처리를 하고, 그렇지 않다면 오답 처리를 합니다.<br>
+                    ✔ quizAnimaition.classList.add("like"); 또는 quizAnimaition.classList.add("dislike");: 답변이 정답인 경우 (infoAnswer == userAnswer) quizAnimaition 요소에 like 클래스를 추가하거나, 오답인 경우 dislike 클래스를 추가합니다. 이렇게 클래스를 추가하면 CSS 스타일을 통해 애니메이션 효과를 보여줄 수 있습니다.<br>
+                    ✔ quizAnswer.classList.remove("none");와 quizDesc.classList.remove("none");: 정답과 설명이 담긴 요소들의 none 클래스를 제거하여, 정답과 설명을 화면에 표시합니다.<br>
+                    ✔ quizConfirm.classList.add("none");와 quizInput.classList.add("none");: 정답 확인 버튼 요소와 사용자의 입력 요소에 none 을 추가하여 "정답 확인하기" 버튼을 화면에서 감추고, 사용자의 답변을 입력하는 입력 필드 역시 화면에서 감춥니다.<br>
+                </ul>

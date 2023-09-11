@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #main {
+            height: 780px;
+            background-color: #886F65;
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.2);
+            margin: 0 auto;
+        }
+        .contents {
+            display: grid;
+            grid-template-areas:
+            "const1 const1"
+            "const2 const2"
+            "const3 const4"
+            ;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 100px 200px 480px;
+        }
+        .contents .const1 {
+            background-color: #74574A;
+            grid-area: const1;
+        }
+        .contents .const2 {
+            background-color: #684D43;
+            grid-area: const2;
+        }
+        .contents .const3 {
+            background-color: #594139;
+            grid-area: const3;
+        }
+        .contents .const4 {
+            background-color: #4A352F;
+            grid-area: const4;
+        }
+        @media (max-width: 1220px){
+            .container {
+                width: 90%;
+            }
+            .contents {
+            display: grid;
+            grid-template-areas:
+            "const1 const2 const2"
+            "const1 const3 const4"
+            ;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container"></div>
+        </header>
+        <nav id="nav">
+            <div class="container"></div>
+        </nav>
+        <main id="main">
+            <div class="container contents">
+                <div class="const1"></div>
+                <div class="const2"></div>
+                <div class="const3"></div>
+                <div class="const4"></div>
+            </div>
+        </main>
+        <footer id="footer">
+            <div class="container"></div>
+        </footer>
+    </div>
+</body>
+</html>
