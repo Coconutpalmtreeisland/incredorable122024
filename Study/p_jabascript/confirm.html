@@ -7,13 +7,18 @@
 </head>
 <body>
     <script>
-        const num = [100, 200, 300, 400, 500];
-        const [num1, num2, ...rest] = num;
+    const obj3 = {
+    x1: 100,
+    y1: {a1: 100, b1: 200},
+    z1: "javascirpt"
+    }
 
-        console.log(num1);
-        console.log(num2);
-        console.log(rest);
-        console.log(...rest);
+    const { x1, y1: {a1, b1}, z1} = obj3;
+
+    console.log(x1);
+    console.log(a1);
+    console.log(b1);
+    console.log(z1);
     </script>
 </body>
 </html>
