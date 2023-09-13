@@ -63,7 +63,6 @@
                 <li><a href="layout01.html">Layout01</a></li>
                 <li><a href="layout02.html">Layout02</a></li>
                 <li><a href="layout03.html">Layout03</a></li>
-                <li><a href="layout03-float.html">Layout03 - float</a></li>
                 <li><a href="layout04.html">Layout04</a></li>
                 <li><a href="layout05.html">Layout05</a></li>
             </ul>
@@ -92,7 +91,7 @@
         </main>
         <script>
             document.querySelectorAll("#nav ul li").forEach((li) => {
-                li.addEventListener("click", (event) => {
+                li.addEventListener("click", () => {
                     event.preventDefault(); //페이지가 넘어가지 않음
 
                     const href = li.querySelector("a").getAttribute("href");
