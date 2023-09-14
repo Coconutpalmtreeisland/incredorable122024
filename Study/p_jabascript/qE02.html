@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz">
+                <div class="quiz__header">
+                    <span class="quiz__date"></span>
+                    <span class="quiz__type"></span>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                        <em></em>.
+                        <span></span>
+                    </div>
+                    <div class="quiz__animation"></div>
+                    <div class="quiz__input">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="quiz_answer"></div>
+                    <div class="quiz__desc"></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="quiz__confirm">정답 확인하기</button>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz__header">
+                    <span class="quiz__date"></span>
+                    <span class="quiz__type"></span>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                        <em></em>.
+                        <span></span>
+                    </div>
+                    <div class="quiz__animation"></div>
+                    <div class="quiz__input">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="quiz_answer"></div>
+                    <div class="quiz__desc"></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="quiz__confirm">정답 확인하기</button>
+                </div>
+            </div>
+            <div class="quiz">
+                <div class="quiz__header">
+                    <span class="quiz__date"></span>
+                    <span class="quiz__type"></span>
+                </div>
+                <div class="quiz__main">
+                    <div class="quiz__question">
+                        <em></em>.
+                        <span></span>
+                    </div>
+                    <div class="quiz__animation"></div>
+                    <div class="quiz__input">
+                        <input type="text" placeholder="정답을 입력해주세요!">
+                    </div>
+                    <div class="quiz_answer"></div>
+                    <div class="quiz__desc"></div>
+                </div>
+                <div class="quiz__footer">
+                    <button class="quiz__confirm">정답 확인하기</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // 문제 정보
+        const quizInfo = [
+            {
+                infoDate : "2011년 2월",
+                infoType : "정보처리기능사",
+                infoNum : "1",
+                infoQuestion : "명령어(Instructuin)는 무엇으로 구성되어 있습니까?",
+                infoAnswer : "명령 코드부와 주소부",
+                infoDesc : "명령어는 수행해야 할 동작을 명시하는 명령 코드부(OP-Code)와 찾아갈 메모리의 번지 부분이나 레지스터를 지정하는 주소부(Operand: 번지부)로 구성되어 있습니다.",
+            },
+            {
+                infoDate : "2010년 10월",
+                infoType : "정보처리기능사",
+                infoNum : "2",
+                infoQuestion : "관계 데이터베이스에서 속성(Attribute)의 수를 의미 하는 것은 무엇입니까?",
+                infoAnswer : "차수",
+                infoDesc : "차수(Degree)는 한 릴레이션(테이블)에서 속성(필드=열)의 개수 예) 4개(성명, 주소, 학교명, 성별)",
+            }, 
+            {
+                infoDate : "2011년 4월",
+                infoType : "정보처리기능사",
+                infoNum : "3",
+                infoQuestion : "사용자와 하드웨어 사이에서 중재자 역할을 수행하며, 하드웨어 자원을 관리하고 시스템 및 응용 프로그램의 실행에 도움을 제공하는 것은 무엇입니까?",
+                infoAnswer : "운영체제",
+                infoDesc : "운영체제(OS; Operating System)는 컴퓨터와 응용 프로그램, 컴퓨터와 사용자 간의 인터페이스 역할을 담당합니다.",
+            }
+        ];
+
+        // 선택자 (예: .quiz__type 자리에 quizType을 넣을 것이라고 선언.)
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizDate = quizWrap.querySelectorAll(".quiz__date");
+        const quizType = quizWrap.querySelectorAll(".quiz__type");
+        const quizNum = quizWrap.querySelectorAll(".quiz__question em");
+        const quizQuestion = quizWrap.querySelectorAll(".quiz__question span");
+        const quizAnswer = quizWrap.querySelectorAll(".quiz__answer");
+        const quizDesc = quizWrap.querySelectorAll(".quiz__desc");
+        const quizConfirm = quizWrap.querySelectorAll(".quiz__confirm");
+        const quizInput = quizWrap.querySelectorAll(".quiz__input input");
+        const quizAnimaition = quizWrap.querySelectorAll(".quiz__animaition");
+
+        // 문제 출력 (innerText = textContent)
+        // quizDate[0].textContent = quizInfo[0].infoDate;
+
+    </script>
+</body>
+</html>

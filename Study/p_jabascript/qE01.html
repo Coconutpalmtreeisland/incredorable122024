@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main">
+        <div class="quiz__wrap">
+            <div class="quiz__header">
+                <span class="quiz__date"></span>
+                <span class="quiz__type"></span>
+            </div>
+            <div class="quiz__main">
+                <div class="quiz__question">
+                    <em></em>.
+                    <span></span>
+                </div>
+                <div class="quiz__animation"></div>
+                <div class="quiz__input">
+                    <input type="text" placeholder="정답을 입력해주세요!">
+                </div>
+                <div class="quiz__answer"></div>
+                <div class="quiz__desc"></div>
+            </div>
+            <div class="quiz__footer">
+                <button class="quiz__confirm">정답 확인하기</button>
+            </div>
+        </div>
+
+    </main>
+    <script>
+        // 문제 정보
+        const infoDate = "년 월";
+        const infoTyep = "__기능사"
+        const infoNume = "1";
+        const infoQuestion = "____는?"
+        const infoAnswer = "____"
+        const infoDesc = "___입니다."
+
+        // 선택자(자리 설정// querySelector: 변수들이 각 태그를 선택, 즉, 태그 자리에 들어가도록 함)
+        const quizWrap = document.querySelector(".quiz__wrap");
+        const quizDate = quizWrap.querySelector(".quiz__date");
+        const quizType = quizWrap.querySelector(".quiz__type");
+        const quizNum = quizWrap.querySelector(".quiz__question em");
+        const quizQuestion = quizWrap.querySelector(".quiz__question span");
+        const quizAnswer = quizWrap.querySelector(".quiz__answer");
+        const quizDesc = quizWrap.querySelector(".quiz__desc");
+        const quizConfirm = quizWrap.querySelector(".quiz__confirm");
+        const quizInput = quizWrap.querySelector(".quiz__input input");
+        const quizAnimaition = quizWrap.querySelector(".quiz__animaition");
+
+        // 문제 출력(innerText: 요소의 텍스트 내용을 문자열로 반환)
+        quizDate.innerText = infoDate;
+        quizType.innerText = infoType;
+        quizNum.innerText = infoNum;
+        quizQuestion.innerText = infoQuestion;
+        quizAnswer.innerText = infoAnswer;
+        quizDesc.innerText = infoDesc;
+
+        // 정답 해설 숨기기(classList: 클래스에 문자 추가)
+        quizAnswer.classList.add("none");
+        quizDesc.classList.add("none");
+
+        // 정답 확인하기(addEventListener: 이벤트를 처리하고, 클릭 같은 특정 이벤트가 발생했을 때 실행할 함수를 등록함)
+        quizConfirm.addEventListener("click", () => {
+            const userAnswer = quizInput.value;
+
+            if(infoAnswer == userAnswer) {
+                quizAnimaition.classList.add("like");
+            } else {
+                quizAnimaition.classList.add("dislike");
+            }
+
+            quizAnswer.classList.remove("none");
+            quizDesc.classList.remove("none");
+            quizConfirm.classList.add("none");
+            quizInput.classList.add("none");
+        });
+
+    </script>
+</body>
+</html>
