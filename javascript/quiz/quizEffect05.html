@@ -127,12 +127,6 @@
 
             // 정답 확인 버튼
             quizConfirm.addEventListener("click", () => {
-                const selectedChoice = quizWrap.querySelector("input[name='choice']:checked");
-
-                if (!selectedChoice) {
-                    alert("보기를 선택해주세요!");
-                    return; // 함수 실행 중지
-                }
                 checkAnswer();
                 quizConfirm.classList.add("none");   // 정답 버튼 삭제
                 quizNext.classList.remove("none");   // 다음 버튼 추가
@@ -155,8 +149,14 @@
 
         const checkAnswer = () => {
             const selectedChoice = quizWrap.querySelector("input[name='choice']:checked");
+
+                if (!selectedChoice) {
+                    alert("보기를 선택해주세요!");
+                    return; // 함수 실행 중지
+                }
+
             const userAnswer = selectedChoice.value;                    // 사용자가 클릭한 정답
-            const corrcetAnswer = quizInfo[currentIndex].infoAnswer;   //정답지의 정답
+            const corrcetAnswer = quizInfo[currentIndex].infoAnswer;   // 정답지의 정답
             const quizElement = quizWrap.querySelector(".quiz");
             const descElement = quizWrap.querySelector(".quiz__desc");
             const answerElement = quizWrap.querySelector(".quiz__answer");
