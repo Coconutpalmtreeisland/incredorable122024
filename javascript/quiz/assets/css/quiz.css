@@ -215,6 +215,13 @@ body::after {
     line-height: 1.5;
     font-weight: 400;
 }
+.quiz__img {
+    margin-bottom: 10px;
+}
+.quiz__img img {
+    width: 100%;
+    border: 1px solid #eee;
+}
 .quiz__choice {
     margin-bottom: 20px;
 }
@@ -270,19 +277,66 @@ body::after {
 .quiz__choice .choice {
     border: 1px solid #eee;
     padding: 17px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: border-color 0.3s, background-color 0.3s;
+    border-radius: 3px;
+    color: #666;
 }
-.quiz__choice .choice:nth-child(1)::before {
-    content: "① ";
-}.quiz__choice .choice:nth-child(2)::before {
-    content: "② ";
-}.quiz__choice .choice:nth-child(3)::before {
-    content: "③ ";
-}.quiz__choice .choice:nth-child(4)::before {
-    content: "④ ";
+.quiz__choice .choice:hover {
+    border-color: #412E91;
+    background-color: #aca9ba;
+    cursor: pointer;
 }
-.quiz__choice .choice.correct {}
-.quiz__choice .choice.incorrect {}
+.quiz__choice .choice.correct {
+    position: relative;
+    border-color: #412E91;
+    background-color: #e9e4ff60;
+    color: #412E91;
+    padding-right: 57px;
+}
+.quiz__choice .choice.correct::after {
+    content: '';
+    width: 14px;
+    height: 14px;
+    border: 6px solid #412E91;
+    border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.quiz__choice .choice.incorrect {
+    position: relative;
+    border-color: #91382e;
+    box-shadow: 1px 1px 5px #c0bfc4;
+    background-color: #e9e4ff60;
+    color: #91382e;
+    padding-right: 57px;
+}
+.quiz__choice .choice.incorrect::before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 28px;
+    height: 6px;
+    background-color: #91382e;
+    border-radius: 4px;
+    transform: translateY(-50%) rotate(-45deg);
+}
+.quiz__choice .choice.incorrect::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 28px;
+    height: 6px;
+    background-color: #91382e;
+    border-radius: 4px;
+    transform: translateY(-50%) rotate(45deg);
+}
 
 .quiz__animaition {
     border: 1px solid #b8a8ff;
