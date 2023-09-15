@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* 
+        객체 생성자 함수란? 
+
+        객체를 만들기 위해 사용되는 함수
+        동일한 형식(속성과 메서드)의 여러 객체를 쉽게 생성할 수 있음
+        비슷한 종류의 여러 객체를 생성할 때 유용하며, 객체의 구조와 초기값을 쉽게 설정할 수 있습니다.
+        */
+
+        // 학생 정보를 저장하는 객체 생성자 함수 만들기
+        function Student(name, age, grade) {
+            this.name = name;
+            this.age = age;
+            this.grade = grade;
+        }
+
+        // 객체 생성자 함수를 사용하여 학생 객체 생성
+        const student1 = new Student("Alice", 12, "A");
+        const student2 = new Student("Bob", 11, "B");
+        const student3 = new Student("Charlie", 13, "C");
+
+        // 생성된 학생 객체 출력
+        console.log(student1);  // {name: 'Alice', age: 12, grade: 'A'}
+        console.log(student2);  // {name: 'Bob', age: 11, grade: 'B'}
+        console.log(student3);  // {name: 'Charlie', age: 13, grade: 'C'}
+
+        // 객체 생성자 함수
+        {
+            function Person(name, age, color, job) {
+                this.name = name;
+                this.age = age;
+                this.color = color;
+                this.job = job;
+                this.like = () => {
+                    console.log(`${this.name}: ${this.age}살, 상징색: ${this.color}`);
+                }
+                this.famous = () => {
+                    console.log(`${this.name}의 직업은 ${this.job}입니다.`);
+                }
+            }
+
+            const person1 = new Person("김준수", 38, "fairy pink");
+            const person2 = new Person("해루석", 30, "Black");
+            const person3 = new Person("박현우", 26, "Hot pink");
+
+            person1.like();
+            person2.like();
+            person3.like();
+
+            const job1 = new Person("김준수", "", "", "가수");
+            const job2 = new Person("해루석", "", "", "유튜버");
+
+            job1.famous();
+            job2.famous();
+
+        }
+        // 프로토타입 함수
+        {
+            function Person(name, age, color, job) {
+                this.name = name;
+                this.age = age;
+                this.color = color;
+                this.job = job;
+            }
+
+            Person.prototype.like = function(){
+                console.log(`${this.name}: ${this.age}살, 상징색: ${this.color}`);
+            }
+            Person.prototype.famous = function(){
+                console.log(`${this.name}의 직업은 ${this.job}입니다.`);
+            }
+
+            const person1 = new Person("김준수", 38, "fairy pink");
+            const person2 = new Person("해루석", 30, "Black");
+            const person3 = new Person("박현우", 26, "Hot pink");
+
+            person1.like();
+            person2.like();
+            person3.like();
+
+            const job1 = new Person("김준수", "", "", "가수");
+            const job2 = new Person("해루석", "", "", "유튜버");
+
+            job1.famous();
+            job2.famous();
+        }
+        // 객체 리터럴 함수
+        {
+            function Person(name, age, color, job) {
+                this.name = name;
+                this.age = age;
+                this.color = color;
+                this.job = job;
+            }
+
+            Person.prototype = {
+                like1: function(){
+                    console.log(`${this.name}: ${this.age}살, 상징색: ${this.color}`);
+                },
+                like2: function(){
+                    console.log(`${this.name}: ${this.age}살, 상징색: ${this.color}`);
+                },
+                like3: function(){
+                    console.log(`${this.name}: ${this.age}살, 상징색: ${this.color}`);
+                }
+            }
+
+            const person1 = new Person("김준수", 38, "fairy pink");
+            const person2 = new Person("해루석", 30, "Black");
+            const person3 = new Person("박현우", 26, "Hot pink");
+
+            person1.like1();
+            person2.like2();
+            person3.like3();
+        }
+    </script>
+</body>
+</html>
