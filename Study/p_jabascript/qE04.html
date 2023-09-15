@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main id="main">
+        <div class="quiz__wrap"></div>
+    </main>
+
+    <script>
+        // 선택자
+        const quizWrap = documnet.querySelector(".quiz__wrap");
+
+        // 문제 정보
+        const quizInfo = [
+            {
+                infoDate : "년 월",
+                infoTyep :"__기능사",
+                infoNume :"1",
+                infoQuestion : "____는?",
+                infoAnswer : "____",
+                infoDesc : "___입니다.",
+            },
+            {
+                infoDate : "년 월",
+                infoTyep :"__기능사",
+                infoNume :"1",
+                infoQuestion : "____는?",
+                infoAnswer : "____",
+                infoDesc : "___입니다.",
+            },
+            {
+                infoDate : "년 월",
+                infoTyep :"__기능사",
+                infoNume :"1",
+                infoQuestion : "____는?",
+                infoAnswer : "____",
+                infoDesc : "___입니다.",
+            }
+        ]
+
+        // 문제 출력
+        const updataQuiz = () => {
+            const quizArray = [];
+
+            quizInfo.forEach((quiz, index) => {
+                quizArray.push(`
+                <div class="quiz">
+                        <div class="quiz__header">${quizInfo.infoDate} ${quizInfo.infoType}</div>
+                        <div class="quiz__main">
+                            <div class="quiz__question">${index+1}. ${quiz.infoQuestion}</div>
+                            <div class="quiz__choice">
+                                <label for="choice1-${index}">
+                                    <input type="radio" id="choice1-${index}" name="choice-${index}" value="1">
+                                    <span></span>
+                                </label>
+                                <label for="choice2-">
+                                    <input type="radio" id="choice2-" name="choice-" value="2">
+                                    <span></span>
+                                </label>
+                                <label for="choice3-">
+                                    <input type="radio" id="choice3-" name="choice-" value="3">
+                                    <span></span>
+                                </label>
+                                <label for="choice4-">
+                                    <input type="radio" id="choice4-" name="choice-" value="4">
+                                    <span></span>
+                                </label>
+                            </div>
+                            <div class="quiz__answer none">
+                            </div>
+                            <div class="quiz__desc none">
+                            </div>
+                        </div>
+                        <div class="quiz__footer">
+                            <button class="quiz__confirm" data-index="">정답 확인하기</button>
+                        </div>
+                    </div>
+                `);
+
+                console.log(quizArray);
+            });
+        }
+    </script>
+</body>
+</html>
