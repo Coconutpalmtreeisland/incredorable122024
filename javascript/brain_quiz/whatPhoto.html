@@ -1,90 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>무슨 사진일까?</title>
 </head>
-
 <body>
-    <script>
-        const w = 300;
-        const h = 300;
-        const canvas = document.getElementById('canvas');
-        canvas.width = w;
-        canvas.height = h;
-
-        const ctx = canvas.getContext('2d');
-        const colors = [
-            '#000000',
-            '#724d90',
-            '#134392',
-            '#0094ac',
-            '#188271',
-            '#f3d600'
-        ];
-
-        function init() {
-            ctx.clearRect(0, 0, w, h);
-            [...Array(100)].map((_, i) => {
-                ctx.beginPath();
-                ctx.fillStyle = colors[i % colors.length];
-                ctx.arc(
-                    Math.random()*300,
-                    Math.random()*300,
-                    30*Math.random(),
-                    0,
-                    2 * Math.PI
-                );
-                ctx.fill();
-            });
-
-            setTimeout(mosaic, 1000);
-        }
-
-        function mosaic() {
-            const img = ctx.getImageData(0, 0, w, h);
-            const _img = ctx.createImageData(w, h);
-
-            const trans = 2;
-            const speed = 100;
-            let ratio = 1;
-
-            const interval = setInterval(() => {
-                if (ratio > 50) {
-                    clearInterval(interval);
-                    setTimeout(() => {
-                    init();
-                    },
-                        2000);
-                        return;
-                }
-
-                for (let j = 0; j < h; j++){
-                    for (let i=0; i < w; i++){
-                        const index = (w * j + i) * 4;
-                        const _index = (w * Math.floor(j / ratio) * ratio + Math.floor(i / ratio) * ratio) * 4;
-                        _img.data[index] = img.data[_index];
-                        _img.data[index + 1] = img.data[_index + 1];
-                        _img.data[index + 2] = img.data[_index + 2];
-                        _img.data[index + 3] = img.data[_index + 3];
-                    }
-                }
-
-                ratio +=trans;
-                ctx.putImageData(_img, 0, 0);
-                return null;
-            },
-            speed);
-        }
-        init();
-        
-    </script>
-
-    <canvas class="question1" width="100px" height="100px">
-        <img src="img/tanghulu.jpg" alt="탕후루">
-    </canvas>
+    
 </body>
-
 </html>
