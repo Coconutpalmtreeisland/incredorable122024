@@ -68,20 +68,20 @@
 }
 
 @media (max-width: 1200px){
-    .header_nav {
+    .header__nav {
         display: none;
     }
     .header__ham {
         display: block;
     }
 }
-@media (max-width: 1200px){
+@media (max-width: 600px){
     .header_inner {
         height: 60px;
         padding: 0 16px;
     }
     .header_logo img {
-        width: 120px;
+        width: 110px;
         padding-top: 5px;
     }
 }
@@ -863,4 +863,8 @@
     .footer__info li {
         word-break: keep-all;
     }
+    .footer__sns {
+        width: 40%;
+    }
+    
 }
