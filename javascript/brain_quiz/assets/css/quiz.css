@@ -36,16 +36,20 @@ body {
     margin: 20px auto;
     border-radius: 20px;
     position: relative;
+}
+#aside {
     display: flex;
     justify-content: space-between;
 }
 .aside__left {
+    position: absolute;
     width: 20%;
 }
 .aside__left .container {
     padding: 10px 50px;
 }
 .aside__right {
+    position: absolute;
     width: 20%;
 }
 .aside__right .container {
@@ -55,10 +59,23 @@ body {
 /* main */
 #main {
     width: 60%;
+    margin: 0 auto;
+    display: inline-block;
+    z-index: 1000;
 }
 .quiz__header {
     width: 1120px;
     height: 79px;
     border-radius: 20px;
     background-color: #fff;
+}
+.quiz__main {
+    
+}
+.quiz__img {
+    width: 50px;
+    height: 50px;
+}
+.quiz__img .img {
+    width: 50%;
 }
