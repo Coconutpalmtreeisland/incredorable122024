@@ -1,0 +1,73 @@
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HakgyoansimBunpilR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimBunpilR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HakgyoansimDoldamB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimDoldamB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JeonHwaseon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/JeonHwaseon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+}
+.button01 {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 50%;
+    bottom: 5%;
+    transform: rotate(90deg);
+}
+.button01 a{
+    display: block;
+    position: relative;
+}
+/* _________________________header_________________________ */
+.title {
+    background-color: #fff; 
+}
+.title__wrap {
+    width: 100%;
+}
+.header__wrap {
+    margin: 10px 25px;
+    height: 100vh;
+    background-color: #204c2a;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.title .header__wrap .logo {
+    font-family: HakgyoansimDoldamB;
+    color: #fff;
+    font-size: 150px;
+    text-align: center;
+}
+.title .header__wrap .subtitle{
+    font-family: JeonHwaseon;
+    color: #fff;
+    font-size: 75px;
+    text-align: center;
+    margin-top: 20px;
+}
+/* _________________________medalSelect_________________________ */
+
