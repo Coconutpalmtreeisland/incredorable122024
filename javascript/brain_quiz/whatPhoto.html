@@ -6,16 +6,55 @@
     <title>무슨 사진일까?</title>
 </head>
 <body>
-    <div class="quiz__wrap">
-        <div class="question__wrap">
-            <div class="question__header">
-                
+    <aside class="aside__left">
+        <head class="timer">
+            <img src="assets/img/timer.png" alt="타이머">
+            <div class="timer__num">
+                <h1 id="timer">60</h1>  <!-- 60초 설정 -->
+                <script src="timer_script.js"></script>
             </div>
-            <div class="img__box">
-                <img src="" alt="">
+        </head> 
+        <footer class="user_info">
+            <div class="user__name">기본이</div>
+            <div class="user__age">21세</div>
+            <div class="uesr__char">
+                <img src="assets/img/default character.png" alt="기본 캐릭터">
             </div>
-
+        </footer>
+    </aside>
+    <aside class="aside__right">
+        <div class="aside__text">두뇌메달</div>
+        <div class="aside__medal">
+            <img src="assets/img/bronze_medal.png" alt="메달">
         </div>
-    </div>
+    </aside>
+    <main class="main">
+        <div class="quiz__wrap">
+            <div class="quiz__header">무슨 사진일까?</div>
+            <div class="quiz__main">
+                <div class="quiz__img"></div>
+                <div class="quiz__answer">
+                    <div class="choice1"></div>
+                    <div class="choice2"></div>
+                    <div class="choice3"></div>
+                    <div class="choice4"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="quizInfo.js"></script>
+    <script>
+        // 선택자
+        const quizWrap = document.querySelector(".quiz__wrap");
+        
+        // 문제 정보
+        let quizInfo = [];
+        
+        // 문제 가져오기
+        const fetchQuiz = () => {
+            fetch()
+        }
+    </script>
 </body>
 </html>
