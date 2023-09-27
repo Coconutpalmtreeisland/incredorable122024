@@ -1,0 +1,160 @@
+@font-face {
+    font-family: 'LeeSeoyun';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/LeeSeoyun.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HakgyoansimBunpilR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimBunpilR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'HakgyoansimDoldamB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimDoldamB.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'JeonHwaseon';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2202-2@1.0/JeonHwaseon.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+}
+#button01 {
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 50%;
+    bottom: 5%;
+    transform: rotate(90deg);
+}
+#button01 a{
+    display: block;
+    position: relative;
+}
+/* _________________________header_________________________ */
+#title {
+    background-color: #fff; 
+}
+#title__wrap {
+    width: 100%;
+}
+#header__wrap {
+    margin: 10px 25px;
+    height: 100vh;
+    background-color: #204c2a;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#title #header__wrap .logo {
+    font-family: HakgyoansimDoldamB;
+    color: #fff;
+    font-size: 150px;
+    text-align: center;
+}
+#title #header__wrap .subtitle{
+    font-family: JeonHwaseon;
+    color: #fff;
+    font-size: 75px;
+    text-align: center;
+    margin-top: 20px;
+}
+/* character */
+.character_box {
+    position: relative;
+    width: 80%;
+    margin: 10% auto;
+}
+.character_box::before {
+    content: '캐릭터 설정';
+    position: absolute;
+    top: -140px;
+    color: #fff;
+    font-family: HakgyoansimDoldamB;
+    font-size: 70px;
+}
+.character_box h2 {
+    display: inline-block;
+    text-align: center;
+}
+.c_wrap {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+}
+.c_wrap div {
+    margin: 0 4vw;
+    width: 33.3333%;
+    border-radius: 5px;
+    position: relative;
+}
+.c_wrap div > img {
+    width: 100%;
+    transform: scale(1.1);
+}
+
+/* input_box */
+#input_box {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: -200px;
+    color: #fff;
+    font-family: HakgyoansimDoldamB;
+    display: inline-block;
+    font-size: 60px;
+}
+#input_box input {
+    font-size: 40px;
+    position: relative;
+    width: 250px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+/* selectgame */
+
+.slide_wrap {
+    width: 100%;
+    position: relative;
+    top: 50px;
+}
+.select_btn {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+}
+.btn_right {
+    transform: translateY(-330%);
+    cursor: pointer;
+}
+.btn_left {
+   transform:translateY(-330%) rotate(180deg);
+   cursor: pointer;
+}
+/* slide */
+
+.slide_img img{
+    background-color: #fff;
+    width: 640px;
+    height: 605px;
+    border-radius: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.slide_img  img{
+    width: 100%;
+    height: 100%;
+}

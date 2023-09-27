@@ -263,7 +263,9 @@
           <div class="quiz__header">무슨 사진일까?</div>
           <div class="quiz__main">
             <div class="quiz__img">
-              <iframe src="${quizInfo[index].imagePaths}" frameborder="0" border="0" cellspacing="0" style="border-style: none;width: 100%; height: 120px;"></iframe>
+              <div class="img__inner">
+                <img src="${quizInfo[index].imagePaths}" alt="${quizInfo[index].imgAlt}">
+              </div>
             </div>
             <div class="quiz__choice" style="margin: 200px 50%">
               <label for="choice1">
