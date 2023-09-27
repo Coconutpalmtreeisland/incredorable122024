@@ -4,12 +4,12 @@ const timerElement = document.getElementById('timer');
 let timerInterval; // 카운트다운을 저장할 변수
 
 function startTimer() {
-    let count = 60; // 시작 숫자 (60부터 시작)
+    let count = 10; // 시작 숫자 (10부터 시작)
 
     timerInterval = setInterval(function () {
         if (count <= 0) {
             clearInterval(timerInterval); // 카운트다운 종료
-            count = 60; // 다시 60으로 초기화
+            count = 10; // 다시 60으로 초기화
             timerElement.textContent = 'XX';
 
         } else {

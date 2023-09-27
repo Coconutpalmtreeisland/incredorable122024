@@ -66,6 +66,13 @@ li {
     padding: 40px;
     border-bottom: 1px dashed #dcdcdc;
 }
+.main__menu h3 {
+    font-weight: 400;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #09073c;
+    font-family: "nanumSquareNeo";
+}
 .main__menu ul {
     margin-bottom: 10px;
 }
