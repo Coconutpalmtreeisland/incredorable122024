@@ -47,7 +47,7 @@
             <h2>로그인</h2>
             <p>로그인을 하면 게시글 및 댓글 작성이 가능합니다.</p>
             <div class="login__form btStyle bmStyle">
-                <form action="joinSave.html" name="join" method="post">
+                <form action="loginSave.php" name="login" method="post">
                     <fieldset>
                         <legend class="blind">로그인 영역</legend>
                         <div>
