@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문제에 맞는 사진을 찾자!</title>
+</head>
+<body>
+    <main id="quiz">
+        <div class="quiz__wrap">
+            <div class="quiz__title">문제에 맞는 사진을 찾자!</div>
+            <div class="quiz__question"></div>
+            <div class="quiz__choices">
+                <div class="btn">
+                    <button class="choice1"><img src="" alt="보기1"></button>
+                    <button class="choice2"><img src="" alt="보기2"></button>
+                    <button class="choice3"><img src="" alt="보기3"></button>
+                    <button class="choice4"><img src="" alt="보기4"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <aside class="left">
+        <div class="medal__text">현재 메달</div>
+        <div class="medal__img"></div>
+    </aside>
+    <aside class="right">
+        <div class="timer__img">
+            <img src="../assets/img/clcok.png" alt="시계">
+        </div>
+        <div class="timer__num">10</div>
+    </aside>
+
+    <script>
+        // 문제 정보
+        const quizInfo = [
+            {
+                question: "박새",
+                choices: [
+                    {img: "", correct: true},
+                    {img: "", correct: false},
+                    {img: "", correct: false},
+                    {img: "", correct: false}
+                ]
+            },
+            {
+                question: "우리나라 화폐에 있는 인물",
+                choices: [
+                    {img: "", correct: true},
+                    {img: "", correct: false},
+                    {img: "", correct: true},
+                    {img: "", correct: false}
+                ]
+            },
+            {
+                question: "파충류",
+                choices: [
+                    {img: "", correct: true},
+                    {img: "", correct: false},
+                    {img: "", correct: false},
+                    {img: "", correct: false}
+                ]
+            },
+            {
+                question: "가장 큰 동물",
+                choices: [
+                    {img: "", correct: true},
+                    {img: "", correct: false},
+                    {img: "", correct: false},
+                    {img: "", correct: false}
+                ]
+            },
+            {
+                question: "설치류",
+                choices: [
+                    {img: "", correct: true},
+                    {img: "", correct: false},
+                    {img: "", correct: true},
+                    {img: "", correct: false}
+                ]
+            },
+            {
+                question: "유럽 연합에 속하지 않는 국가",
+                choices: [
+                    {img: "", correct: true},
+                    {img: "", correct: false},
+                    {img: "", correct: false},
+                    {img: "", correct: false}
+                ]
+            },
+        ]
+
+        // 타이머 함수 생성
+
+        // 문제 출력 함수
+        function updateQuiz(){
+            const quizQuestion = document.querySelector(".quiz__question");
+            
+        }
+
+        // classList로 메달 이미지 바꾸기
+        // classList로 정답 오답 표시
+    </script>
+</body>
+</html>
