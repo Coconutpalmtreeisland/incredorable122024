@@ -37,316 +37,279 @@
         const quizQuestion = quizWrap.querySelector(".quiz__question");
         const quizChoices = quizWrap.querySelectorAll(".quiz__choices");
         const medalImg = quizWrap.querySelector(".medal__img");
-
+        
         // 문제 정보
         const quizInfo = [
             {
                 question: "오목눈이",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: false},
-                    {img: "", correct: false}
+                    {img: "assets/img/img01-1.jpg", correct: true},
+                    {img: "assets/img/img01-2.jpg", correct: false},
+                    {img: "assets/img/img01-3.jpg", correct: false},
+                    {img: "assets/img/img01-4.jpg", correct: false}
                 ]
             },
             {
                 question: "우리나라 화폐에 없는 인물",
                 choices: [
-                    {img: "", correct: false},
-                    {img: "", correct: false},
-                    {img: "", correct: false},
-                    {img: "", correct: true}
+                    {img: "assets/img/img02-1.jpg", correct: false},
+                    {img: "assets/img/img02-2.jpg", correct: false},
+                    {img: "assets/img/img02-3.jpg", correct: false},
+                    {img: "assets/img/img02-4.jpg", correct: true}
                 ]
             },
             {
                 question: "파충류",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: false},
-                    {img: "", correct: false}
+                    {img: "assets/img/img03-1.jpg", correct: false},
+                    {img: "assets/img/img03-2.jpg", correct: true},
+                    {img: "assets/img/img03-3.jpg", correct: false},
+                    {img: "assets/img/img03-4.jpg", correct: false}
                 ]
             },
             {
                 question: "가장 큰 동물",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: false},
-                    {img: "", correct: false}
+                    {img: "assets/img/img04-1.jpg", correct: false},
+                    {img: "assets/img/img04-2.jpg", correct: false},
+                    {img: "assets/img/img04-3.jpg", correct: true},
+                    {img: "assets/img/img04-4.jpg", correct: false}
                 ]
             },
             {
                 question: "설치류",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img05-1.jpg", correct: false },
+                    {img: "assets/img/img05-2.jpg", correct: true},
+                    {img: "assets/img/img05-3.jpg", correct: true},
+                    {img: "assets/img/img05-4.jpg", correct: false}
                 ]
             },
             {
                 question: "유럽 연합에 속하지 않는 국가",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: false},
-                    {img: "", correct: false}
+                    {img: "assets/img/img06-1.jpg", correct: true},
+                    {img: "assets/img/img06-2.jpg", correct: false},
+                    {img: "assets/img/img06-3.jpg", correct: false},
+                    {img: "assets/img/img06-4.jpg", correct: false}
                 ]
             },
             {
                 question: "기원전 사람",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img07-1.jpg", correct: false},
+                    {img: "assets/img/img07-2.jpg", correct: true},
+                    {img: "assets/img/img07-3.jpg", correct: false},
+                    {img: "assets/img/img07-4.jpg", correct: true}
                 ]
             },
             {
                 question: "빌런",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img08-1.jpg", correct: false},
+                    {img: "assets/img/img08-2.jpg", correct: false},
+                    {img: "assets/img/img08-3.jpg", correct: true},
+                    {img: "assets/img/img08-4.jpg", correct: false}
                 ]
             },
             {
                 question: "가수",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img09-1.jpg", correct: true},
+                    {img: "assets/img/img09-2.jpg", correct: false},
+                    {img: "assets/img/img09-3.jpg", correct: false},
+                    {img: "assets/img/img09-4.jpg", correct: false}
                 ]
             },
             {
                 question: "Tvn 프로그램이 아닌 것",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img10-1.jpg", correct: false},
+                    {img: "assets/img/img10-2.jpg", correct: false},
+                    {img: "assets/img/img10-3.jpg", correct: true},
+                    {img: "assets/img/img10-4.jpg", correct: false}
                 ]
             },
             {
                 question: "가장 늦게 데뷔한 그룹",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img11-1.jpg", correct: false},
+                    {img: "assets/img/img11-2.jpg", correct: true},
+                    {img: "assets/img/img11-3.jpg", correct: false},
+                    {img: "assets/img/img11-4.jpg", correct: false}
                 ]
             },
             {
-                question: "제작자를 알 수 있는 문자",
+                question: "창제자를 알 수 있는 문자",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img12-1.jpg", correct: false},
+                    {img: "assets/img/img12-2.jpg", correct: true},
+                    {img: "assets/img/img12-3.jpg", correct: false},
+                    {img: "assets/img/img12-4.jpg", correct: false}
                 ]
             },
             {
                 question: "유네스코에 등재된 유산이 아닌 것",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img13-1.jpg", correct: false},
+                    {img: "assets/img/img13-2.jpg", correct: false},
+                    {img: "assets/img/img13-3.jpg", correct: false},
+                    {img: "assets/img/img13-4.jpg", correct: true}
                 ]
             },
             {
                 question: "과일",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img14-1.jpg", correct: false},
+                    {img: "assets/img/img14-2.jpg", correct: false},
+                    {img: "assets/img/img14-3.jpg", correct: false},
+                    {img: "assets/img/img14-4.jpg", correct: true}
                 ]
             },
             {
                 question: "고려시대 배경 사극",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img15-1.jpg", correct: false},
+                    {img: "assets/img/img15-2.jpg", correct: false},
+                    {img: "assets/img/img15-3.jpg", correct: false},
+                    {img: "assets/img/img15-4.jpg", correct: true}
                 ]
             },
             {
                 question: "가장 많은 언어로 번역된 책",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img16-1.jpg", correct: true},
+                    {img: "assets/img/img16-2.jpg", correct: false},
+                    {img: "assets/img/img16-3.jpg", correct: false},
+                    {img: "assets/img/img16-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "대한민국 1대 대통령",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img17-1.jpg", correct: true},
+                    {img: "assets/img/img17-2.jpg", correct: false},
+                    {img: "assets/img/img17-3.jpg", correct: false},
+                    {img: "assets/img/img17-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "12지신 7번째 동물",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img18-1.jpg", correct: false},
+                    {img: "assets/img/img18-2.jpg", correct: false},
+                    {img: "assets/img/img18-3.jpg", correct: false},
+                    {img: "assets/img/img18-4.jpg", correct: true}
                 ]
             },
             {
-                question: "과일",
+                question: "광역시",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img19-1.jpg", correct: false},
+                    {img: "assets/img/img19-2.jpg", correct: true},
+                    {img: "assets/img/img19-3.jpg", correct: true},
+                    {img: "assets/img/img19-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "고흐의 작품",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img20-1.jpg", correct: false},
+                    {img: "assets/img/img20-2.jpg", correct: false},
+                    {img: "assets/img/img20-3.jpg", correct: true},
+                    {img: "assets/img/img20-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "태양계에서 가장 큰 행성",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img21-1.jpg", correct: false},
+                    {img: "assets/img/img21-2.jpg", correct: true},
+                    {img: "assets/img/img21-3.jpg", correct: false},
+                    {img: "assets/img/img21-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "남극에 사는 동물",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img22-1.jpg", correct: false},
+                    {img: "assets/img/img22-2.jpg", correct: false},
+                    {img: "assets/img/img22-3.jpg", correct: false},
+                    {img: "assets/img/img22-4.jpg", correct: true}
                 ]
             },
             {
-                question: "과일",
+                question: "영토가 가장 넓은 나라",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img23-1.jpg", correct: true},
+                    {img: "assets/img/img23-2.jpg", correct: false},
+                    {img: "assets/img/img23-3.jpg", correct: false},
+                    {img: "assets/img/img23-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "인구가 가장 많은 나라",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img24-1.jpg", correct: false},
+                    {img: "assets/img/img24-2.jpg", correct: false},
+                    {img: "assets/img/img24-3.jpg", correct: false},
+                    {img: "assets/img/img24-4.jpg", correct: true}
                 ]
             },
             {
-                question: "과일",
+                question: "기업의 창업주가 아닌 사람",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img25-1.jpg", correct: false},
+                    {img: "assets/img/img25-2.jpg", correct: false},
+                    {img: "assets/img/img25-3.jpg", correct: true},
+                    {img: "assets/img/img25-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "픽사 제작이 아닌 영화",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img26-1.jpg", correct: false},
+                    {img: "assets/img/img26-2.jpg", correct: true},
+                    {img: "assets/img/img26-3.jpg", correct: false},
+                    {img: "assets/img/img26-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "11번째로 스페이스 클럽에 가입한 국가의 발사체",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img27-1.jpg", correct: true},
+                    {img: "assets/img/img27-2.jpg", correct: false},
+                    {img: "assets/img/img27-3.jpg", correct: false},
+                    {img: "assets/img/img27-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "외국 브랜드",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img28-1.jpg", correct: true},
+                    {img: "assets/img/img28-2.jpg", correct: false},
+                    {img: "assets/img/img28-3.jpg", correct: false},
+                    {img: "assets/img/img28-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "브랜드명이 보통명사가 된 것",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img29-1.jpg", correct: true},
+                    {img: "assets/img/img29-2.jpg", correct: true},
+                    {img: "assets/img/img29-3.jpg", correct: true},
+                    {img: "assets/img/img29-4.jpg", correct: false}
                 ]
             },
             {
-                question: "과일",
+                question: "다른 대륙에 있는 랜드마크",
                 choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
+                    {img: "assets/img/img30-1.jpg", correct: true},
+                    {img: "assets/img/img30-2.jpg", correct: false},
+                    {img: "assets/img/img30-3.jpg", correct: false},
+                    {img: "assets/img/img30-4.jpg", correct: false}
                 ]
             },
-            {
-                question: "과일",
-                choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
-                ]
-            },
-            {
-                question: "과일",
-                choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
-                ]
-            },
-            {
-                question: "과일",
-                choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
-                ]
-            },
-            {
-                question: "과일",
-                choices: [
-                    {img: "", correct: true},
-                    {img: "", correct: false},
-                    {img: "", correct: true},
-                    {img: "", correct: false}
-                ]
-            },
-
         ]
         
         // 전역변수
