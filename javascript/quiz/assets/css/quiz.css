@@ -519,9 +519,9 @@ pre code.hljs {
         margin-bottom: 20px;
     }
     #header nav li a {
-        width: 30px;
-        height: 30px;
-        padding: 7px;
+        width: 26px;
+        height: 26px;
+        padding: 5px;
     }
     .quiz__wrap {
         padding: 0 6px;
@@ -530,6 +530,10 @@ pre code.hljs {
     .quiz__wrap > .quiz {
         width: 100%;
         padding: 30px 20px;
+    }
+    .quiz__wrap > .long {
+        width: 100%;
+        padding: 30px 10px;
     }
     .quiz__header {
         margin-bottom: 20px;
@@ -906,4 +910,25 @@ pre code.hljs {
     padding: 10px 20px;
     border-radius: 40px;
     text-align: center;
+}
+
+/* 정보처리 주관식 */
+.quiz__add {
+    border: 1px solid #eee;
+    padding: 17px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: border-color 0.3s, background-color 0.3s;
+    border-radius: 3px;
+    color: #666;
+}
+.quiz__wrap > .long {
+    width: 800px;
+    min-height: 250px;
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.1);
+    margin: 20px;
 }
