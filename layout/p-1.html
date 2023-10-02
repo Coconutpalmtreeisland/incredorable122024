@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>슬라이드 T-1</title>
+    <title>슬라이드 P-1</title>
     <link href="https://webfontworld.github.io/bccard/Paybooc.css" rel="stylesheet">
     <style>
         * {
@@ -77,6 +77,37 @@
             height: 100px;
             background-color: #9d9d9d;
         }
+        /* popup */
+        #wrap {
+            position: relative;
+        }
+        .content3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .popup-btn {
+            background-color: rgba(255, 255, 255, 0.6);
+            padding: 10px;
+            display: inline-block;
+        }
+        .popup-view {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            background-color: #a2a2a2;
+            border: 3px solid #000;
+            z-index: 1000;
+            display: none;
+        }
+        .popup-close {
+            background-color: #fff;
+            padding: 10px;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -94,7 +125,9 @@
         <main id="contents">
             <section class="content1"></section>
             <section class="content2"></section>
-            <section class="content3"></section>
+            <section class="content3">
+                <a href="#" class="popup-btn">팝업</a>
+            </section>
         </main>
         <!-- //contents -->
     
@@ -104,17 +137,37 @@
             <div class="footer3"></div>
         </footer>
         <!-- //footer -->
+
+        <div class="popup-view">
+            <a href="#" class="popup-close">닫기</a>
+        </div>
+        <!-- //popup-view -->
+
     </div>
     <!-- //wrap -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>
-
-    </script>
+    <!-- <script>
+        $(function(){
+            $(".popup-btn").click(function(){
+                $(".popup-view").show();
+            });
+            $(".popup-close").click(function(){
+                $(".popup-view").hide();
+            });
+        });
+    </script> -->
     <!-- jquery -->
 
     <script>
-
+        window.onload = function(){
+            document.querySelector(".popup-btn").addEventListener("click", function(){
+                document.querySelector(".popup-view").style.display = "block";
+            });
+            document.querySelector(".popup-close").addEventListener("click", function(){
+                document.querySelector(".popup-view").style.display = "none";
+            });
+        }
     </script>
     <!-- javascript -->
     
