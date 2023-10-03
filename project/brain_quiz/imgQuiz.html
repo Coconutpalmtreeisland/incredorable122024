@@ -11,7 +11,7 @@
             <div class="quiz__title">문제에 맞는 사진을 찾자!</div>
             <div class="quiz__question"></div>
             <div class="quiz__choices">
-                <div class="btn">
+                <div class="btn" id="choice">
                     <button class="choice1"><img src="" alt="보기1"></button>
                     <button class="choice2"><img src="" alt="보기2"></button>
                     <button class="choice3"><img src="" alt="보기3"></button>
@@ -34,12 +34,11 @@
     <script>
         // 선택자
         const quizWrap = document.querySelector(".quiz__wrap");
-        const quizQuestion = quizWrap.querySelector(".quiz__question");
-        const quizChoices = quizWrap.querySelectorAll(".quiz__choices");
+        const quizChoices = quizWrap.getElementById("choice");
         const medalImg = quizWrap.querySelector(".medal__img");
         
         // 문제 정보
-        const quizInfo = [
+        let quizInfo = [
             {
                 question: "오목눈이",
                 choices: [
@@ -348,8 +347,19 @@
 
         // 문제 출력 함수 (질문과 이미지 불러오기)
         function updateQuiz(){
-            const currentQuestion = quizInfo[QuestionNum];
+            const currentIndex = quizInfo[QuestionNum];
+            const quizQuestion = quizWrap.querySelector(".quiz__question");
+            quizQuestion.textContent = currentIndex.question;
 
+            quizChoices.innerHTML = "";
+
+            currentIndex.choices.forEach((choice, index) => {
+                const choiceElement = document.createElement("div");
+                choiceElement.className = "btn";
+                choiceElement.innerHTML = `
+                    <button class="choice1"><img src="" alt="보기1"></button>
+                `;
+            });
         }
 
 
