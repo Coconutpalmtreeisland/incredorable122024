@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP 블로그 만들기</title>
 
-    <?php include "../include/head.php" ?>
-    <!-- //head -->
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
-<body class="gray">
-<?php include "../include/skip.php" ?>
+<body class="gray"> 
+    <?php include "../include/skip.php" ?>
     <!-- //skip -->
 
     <?php include "../include/header.php" ?>
     <!-- //header -->
 
     <main id="main" role="main">
-        <div class="members__inner container">
+         <div class="members__inner container">
             <h3>회원 목록</h3>
             <table>
                 <colgroup>
@@ -24,7 +23,7 @@
                 </colgroup>
                 <thead>
                     <tr>
-                        <th>memberID</th>
+                        <th>memberId</th>
                         <th>youEmail</th>
                         <th>youName</th>
                         <th>youPass</th>
@@ -52,20 +51,19 @@
                 echo "<td>".$info['youName']."</td>";
                 echo "<td>".$info['youPass']."</td>";
                 echo "<td>".$info['youPhone']."</td>";
-                echo "<td>".date('Y-m-d', $info['regTime'])."</td>";
+                echo "<td>".date('Y-m-d', $info['regtime'])."</td>";
                 echo "</tr>";
             }
         }
     }
-?>
+?>                   
                 </tbody>
             </table>
-        </div>
+         </div>
     </main>
     <!-- //main -->
 
     <?php include "../include/footer.php" ?>
-    <!-- //footer -->
-
+    <!-- //foter -->
 </body>
 </html>

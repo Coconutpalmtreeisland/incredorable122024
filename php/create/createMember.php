@@ -1,26 +1,21 @@
 <?php
     include "../connect/connect.php";
 
-    $squl = "create table members(";
-    $squl .= " memberID int(10) unsigned auto_increment,";
-    $squl .= "youEmail varchar(40) NOT NULL,";
-    $squl .= "youName varchar(10) NOT NULL,";
-    $squl .= "youPass varchar(50) NOT NULL,";
-    $squl .= "youPhone varchar(20) NOT NULL,";
-    $squl .= "regTime int(40) NOT NULL,";
-    $squl .= "PRIMARY KEY(memberID)";
-    $squl .= ") charset=utf8;";
-
-    $connect -> query($squl);        
-       
+    $sql = "create table members(";
+    $sql .= "memberID int(10) unsigned auto_increment,";
+    $sql .= "youEmail varchar(40) NOT NULL,";
+    $sql .= "youName varchar(10) NOT NULL,";
+    $sql .= "youPass varchar(50) NOT NULL,";
+    $sql .= "youPhone varchar(20) NOT NULL,";
+    $sql .= "regTime int(40) NOT NULL,";
+    $sql .= "PRIMARY KEY(memberID)";
+    $sql .= ") charset=utf8";
+    
+    $result = $connect -> query($sql);
+        
     if($result){
         echo "Create Tables Complete";
     } else {
         echo "Create Tables False";
-    }
-        
-        
-        
-    
-
+    }      
 ?>

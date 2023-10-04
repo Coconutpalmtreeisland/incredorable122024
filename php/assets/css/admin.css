@@ -13,13 +13,14 @@
 }
 .members__inner table th,
 .members__inner table td {
-    border-bottom: 1px solid var(--black400);
     border-right: 1px solid var(--black400);
+    border-bottom: 1px solid var(--black400);
     padding: 10px;
 }
-.members__inner table tr:hover{
+.members__inner table tr:hover {
     background-color: var(--black600);
 }
+
 .members__inner table th:last-child,
 .members__inner table td:last-child {
     border-right: 0;

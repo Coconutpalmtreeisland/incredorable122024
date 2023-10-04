@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="assets/css/quiz.css">
     <link rel="stylesheet" href="assets/css/ani.css">
+    <link rel="stylesheet" href="../../assets/css/default.min.css">
 </head>
 <body class="fixed">
     <header id="header">
@@ -181,9 +182,182 @@
     <!-- //header -->
 
     <footer id="footer">
+        <div class="modal__wrap">
+            <div class="modal__btn">소스 보기</div>
+            <div class="modal__cont">
+                <div class="modal__box">
+                    <div class="title">
+                        <span class="dot" aria-label="true"></span>
+                        <div class="tabs">
+                            <div class="active">
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                                        <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                        <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>Javascript</em>
+                                <span class="close">
+                                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont">
+                        <div class="active">
+<pre><code class="language-js">// 문제 정보
+const quizInfo = [
+    {
+        infoDate : "2011년 2월",
+        infoType : "정보처리기능사",
+        infoNum : "1",
+        infoQuestion : "명령어(Instructuin)는 무엇으로 구성되어 있습니까?",
+        infoAnswer : "명령 코드부와 주소부",
+        infoDesc : "명령어는 수행해야 할 동작을 명시하는 명령 코드부(OP-Code)와 찾아갈 메모리의 번지 부분이나 레지스터를 지정하는 주소부(Operand: 번지부)로 구성되어 있습니다.",
+    },
+    {
+        infoDate : "2010년 10월",
+        infoType : "정보처리기능사",
+        infoNum : "2",
+        infoQuestion : "관계 데이터베이스에서 속성(Attribute)의 수를 의미 하는 것은 무엇입니까?",
+        infoAnswer : "차수",
+        infoDesc : "차수(Degree)는 한 릴레이션(테이블)에서 속성(필드=열)의 개수 예) 4개(성명, 주소, 학교명, 성별)",
+    }, 
+    {
+        infoDate : "2011년 4월",
+        infoType : "정보처리기능사",
+        infoNum : "3",
+        infoQuestion : "사용자와 하드웨어 사이에서 중재자 역할을 수행하며, 하드웨어 자원을 관리하고 시스템 및 응용 프로그램의 실행에 도움을 제공하는 것은 무엇입니까?",
+        infoAnswer : "운영체제",
+        infoDesc : "운영체제(OS; Operating System)는 컴퓨터와 응용 프로그램, 컴퓨터와 사용자 간의 인터페이스 역할을 담당합니다.",
+    }
+];
+// 선택자
+const quizWrap = document.querySelector(".quiz__wrap");
+const quizDate = quizWrap.querySelectorAll(".quiz__date");
+const quizType = quizWrap.querySelectorAll(".quiz__type");
+const quizNum = quizWrap.querySelectorAll(".quiz__question em");
+const quizQuestion = quizWrap.querySelectorAll(".quiz__question span");
+const quizAnswer = quizWrap.querySelectorAll(".quiz__answer");
+const quizDesc = quizWrap.querySelectorAll(".quiz__desc");
+const quizConfirm = quizWrap.querySelectorAll(".quiz__confirm");
+const quizInput = quizWrap.querySelectorAll(".quiz__input input");
+const quizAnimaition = quizWrap.querySelectorAll(".quiz__animaition");
+
+// 문제 출력 (innertext = textContent)
+//quizDate[0].textContent = quizInfo[0].infoDate;
+//quizDate[1].textContent = quizInfo[1].infoDate;
+//quizDate[2].textContent = quizInfo[2].infoDate;
+
+//quizType[0].textContent = quizInfo[0].infoType;
+//quizType[1].textContent = quizInfo[1].infoType;
+//quizType[2].textContent = quizInfo[2].infoType;
+
+//quizNum[0].textContent = quizInfo[0].infoNum;
+//quizNum[1].textContent = quizInfo[1].infoNum;
+//quizNum[2].textContent = quizInfo[2].infoNum;
+
+//quizQuestion[0].textContent = quizInfo[0].infoQuestion;
+//quizQuestion[1].textContent = quizInfo[1].infoQuestion;
+//quizQuestion[2].textContent = quizInfo[2].infoQuestion;
+
+//quizAnswer[0].textContent = quizInfo[0].infoAnswer;
+//quizAnswer[1].textContent = quizInfo[1].infoinfoAnswerNum;
+//quizAnswer[2].textContent = quizInfo[2].infoAnswer;
+
+//quizDesc[0].textContent = quizInfo[0].infoDesc;
+//quizDesc[1].textContent = quizInfo[1].infoDesc;
+//quizDesc[2].textContent = quizInfo[2].infoDesc;
+
+// for()
+// for(let i=0; i&lt;quizInfo.length; i++){
+//     quizDate[i].textContent = quizInfo[i].infoDate;
+//     quizType[i].textContent = quizInfo[i].infoType;
+//     quizNum[i].textContent = quizInfo[i].infoNum;
+//     quizQuestion[i].textContent = quizInfo[i].infoQuestion;
+//     quizAnswer[i].textContent = quizInfo[i].infoAnswer;
+//     quizDesc[i].textContent = quizInfo[i].infoDesc;
+// }
+
+// forEach()
+quizInfo.forEach((el, i) => {
+    quizDate[i].textContent = quizInfo[i].infoDate;
+    quizType[i].textContent = quizInfo[i].infoType;
+    quizNum[i].textContent = quizInfo[i].infoNum;
+    quizQuestion[i].textContent = quizInfo[i].infoQuestion;
+    quizAnswer[i].textContent = quizInfo[i].infoAnswer;
+    quizDesc[i].textContent = quizInfo[i].infoDesc;
+});
+
+// for in()
+// for(let i in quizInfo){
+//     quizDate[i].textContent = quizInfo[i].infoDate;
+//     quizType[i].textContent = quizInfo[i].infoType;
+//     quizNum[i].textContent = quizInfo[i].infoNum;
+//     quizQuestion[i].textContent = quizInfo[i].infoQuestion;
+//     quizAnswer[i].textContent = quizInfo[i].infoAnswer;
+//     quizDesc[i].textContent = quizInfo[i].infoDesc;
+// };
+
+// 정답 해설 숨기기
+//quizAnswer[0].style.display = "none";
+//quizAnswer[1].style.display = "none";
+//quizAnswer[2].style.display = "none";
+
+//quizDesc[0].style.display = "none";
+//quizDesc[1].style.display = "none";
+//quizDesc[2].style.display = "none";
+
+// for()
+for(i=0; i&lt;quizInfo.length; i++){
+    quizAnswer[i].style.display = "none";
+    quizDesc[i].style.display = "none";
+}
+// forEach()
+// quizInfo.forEach((el, i) => {
+//     quizAnswer[i].style.display = "none";
+//     quizDesc[i].style.display = "none";
+// });
+
+// 정답 확인
+quizConfirm.forEach(function(btn, num){
+    btn.addEventListener("click", function(){
+        const userAnswer = quizInput[num].value.trim().toLowerCase();
+        const corretAnswer = quizInfo
+        
+        if(userAnswer == quizInfo[num].infoAnswer){
+            quizAnimaition[num].classList.add("like");
+        } else {
+            quizAnimaition[num].classList.add("dislike");
+        }
+
+        quizAnswer[num].style.display = "block";
+        quizDesc[num].style.display = "block";
+        quizConfirm[num].style.display = "none";
+        quizInput[num].style.display = "none";
+    });
+});
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__close">
+                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
         <a href="adorableness1215@naver.com">adorableness1215@naver.com</a>
     </footer>
-    <!-- //footer -->
+
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="js/common.js"></script>
 
     <script>
         // 문제 정보

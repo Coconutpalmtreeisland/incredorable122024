@@ -33,9 +33,9 @@
         </div>
         <nav class="nav__inner">
             <ul>
-                <li><a href="join.html">회원가입</a></li>
-                <li><a href="login.html">로그인</a></li>
-                <li><a href="board.html">게시판</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">게시판</a></li>
                 <li><a href="#">블로그</a></li>
             </ul>
         </nav>
@@ -47,7 +47,7 @@
             <h2>로그인</h2>
             <p>로그인을 하면 게시글 및 댓글 작성이 가능합니다.</p>
             <div class="login__form btStyle bmStyle">
-                <form action="joinSave.html" name="join" method="post">
+                <form action="loginSave.php" name="login" method="post">
                     <fieldset>
                         <legend class="blind">로그인 영역</legend>
                         <div>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>퀴즈 이펙트06</title>
+    <title>퀴즈 이펙트07</title>
 
     <link rel="stylesheet" href="assets/css/quiz.css">
 </head>
@@ -30,9 +30,9 @@
     <!-- header -->
 
     <main id="main">
-        <div class="cbt__box none">
+        <div class="cbt__box">
             <h2>기능사 시험</h2>
-            <select id="cbtSelct1">
+            <select id="cbtSelect1">
                 <option value="gineungsaJC2005_02">정보처리기능사 2005년 2회</option>
                 <option value="gineungsaJC2005_04">정보처리기능사 2005년 4회</option>
                 <option value="gineungsaJC2005_05">정보처리기능사 2005년 5회</option>
@@ -40,7 +40,7 @@
                 <option value="gineungsaJC2006_02">정보처리기능사 2006년 2회</option>
                 <option value="gineungsaJC2006_03">정보처리기능사 2006년 3회</option>
                 <option value="gineungsaJC2006_05">정보처리기능사 2006년 5회</option>
-                <option value="gineungsaJC2007_04">정보처리기능사 2007년 1회</option>
+                <option value="gineungsaJC2007_01">정보처리기능사 2007년 1회</option>
                 <option value="gineungsaJC2007_02">정보처리기능사 2007년 2회</option>
                 <option value="gineungsaJC2007_04">정보처리기능사 2007년 4회</option>
                 <option value="gineungsaJC2007_05">정보처리기능사 2007년 5회</option>
@@ -57,8 +57,8 @@
                 <option value="gineungsaJC2011_04">정보처리기능사 2011년 4회</option>
                 <option value="gineungsaJC2011_05">정보처리기능사 2011년 5회</option>
             </select>
-            <select id="cbtSelct2">
-                <option value="gineungsaWD2009_05">웹디자인기능사 2009년 5회</option>
+            <select id="cbtSelect2">
+                <option value="gineungsaWD2009_05">웹디자인기능사 2009년 1회</option>
                 <option value="gineungsaWD2010_01">웹디자인기능사 2010년 1회</option>
                 <option value="gineungsaWD2010_02">웹디자인기능사 2010년 2회</option>
                 <option value="gineungsaWD2010_04">웹디자인기능사 2010년 4회</option>
@@ -69,7 +69,7 @@
                 <option value="gineungsaWD2011_05">웹디자인기능사 2011년 5회</option>
                 <option value="gineungsaWD2012_02">웹디자인기능사 2012년 2회</option>
                 <option value="gineungsaWD2012_04">웹디자인기능사 2012년 4회</option>
-                <option value="gineungsaWD2012_02">웹디자인기능사 2013년 2회</option>
+                <option value="gineungsaWD2013_02">웹디자인기능사 2013년 2회</option>
                 <option value="gineungsaWD2013_04">웹디자인기능사 2013년 4회</option>
                 <option value="gineungsaWD2013_05">웹디자인기능사 2013년 5회</option>
                 <option value="gineungsaWD2014_01">웹디자인기능사 2014년 1회</option>
@@ -79,73 +79,121 @@
                 <option value="gineungsaWD2015_03">웹디자인기능사 2015년 3회</option>
                 <option value="gineungsaWD2015_04">웹디자인기능사 2015년 4회</option>
                 <option value="gineungsaWD2015_05">웹디자인기능사 2015년 5회</option>
-                <option value="gineungsaWD20160_01">웹디자인기능사 2016년 1회</option>
+                <option value="gineungsaWD2016_01">웹디자인기능사 2016년 1회</option>
                 <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
             </select>
             <p>
-                당신의 이름은 <input type="text"> 입니다.<br>
-                <em>정보처리기능사 2006년 2회</em> 문제를 선택했습니다.<br>
+                당신의 이름은 <input type="text"> 입니다. <br>
+                <em>정보처리기능사 2006년 2회</em> 문제를 선택했습니다. <br>
                 시작하겠습니까?<br>
-                <i>총 시간은 60분이며, 60점 이상 맞아야 합격입니다.</i>
+                <i>총 시간은 60분이며, 60점 이상 맞아야 합격입니다. </i>
             </p>
-            <button class="cbt__box_start">시작하기</button>
+            <button class="cbt__box__start">시작하기</button>
         </div>
 
-        <div class="cbt__wrap">
+        <div class="cbt__wrap none">
             <div class="cbt__header">
-                <h1 class="cbt__title">2020년 1회 정보처리기능사 기출문제</h1>
-                <div class="cbt__time">
-                    <div class="time">남은 시간 <span>60분 00초</span></div>
-                </div>
+                <h1 class="cbt__title">2020년 1회 정보처리기사 기출문제</h1>
+                <div class="cbt__time">남은 시간 <span>60분 00초</span></div>
             </div>
             <!-- //cbt__header -->
 
             <div class="cbt__conts">
                 <div class="cbt__quiz">
-                    <div class="cbt">
-                        <div class="cbt__question">모든 입력이 1일 때만 출력이 1이 되고, 입력이 하나라도 0이면 출력은 0이 되는 게이트(Gate)는?</div>
+                    <!-- <div class="cbt">
+                        <div class="cbt__question">1. GoF(Gang of Four)의 디자인 패턴에서 행위 패턴에 속하는 것은?</div>
                         <div class="cbt__choices">
                             <input type="radio" id="choice1">
-                            <label for="choice1"><span class="choice">AND</span></label>
+                            <label for="choice1"><span class="choice">Visitor</span></label>
                             <input type="radio" id="choice2">
-                            <label for="choice1"><span class="choice">OR</span></label>
+                            <label for="choice1"><span class="choice">Builder</span></label>
                             <input type="radio" id="choice3">
-                            <label for="choice1"><span class="choice">XOR</span></label>
+                            <label for="choice1"><span class="choice">Prototype</span></label>
                             <input type="radio" id="choice4">
-                            <label for="choice1"><span class="choice">NAND</span></label>
+                            <label for="choice1"><span class="choice">Bridge</span></label>
                         </div>
                         <div class="cbt__desc">
-                            모든 입력이 1이이여 1이 출력된다는 말은 둘다 참이어야 참이므로 AND 입니다.
+                            객체지향 구성 요소에는 클래스(Class), 객체(Object), 인스턴스(Instance), 메시지(Message), 메소드(Method) 등이 있다.
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
             <!-- //cbt__conts -->
-
+            
             <div class="cbt__aside">
-                <div class="cbt__name">수험자 : 이혜민</div>
+                <div class="cbt__name">수험자 : 웹쓰</div>
                 <div class="cbt__submit">답안지 제출하기</div>
-                <div class="cbt__omr"></div>
+                <div class="cbt__omr">
+                    <!-- <div class="omr">
+                        <strong>1</strong>
+                        <input type="radio" name="omr1" id="omr1">
+                        <label for="omr1">
+                            <span class="label-inner">1</span>
+                        </label>
+                        <input type="radio" name="omr2" id="omr2">
+                        <label for="omr2">
+                            <span class="label-inner">2</span>
+                        </label>
+                        <input type="radio" name="omr3" id="omr3">
+                        <label for="omr3">
+                            <span class="label-inner">3</span>
+                        </label>
+                        <input type="radio" name="omr4" id="omr4">
+                        <label for="omr4">
+                            <span class="label-inner">4</span>
+                        </label>
+                    </div> -->
+                </div>
             </div>
             <!-- //cbt__aside -->
-
         </div>
-
     </main>
-    <!-- main -->
+    <!-- //main -->
 
-    <footer id="footer">
+    <!-- <footer id="footer">
         <a href="adorableness1215@naver.com">adorableness1215@naver.com</a>
-    </footer>
+    </footer> -->
     <!-- footer -->
 
     <script>
         // 선택자
-        const cbtBox = document.querySelector(".cbt__box");
-        const cbtBoxStar = document.querySelector(".cbt__box_start");
+        const cbtSelect1 = document.getElementById("cbtSelect1");
+        const cbtSelect2 = document.getElementById("cbtSelect2");
+        const cbtSelectTitle = document.querySelector(".cbt__select__title");
 
-        cbtBoxStar.addEventListener("click", () => {
-            cbtBox.style.display = "none";
+        // 문제 정보
+        let quizInfo = [];  //모든 퀴즈 정보
+        
+        let quizScore = 0;      //퀴즈 점수 
+        let quizCorrect = 0;    //퀴즈 맞은 갯수 
+
+
+
+        cbtSelect1.addEventListener("change", (e) => {
+            let selectValue = e.target.value;
+            let selectText = e.target.options[e.target.selectedIndex].text;
+        });
+   
+
+        // 문제 가져오기
+        const fetchQuiz = () => {
+            fetch("https://webstoryboy.github.io/webs2024/json/gineungsaJC2011_05.json")
+            .then(res => res.json())
+            .then(items => {
+                console.log(items);
+                quizInfo = items.map((item, index) => {
+                    const formattedQuiz = {
+                        infoDate : "2011년 5회",
+                    }
+                    return formattedQuiz;
+                });
+                console.log(quizInfo);
+            })
+        }
+
+        // 페이지가 로드된 후 실행
+        document.addEventListener("DOMContentLoaded", () => {
+            fetchQuiz();
         });
     </script>
 </body>

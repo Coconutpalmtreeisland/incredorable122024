@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PHP 블로그 만들기</title>
-
+    <title>회원가입 완료</title>
+    <!-- CSS -->
     <?php include "../include/head.php" ?>
-    <!-- //head -->
 </head>
 <body class="gray">
-<?php include "../include/skip.php" ?>
+    <?php include "../include/skip.php" ?>
     <!-- //skip -->
-
     <?php include "../include/header.php" ?>
     <!-- //header -->
-
     <main id="main" role="main">
-        <div class="intro__inner container">
+    <div class="intro__inner container">
             <div class="intro__img">
-                <img srcset="../assets/img/intro01-min.jpgs ../assets/img/intro01@2x-min.jpg, ../assets/img/intro01@3x-min.jpg"  alt="소개 이미지">
+                <img srcset="../assets/img/intro02-min.jpg, ../assets/img/intro02@2x-min.jpg, ../assets/img/intro02@3x-min.jpg"  alt="소개 이미지">
             </div>
             <div class="intro__text">
+            
+            </div>
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
@@ -30,14 +29,13 @@
 
     // echo $youEmail, $youPass;
 
-    // 메세지 출력
     function msg($alert){
         echo "<p>$alert</p>";
     }
 
     // 데이터 조회
-    // members 데이터 중에 이메일/비밀번호
-    $sql = "SELECT memberID, youEmail, youName, youPass FROM members WHERE youEmail = '$youEmail' AND youPass = '$youPass'";
+    // members 데이터 중에 아이디가 3번 회원 
+    $sql = "SELECT memberID, youEmail, youName,youPass FROM members WHERE youEmail = '$youEmail' AND youPass = '$youPass'";
     $result = $connect -> query($sql);
 
     if($result){
@@ -50,7 +48,7 @@
 
             // echo "<pre>";
             // var_dump($memberInfo);
-            // echo "</pre>";
+            // echo "<pre>";
 
             // 로그인 성공 --> 세션 생성
             $_SESSION['memberID'] = $memberInfo['memberID'];
@@ -67,7 +65,6 @@
     <!-- //main -->
 
     <?php include "../include/footer.php" ?>
-    <!-- //footer -->
-
+    <!-- //foter -->
 </body>
 </html>

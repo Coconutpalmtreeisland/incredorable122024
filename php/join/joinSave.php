@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입 완료</title>
-
     <!-- CSS -->
     <?php include "../include/head.php" ?>
-
 </head>
 <body class="gray">
     <?php include "../include/skip.php" ?>
     <!-- //skip -->
-
     <?php include "../include/header.php" ?>
     <!-- //header -->
-
     <main id="main" role="main">
         <div class="intro__inner container">
             <div class="intro__img">
-                <img srcset="../assets/img/intro01-min.jpgs ../assets/img/intro01@2x-min.jpg, ../assets/img/intro01@3x-min.jpg"  alt="소개 이미지">
+                <img srcset="../assets/img/intro02-min.jpg, ../assets/img/intro02@2x-min.jpg, ../assets/img/intro02@3x-min.jpg"  alt="소개 이미지">
             </div>
             <div class="intro__text">
 <?php
@@ -31,20 +27,18 @@
     $youPassC = $_POST['youPassC'];
     $youPhone = $_POST['youPhone'];
     $regTime = time();
-
     // echo $youEmail, $youName, $youPass, $youPassC, $youPhone, $regTime;
-    
+
+  
     // 메세지 출력
     function msg($alert){
         echo "<p>$alert</p>";
     }
-    
+
     // 이메일 유효성 검사
     $check_mail = preg_match("/^[a-z0-9_+.-]+@([a-z0-9-]+\.)+[a-z0-9]{2,4}$/", $youEmail);
-
     if($check_mail == false){
-        msg("이메일 형식이 잘못되었습니다. 다시 한번 확인해주세요!");
-        exit;
+        mgs("이메일 형식이 잘못되었습니다. 다시 한번 확인해주세요!");
     }
 
     // 이름 유효성 검사
@@ -62,17 +56,16 @@
     }
 
     //휴대폰 번호 유효성 검사
-    $check_number = preg_match("/^(010|011|016|017|018|019)-[0-9]{4}-[0-9]{4}$/", $youPhone);
-
+    $check_number = preg_match("/^(010|011|016|017|018|019)-[0-9]{3,4}-[0-9]{4}$/", $youPhone);
     if($check_number == false){
         msg("번호가 정확하지 않습니다. 올바른 번호(000-0000-0000) 형식으로 작성해주세요!");
         exit;
     }
 
-    // 이메일 중복 검사
+    //이메일 중복 검사
     $isEmailCheck = false;
 
-    $sql = "SELECT youEmail FROM members WHERE youEmail = '$youEmail'";
+    $sql = "SELECT youEmail FROM members WHERE youEmail = 'admin@naver.com'";
     $result = $connect -> query($sql);
 
     if($result){
@@ -81,7 +74,7 @@
         if($count == 0){
             $isEmailCheck = true;
         } else {
-            msg("이미 회원가입이 되어 있습니다. 로그인을 해주세요!");
+            msg("이미 회원가입이 되어 있습니다. 로그인을 해주세요! <div class='intro__btn'><a href='main.html'>메인으로</a><a href='login.html'>로그인</a></div>");
             exit;
         }
     } else {
@@ -95,6 +88,7 @@
     $sql = "SELECT youPhone FROM members WHERE youPhone = '$youPhone'";
     $result = $connect -> query($sql);
 
+    
     if($result){
         $count = $result -> num_rows;
 
@@ -109,32 +103,34 @@
         exit;
     }
 
+
     // 회원가입
-    if( $isEmailCheck == true && $isPhoneCheck == true ){
+    if( $isEmailCheck == true && $isPhoneCheck = true ){
         $sql = "INSERT INTO members(youEmail, youName, youPass, youPhone, regTime) VALUES('$youEmail', '$youName', '$youPass', '$youPhone', '$regTime')";
-        $result = $connect -> query($sql);
+        $result = $connect -> query($sql); 
 
         if($result){
-            msg("회원가입을 축하합니다.! 로그인을 해주세요!");
+            msg("회원가입을 축하합니다.! 로그인을 해주세요");
+            exit;
         } else {
-            msg("에러발생3: 관리자에게 문의하세요!");
+            msg("에러발생3: 관리자에게 문의하세요");
             exit;
         }
+
     } else {
         msg("이미 회원가입이 되어 있습니다!. 다시 한번 확인해주세요!");
+        exit;
     }
 ?>
             </div>
-            <div class="intro__btn">
-                <a href="main.html">메인으로</a>
-                <a href="login.html">로그인</a>
+            <div class='intro__btn'>
+                <a href='main.html'>메인으로</a>
+                <a href='login.html'>로그인</a>
             </div>
         </div>
     </main>
     <!-- //main -->
-
     <?php include "../include/footer.php" ?>
-    <!-- //footer -->
-
+    <!-- //foter -->
 </body>
 </html>
