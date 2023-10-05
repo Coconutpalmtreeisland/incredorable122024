@@ -25,9 +25,8 @@
                 로그인을 하시면 게시글 및 댓글 작성이 가능합니다.
             </div>
         </div>
-        <section class="login__inner container">
-            <h2>로그인</h2>
-            <p>로그인을 하시면 게시글 및 댓글 작성이 가능합니다.</p>
+        <section class="join__inner container">
+            <h2>회원가입</h2>
             <div class="join__form">
                 <form action="joinSave.php" name="join" method="post">
                     <fieldset>
@@ -36,8 +35,21 @@
                             <label for="youEmail" class="required">이메일</label>
                             <input type="email" id="youEmail" name="youEmail" placeholder="이메일을 적어주세요!" class="input__style" required>
                         </div>
+                        <div>
+                            <label for="youName" class="required">이름</label>
+                            <input type="text" id="youName" name="youName" placeholder="이름을 적어주세요!" class="input__style" required>
+                        </div>
+                        <div>
                             <label for="youPass" class="required">비밀번호</label>
                             <input type="password" id="youPass" name="youPass" placeholder="비밀번호를 적어주세요!" class="input__style" required>
+                        </div>
+                        <div>
+                            <label for="youPassC" class="required">비밀번호 확인</label>
+                            <input type="password" id="youPassC" name="youPassC" placeholder="다시 한번 비밀번호를 적어주세요!" class="input__style" required>
+                        </div>
+                        <div>
+                            <label for="youPhone" class="required">연락처</label>
+                            <input type="text" id="youPhone" name="youPhone" placeholder="연락처를 적어주세요!" class="input__style" required>
                         </div>
                         <button type="submit" class="btn__style mt100">회원가입 완료</button>
                     </fieldset>

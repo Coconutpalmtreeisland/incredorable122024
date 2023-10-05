@@ -1,3 +1,6 @@
+#header {
+    position: relative;
+}
 .header__inner {
     border-bottom: 3px solid var(--black);
     position: relative;
@@ -92,7 +95,7 @@
 
 @media (max-width: 800px) {
     .nav__inner {
-        top: 46px;
+        top: 73px;
     }
     .header__inner .left {
         display: none;

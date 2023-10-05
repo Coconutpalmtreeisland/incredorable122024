@@ -7,8 +7,14 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css">
+    <?php include "../include/head.php" ?>
 </head>
-<body class="gray">
+<body class="gray"> 
+    <?php include "../include/skip.php" ?>
+    <!-- //skip -->
+
+    <?php include "../include/header.php" ?>
+    <!-- //header -->
     <div id="skip">
         <a href="#header">헤더 영역 바로가기</a>
         <a href="#main">콘텐츠 영역 바로가기</a>
@@ -73,13 +79,8 @@
     </main>
     <!-- //main -->
 
-    <footer id="footer" role="contentinfo">
-        <div class="footer__inner container btStyle">
-            <div>Copyright 2023 Incredorable</div>
-            <div>blog by coconutpalmtreeisland</div>
-        </div>
-    </footer>
-    <!-- //footer -->
+    <?php include "../include/footer.php" ?>
+    <!-- //foter -->
 
 </body>
 </html>

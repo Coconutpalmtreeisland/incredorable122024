@@ -10,42 +10,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP 블로그 만들기</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <?php include "../include/head.php" ?>
 </head>
 <body class="gray"> 
-    <div id="skip">
-    <a href="#header">헤더 영역 바로가기</a>
-    <a href="#main">콘텐츠 영역 바로가기</a>
-    <a href="#footer">푸터 영역 바로가기</a>
-</div>
-<!-- //skip -->
-
-    <header id="header" role="banner">
-    <div class="header__inner container">
-        <div class="left">
-            <a href="../index.html">
-                <span class="blind">메인으로</span>
-            </a>
-        </div>
-        <div class="logo">
-            <a href="../main/main.php">Developer Blog</a>
-        </div>
-        <div class="right">
-                <ul>
-                    <li><a href="../join/join.php">회원가입</a></li>
-                </ul>
-                    </div>
-    </div>
-    <nav class="nav__inner">
-        <ul>
-            <li><a href="../join/join.php">회원가입</a></li>
-            <li><a href="../login/login.php">로그인</a></li>
-            <li><a href="../board/borar.php">게시판</a></li>
-            <li><a href="../blog/blog.php">블로그</a></li>
-        </ul>
-    </nav>
-</header>
-<!-- //header -->
+    <?php include "../include/skip.php" ?>
+    <!-- //skip -->
+    <?php include "../include/header.php" ?>
+    <!-- //header -->
 
     <main id="main" role="main">
         <div class="intro__inner bmStyle container">
@@ -60,8 +31,8 @@
             </div>
         </div>
         <section class="board__inner container">
-        <div class="board__write">
-                <form action="boardWriteSave.php" name="#" method="#">
+            <div class="board__write">
+                <form action="boardWriteSave.php" name="boardWriteSave" method="post">
                     <fieldset>
                         <legend class="blind">게시글 작성하기</legend>
                         <div>
@@ -82,13 +53,7 @@
     </main>
     <!-- //main -->
 
-    <footer id="footer" role="contentinfo">
-    <div class="footer__inner container btStyle">
-        <div>Copyright 2023 incredroable</div>
-        <div>blog by coconutpalmtreeisland</div>
-    </div>
-</footer>
-<!-- //foter -->
-
+    <?php include "../include/footer.php" ?>
+       <!-- //foter -->
 </body>
 </html>
