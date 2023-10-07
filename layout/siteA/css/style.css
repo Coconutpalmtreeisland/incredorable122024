@@ -1,0 +1,381 @@
+@charset "UTf-8";
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.ttf') format("truetype");
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: 'Wooridaum';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Wooridaum';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Wooridaum';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.ttf') format("truetype");
+    font-display: swap;
+} 
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'NanumSquareNeo';
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+/* wrap */
+#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+/* header */
+#header {
+    width: 100%;
+    display: flex;
+    background-color: #a09429;
+}
+#header .logo {
+    width: 20%;
+    height: 100px;
+}
+#header .logo a {
+    display: inline-block;
+    color: #fff;
+    padding: 30px 40px;
+    font-family: 'Wooridaum';
+}
+#header .nav {
+    width: 80%;
+    height: 100px;
+    position: relative;
+    z-index: 1000;
+}
+#header .nav > ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: 100%;
+}
+#header .nav > ul > li {
+    position: relative;
+}
+#header .nav > ul > li > a {
+    color: #fff;
+    padding: 10px 45px;
+    background: #948926;
+    display: block;
+}
+#header .nav > ul > li > a:hover {
+    background-color: #ada558;
+}
+#header .nav > ul > li > ul {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+#header .nav > ul > li > ul > li > a {
+    padding: 10px 20px;
+    display: block;
+}
+#header .nav > ul > li > ul > li > a:hover {
+    background-color: #f8f3c5;
+}
+
+/* slider */
+#slider {
+    width: 100%;
+    height: 300px;
+    background-color: #e3e3e3;
+}
+#slider .sliderWrap {
+    position: relative;
+}
+#slider .sliderWrap .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#slider .sliderWrap .slider .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px 38px;
+}
+#slider .sliderWrap .slider .text h2 {
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+#slider .sliderWrap .slider .text p {
+    color: #fff;
+    font-size: 16px;
+}
+
+/* contents */
+#contents {
+    width: 100%;
+    display: flex;
+}
+
+/* contents : info */
+#contents .info {
+    width: 100%; /* 너비 100%로 변경 */
+    max-width: 400px; /* 최대 너비 설정 */
+    height: 200px;
+    background-color: #ece6a9;
+    padding: 18px;
+    box-sizing: border-box;
+    display: flex; /* display 속성 변경 */
+    justify-content: flex-start; /* 가운데 정렬로 변경 */
+    align-content: center;
+    flex-wrap: wrap;
+}
+#contents .info .info-menu {
+    margin-bottom: 10px;
+    display: flex; /* 자식 요소를 가로로 나열 */
+    justify-content: flex-start; /* 왼쪽 정렬 */
+    align-items: center;
+}
+#contents .info .info-menu a {
+    font-size: 22px;    
+}
+#contents .info .info-menu a:first-child {
+    margin-right: 5px; /* 메뉴 아이템 사이에 간격 추가 */
+}
+#contents .info .info-menu a:last-child {
+    margin-left: 5px; /* 메뉴 아이템 사이에 간격 추가 */
+}
+#contents .info .info-cont {
+    flex-grow: 1; /* 나머지 공간을 모두 차지하도록 설정 */
+}
+#contents .info .info-cont .notice {
+    display: none;
+}
+#contents .info .info-cont .notice li {
+    display: flex;
+}
+#contents .info .info-cont .notice li a {
+    width: 75%;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: nowrap; /* 텍스트를 한 줄로 표시 */
+    overflow: hidden;    /* 오버플로우된 부분 숨김 */
+    text-overflow: ellipsis; /* 오버플로우된 부분에 '...' 추가 */
+}
+#contents .info .info-cont .notice li a:hover {
+    text-decoration: underline;
+}
+#contents .info .info-cont .notice li span {
+    width: 25%;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: right;
+}
+#contents .info .info-cont .gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+#contents .info .info-cont .gallery ul li a {
+    border: 2px solid transparent;
+    display: block;
+}
+#contents .info .info-cont .gallery ul li a:hover {
+    border-color: #a09429;
+}
+
+/* contents : banner */
+#contents .banner {
+    width: 400px;
+    height: 200px;
+    background-image: url(../images/banner.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#contents .banner h3 {
+    color: #fff;
+    font-size: 24px;
+}
+#contents .banner a {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 50px;
+    margin-top: 15px;
+    font-weight: 300;
+}
+#contents .banner a:hover {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+/* contents : link */
+#contents .link {
+    width: 400px;
+    height: 200px;
+    background-image: url(../images/link.jpg);
+}
+#contents .link h3 {
+    color: #fff;
+    padding: 20px;
+}
+#contents .link a {
+    width: 100px;
+    height: 100px;
+    background-color: rgba(90, 48, 138, 0.7);
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    color: #fff;
+    line-height: 100px;
+    margin: 0 auto;
+    font-weight: 300;
+}
+#contents .link a:hover {
+    background-color: rgba(90, 48, 138, 1);
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    display: flex;
+    background-color: #cac8b8;
+
+}
+#footer .footer1 {
+    width: 20%;
+    height: 100px;
+}
+#footer .footer1 h4 {
+    font-size: 30px;
+    color: #7f7f7f;
+    padding: 32px 30px;
+}
+#footer .footer2 {
+    width: 80%;
+}
+#footer .footer2 .footer2-1 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+#footer .footer2 .footer2-1 ul {
+    padding-top: 24px;
+}
+#footer .footer2 .footer2-1 li {
+    display: inline-block;
+    border-right: 1px solid #333;
+}
+#footer .footer2 .footer2-1 li:last-child {
+    border: 0;
+}
+#footer .footer2 .footer2-1 li a {
+    padding: 10px;
+}
+#footer .footer2 .footer2-1 li a:hover {
+    text-decoration: underline;
+}
+#footer .footer2 .footer2-2 {
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
