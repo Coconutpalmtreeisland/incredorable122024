@@ -1,4 +1,4 @@
-$(function (){
+$(function (){ //html을 다 읽고 실행하라
     // 슬라이드 : 페이드 효과
     let currentIndex = 0;
     $(".slider").hide().first().show();
@@ -11,6 +11,7 @@ $(function (){
 
         currentIndex = nextIndex;
     }, 3000);
+
 
     // 메뉴 : 하나씩 나오기
     $(".nav > ul > li").mouseover(function(){
@@ -26,6 +27,17 @@ $(function (){
     tabCont.hide().eq(0).show();
 
     tabBtn.click(function(){
-        
+        const index = $(this).index();
+
+        $(this).addClass("active").siblings().removeClass("active");
+        tabCont.eq(index).show().siblings().hide();
+    }); // tabBtn.on("click", function(){}); 같음
+
+    // 팝업
+    $(".popup-btn").click(function(){
+        $(".popup-view").show();
+    });
+    $(".popup-close").click(function(){
+        $(".popup-view").hide();
     });
 });
