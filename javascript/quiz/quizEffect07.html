@@ -158,43 +158,43 @@
         // 문제 가져오기
         const fetchQuiz = (value, text) => {
             fetch(`https://webstoryboy.github.io/webs2024/json/${value}.json`)
-                .then(res => res.json())
-                .then(items => {
-                    console.log(items);
-                    quizInfo = items.map((item, index) => {
-                        const formattedQuiz = {
-                            infoNum: index +1,
-                            infoQuestion: item.question,
-                            infoDesc: item.desc,
-                            infoAnswer: item.correct_answer
-                        }
+            .then(res => res.json())
+            .then(items => {
+                console.log(items);
+                quizInfo = items.map((item, index) => {
+                    const formattedQuiz = {
+                        infoNum: index +1,
+                        infoQuestion: item.question,
+                        infoDesc: item.desc,
+                        infoAnswer: item.correct_answer
+                    }
 
-                        // 보기 가져오기
-                        const choices = [...item.incorrect_answers, item.correct_answer];
+                    // 보기 가져오기
+                    const choices = [...item.incorrect_answers, item.correct_answer]
 
-                        // 보기 랜덤 섞기
-                        for(let i=choices.length -1; i>0; i--){
-                            const j = Math.floor(Math.random() * (i + 1));
-                            [choices[i], choices[j]] = [choices[j], choices[i]];
-                        }
-                        formattedQuiz.infoChoices = choices;
+                    // 보기 랜덤 섞기
+                    for (let i=choices.length-1; i>0; i--){
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [choices[i], choices[j]] = [choices[j], choices[i]];
+                    }
+                    formattedQuiz.infoChoices = choices;
 
-                        // 문제에 대한 이미지가 있다면
-                        if(item.hasOwnProperty("question_img")){
-                            const src = "<img src='https://coconutpalmtreeisland.github.io/webs2024/json/img/"
-                            formattedQuiz.infoQuestionImg = src + item.question_img + ".jpg' alt=정보처리기능사>";
-                        }
+                    // 문제에 대한 이미지가 있다면
+                    if(item.hasOwnProperty("question_img")){
+                        const src = "<img src='https://coconutpalmtreeisland.github.io/webs2024/json/img/"
+                        formattedQuiz.infoQuestionImg = src + item.question_img + ".jpg' alt='정보처리기능사'>";
+                    }
 
-                        // 문제에 대한 설명이 있다면
-                        if(item.hasOwnProperty("question_desc")){
-                            formattedQuiz.infoQuestionDesc = item.question_desc;
-                        }
+                    // 문제에 대한 설명이 있다면
+                    if(item.hasOwnProperty("question_desc")){
+                        formattedQuiz.infoQuestionDesc = item.question_desc;
+                    }
 
-                        return formattedQuiz;
-                    });
-                    console.log(quizInfo);
-                    updataQuiz();
+                    return formattedQuiz;
                 });
+                console.log(quizInfo);
+                updataQuiz();
+            });
         }
 
         // 문제 출력하기
