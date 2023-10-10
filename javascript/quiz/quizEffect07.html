@@ -106,7 +106,7 @@
             <div class="cbt__aside">
                 <div class="cbt__name">수험자 : <span></span></div>
                 <div class="cbt__submit">답안지 제출하기</div>
-                <div class="cbt__giveUp">포기하기</div>
+                <div class="cbt__giveUp none">포기하기</div>
                 <div class="cbt__omr"></div>
             </div>
             <!-- //cbt__aside -->
@@ -170,11 +170,11 @@
                         }
 
                         // 보기 가져오기
-                        const choices = [...item.incorrect_answers, item.correct_answer]
+                        const choices = [...item.incorrect_answers, item.correct_answer];
 
                         // 보기 랜덤 섞기
                         for(let i=choices.length -1; i>0; i--){
-                            const j =Math.floor(Math.random() * (i + 1));
+                            const j = Math.floor(Math.random() * (i + 1));
                             [choices[i], choices[j]] = [choices[j], choices[i]];
                         }
                         formattedQuiz.infoChoices = choices;
@@ -366,9 +366,10 @@
                     checkAnswers();
                 } else {
                     alert("모든 문제에 대한 답을 선택해야 합니다. 체크되지 않은 문제가 있습니다. 정답과 해설을 보고싶다면 포기하기 버튼을 눌러주세요!");
+                    const cbtGiveUp = document.querySelector(".cbt__giveUp");
+                    cbtGiveUp.classList.remove("none");
 
                     // 포기하기 버튼 클릭
-                    const cbtGiveUp = document.querySelector(".cbt__giveUp");
                     cbtGiveUp.addEventListener("click", () => {
                         // 사용자에게 포기 여부를 확인하는 알림창 표시
                         const confirmResult = confirm("문제 풀기를 포기하고 정답과 해설을 확인하시겠습니까?");
