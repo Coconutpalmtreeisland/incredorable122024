@@ -354,45 +354,52 @@
                 }
             });
 
-            // 포기하기 버튼 클릭
-            const cbtGiveUp = document.querySelector(".cbt__giveUp");
-            cbtGiveUp.addEventListener("click", () => {
-                // 모든 문제에 대한 체크 여부 확인
-                const allQuestionChecked = quizInfo.every((_, number) => {
+            // 답안 제출하기 버튼 클릭
+            cbtSubmit.addEventListener("click", () => {
+
+            // 모든 문제에 대한 체크 여부를 확인
+            const allQuestionChecked = quizInfo.every((_, number) => {
                     return getSelectChoice(number) !== -1;
                 });
 
-                if (allQuestionChecked) {
-                    // 사용자에게 포기 여부를 확인하는 알림창 표시
-                    const confirmResult = confirm("문제 풀기를 포기하고 정답과 해설을 확인하시겠습니까?");
-
-                    if (confirmResult) {
-                        // 모든 문제를 순회하며 정답과 설명 확인
-                        quizInfo.forEach((question, number) => {
-                            const userChoice = getSelectChoice(number);
-                            const cbtQuestion = document.querySelector(`.cbt:nth-child(${number + 1})`);
-                            const cbtAnswer = cbtQuestion.querySelector(".cbt__answer");
-                            const cbtDesc = cbtQuestion.querySelector(".cbt__desc");
-
-                            // 사용자가 체크한 답안이 정답과 다른 경우
-                            if (userChoice !== -1 && question.infoChoices[userChoice - 1] !== question.infoAnswer) {
-                                cbtQuestion.classList.add('bad');
-                                cbtAnswer.classList.remove('none');
-                                cbtDesc.classList.remove('none');
-                            }
-                        });
-                    } else {
-                        // "아니요"를 클릭하면 아무 작업도 하지 않음
-                    }
+                if(allQuestionChecked){
+                    checkAnswers();
                 } else {
                     alert("모든 문제에 대한 답을 선택해야 합니다. 체크되지 않은 문제가 있습니다. 정답과 해설을 보고싶다면 포기하기 버튼을 눌러주세요!");
-                }
-            });
 
-            // 답안 제출하기 버튼 클릭
-            const cbtSubmit = document.querySelector(".cbt__submit");
-            cbtSubmit.addEventListener("click", () => {
-                checkAnswers();
+                    // 포기하기 버튼 클릭
+                    const cbtGiveUp = document.querySelector(".cbt__giveUp");
+                    cbtGiveUp.addEventListener("click", () => {
+                        // 사용자에게 포기 여부를 확인하는 알림창 표시
+                        const confirmResult = confirm("문제 풀기를 포기하고 정답과 해설을 확인하시겠습니까?");
+
+                        if (confirmResult) {
+                            // 포기할 때 모든 문제에 대해 루프 돌기
+                            quizInfo.forEach((question, number) => {
+                                const cbtQuestion = document.querySelector(`.cbt:nth-child(${number + 1})`);
+
+                                // 아직 답안을 선택하지 않은 문제인 경우
+                                if (getSelectChoice(number) === -1) {
+                                    // 문제를 틀린 문제로 표시
+                                    cbtQuestion.classList.add('bad');
+
+                                    // 정답과 해설 표시
+                                    const cbtAnswer = cbtQuestion.querySelector(".cbt__answer");
+                                    const cbtDesc = cbtQuestion.querySelector(".cbt__desc");
+                                    cbtAnswer.classList.remove('none');
+                                    cbtDesc.classList.remove('none');
+                                    cbtQuestion.classList.add('bad');
+
+                                }
+                            });
+
+                            // 모든 문제에 대한 정답 확인 함수 실행
+                            checkAnswers();
+                        } else {
+                            // "아니요"를 클릭하면 아무 작업도 하지 않음
+                        }
+                    });
+                }
             });
         });
     </script>
