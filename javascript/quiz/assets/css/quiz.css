@@ -154,7 +154,7 @@ pre code.hljs {
 
 /* main */
 #main {
-    min-height: 78vh;
+    min-height: 100vh;
 }
 
 /* quiz__wrap */
@@ -592,7 +592,7 @@ pre code.hljs {
     padding: 10px 20px;
     position: absolute;
     right: 20px;
-    bottom: 20px;
+    bottom: 60px;
     cursor: pointer;
     z-index: 100000;
 }
@@ -707,7 +707,7 @@ pre code.hljs {
     position: absolute;
     right: 20px;
     top: 20px;
-    background-color: #ffffff;
+    background-color: #3b3d63;
     padding: 1rem 1rem 0.8rem 1rem;
     border-radius: 5px;
     cursor: pointer;
@@ -1119,8 +1119,17 @@ pre code.hljs {
     cursor: pointer;
     margin-bottom: 10px;
 }
-.cbt__giveUp {
-    background-color: #412E91;
+.cbt__giveup {
+    background-color: #533bb6;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 40px;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.cbt__again {
+    background-color: #533bb6;
     color: #fff;
     padding: 10px 20px;
     border-radius: 40px;
