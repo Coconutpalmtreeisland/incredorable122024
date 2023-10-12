@@ -162,7 +162,7 @@
         echo "<li class='{$active}'><a href='board.php?page={$i}'>${i}</a></li>";
     }
 
-    // 처음으로/이전
+    // 다음/마지막으로
     if($page != $boardTotalCount){
         $nextPage = $page +1;
         echo "<li class='next'><a href='board.php?page={$nextPage}'>다음</a></li>";
