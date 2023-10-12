@@ -207,29 +207,28 @@
                     </div>
                     <div class="cont">
                         <div class="active">
-<pre><code class="language-js">window.addEventListener("mousemove", (event) => {
-document.querySelector(".clientX").innerHTML = event.clientX;
-document.querySelector(".clientY").innerHTML = event.clientY;
-document.querySelector(".offsetX").innerHTML = event.offsetX;
-document.querySelector(".offsetY").innerHTML = event.offsetY;
-document.querySelector(".pageX").innerHTML = event.pageX;
-document.querySelector(".pageY").innerHTML = event.pageY;
-document.querySelector(".screenX").innerHTML = event.screenX;
-document.querySelector(".screenY").innerHTML = event.screenY;
+<pre><code class="language-js">window.addEventListener("mousemove", (event) => {    // 마우스 좌표를 화면에 표시
+    document.querySelector(".clientX").innerHTML = event.clientX;
+    document.querySelector(".clientY").innerHTML = event.clientY;
+    document.querySelector(".offsetX").innerHTML = event.offsetX;
+    document.querySelector(".offsetY").innerHTML = event.offsetY;
+    document.querySelector(".pageX").innerHTML = event.pageX;
+    document.querySelector(".pageY").innerHTML = event.pageY;
+    document.querySelector(".screenX").innerHTML = event.screenX;
+    document.querySelector(".screenY").innerHTML = event.screenY;
 });
 
 // 선택자
-const mouseCursor = document.querySelector(".mouse__cursor");
+const mouseCursor = document.querySelector(".mouse__cursor");                       // 커서 엘리먼트 선택
 
-// 마우스 좌표 값을 커서 할당
+// 마우스 좌표 값을 커서 할당, e.clientX 및 e.clientY 값에 기반하여 설정
 window.addEventListener("mousemove", (e) => {
     mouseCursor.style.left = e.clientX -25 + "px";
     mouseCursor.style.top = e.clientY -25 + "px";
 });
 
-
-// for문
-for(let i=1; i&lt;=8; i++){
+// for문, 요소에 대한 마우스 호버 이벤트
+for(let i=1; i&lt;=8; i++){                                                         //  1부터 8까지의 클래스 이름을 가진 엘리먼트에 대한 mouseover 및 mouseout 이벤트를 처리
     document.querySelector(".s"+i).addEventListener("mouseover", function(){
         mouseCursor.classList.add("s"+i);
     });
@@ -240,32 +239,34 @@ for(let i=1; i&lt;=8; i++){
 </code></pre>
                         </div>
                         <div>
-<pre><code class="language-js">window.addEventListener("mousemove", (event) => {
-document.querySelector(".clientX").innerHTML = event.clientX;
-document.querySelector(".clientY").innerHTML = event.clientY;
-document.querySelector(".offsetX").innerHTML = event.offsetX;
-document.querySelector(".offsetY").innerHTML = event.offsetY;
-document.querySelector(".pageX").innerHTML = event.pageX;
-document.querySelector(".pageY").innerHTML = event.pageY;
-document.querySelector(".screenX").innerHTML = event.screenX;
-document.querySelector(".screenY").innerHTML = event.screenY;
+<pre><code class="language-js">window.addEventListener("mousemove", (event) => {    // 마우스 좌표를 화면에 표시
+    document.querySelector(".clientX").innerHTML = event.clientX;
+    document.querySelector(".clientY").innerHTML = event.clientY;
+    document.querySelector(".offsetX").innerHTML = event.offsetX;
+    document.querySelector(".offsetY").innerHTML = event.offsetY;
+    document.querySelector(".pageX").innerHTML = event.pageX;
+    document.querySelector(".pageY").innerHTML = event.pageY;
+    document.querySelector(".screenX").innerHTML = event.screenX;
+    document.querySelector(".screenY").innerHTML = event.screenY;
 });
 
 // 선택자
-const mouseCursor = document.querySelector(".mouse__cursor");
+const mouseCursor = document.querySelector(".mouse__cursor");                       // 커서 엘리먼트 선택
 
-// 마우스 좌표 값을 커서 할당
+// 마우스 좌표 값을 커서 할당, e.clientX 및 e.clientY 값에 기반하여 설정
 window.addEventListener("mousemove", (e) => {
     mouseCursor.style.left = e.clientX -25 + "px";
     mouseCursor.style.top = e.clientY -25 + "px";
 });
 
-// forEach
+// forEach, span 엘리먼트에 대한 이벤트 처리
 document.querySelectorAll(".mouse__text span").forEach((span, num) => {
     span.addEventListener("mouseover", () => {
+        // 마우스가 span 엘리먼트 위에 올라갈 때 클래스 추가
         mouseCursor.classList.add("s" + (num+1));
     });
     span.addEventListener("mouseout", () => {
+        // 마우스가 span 엘리먼트에서 나갈 때 클래스 제거
         mouseCursor.classList.remove("s" + (num+1));
     });
 });

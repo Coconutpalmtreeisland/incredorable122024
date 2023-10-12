@@ -154,7 +154,7 @@ pre code.hljs {
 
 /* main */
 #main {
-    min-height: 100vh;
+    min-height: 85vh;
 }
 
 /* quiz__wrap */
@@ -592,14 +592,13 @@ pre code.hljs {
     padding: 10px 20px;
     position: absolute;
     right: 20px;
-    bottom: 60px;
+    bottom: 20px;
     cursor: pointer;
-    z-index: 100000;
 }
 .modal__cont {
     width: 100%;
     height: 100vh;
-    background-color: #e9e4fa73;
+    background-color: rgba(0,0,0,0.7);
     position: fixed;
     left: 0;
     top: 0;
@@ -614,23 +613,23 @@ pre code.hljs {
     width: 70%;
     height: 70vh;
     border-radius: 10px;
-    background-color: #ccc;
+    background-color: #fff;
     transform: scale(0);
 }
 .modal__box .title {
     padding: 1rem;
-    background-color: #412E91;
+    background-color: #b8a8ff;
     display: flex;
     align-items: center;
     color: #fff;
     height: 50px;
-    border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
 }
 .modal__box .title .dot {
     width: 15px;
     height: 15px;
-    background-color: #b8a8ff;
+    background-color: #f5f2ff;
     display: inline-block;
     border-radius: 50%;
     position: relative;
@@ -643,7 +642,7 @@ pre code.hljs {
     top: 0;
     width: 15px;
     height: 15px;
-    background-color: #b8a8ff;
+    background-color: #f5f2ff;
     border-radius: 50%;
 }
 .modal__box .title .dot::after {
@@ -653,7 +652,7 @@ pre code.hljs {
     top: 0;
     width: 15px;
     height: 15px;
-    background-color: #b8a8ff;
+    background-color: #f5f2ff;
     border-radius: 50%;
 }
 .modal__box .title .tabs {
@@ -661,18 +660,18 @@ pre code.hljs {
     margin-left: 50px;
 }
 .modal__box .title .tabs > div {
-    color: #e9e4fa;
-    background-color: #e9e4fa;
+    color: #fff;
+    background-color: #e9e4ff60;
     padding: 0.35rem 0.8rem 0.25rem 0.8rem;
     margin-right: 0.5rem;
     display: flex;
     align-items: center;
     border-radius: 0.4rem;
-    text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
 }
 .modal__box .title .tabs > div.active {
-    background-color: #b8a8ff;
+    background-color: #412E91;
 }
 .modal__box .title .tabs > div em {
     font-style: normal;
@@ -686,9 +685,9 @@ pre code.hljs {
     margin-top: 0.2rem;
 }
 .modal__box .cont {
-    background-color: #e9e4fa;
+    background-color: #282936;
     height: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
     box-sizing: border-box;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
@@ -703,11 +702,12 @@ pre code.hljs {
 .modal__box .cont pre {
     text-align: left;
 }
+
 .modal__close {
     position: absolute;
     right: 20px;
     top: 20px;
-    background-color: #3b3d63;
+    background-color: #e5e5e5;
     padding: 1rem 1rem 0.8rem 1rem;
     border-radius: 5px;
     cursor: pointer;
@@ -715,7 +715,7 @@ pre code.hljs {
     opacity: 0;
 }
 .modal__close:hover {
-    background-color: #b8a8ff;
+    background-color: #412E91;
 }
 
 @media (max-width: 1100px){
@@ -745,6 +745,7 @@ pre code.hljs {
     }
 }
 
+
 /* 모달 애니메이션 */
 .modal__cont.show {
     animation: foldOut 1s ease forwards;
@@ -755,6 +756,7 @@ pre code.hljs {
 .modal__cont.show .modal__close {
     animation: opacityOut 0.5s 1.5s ease forwards;
 }
+
 .modal__cont.show.hide {
     animation: foldIn 0.3s 0.5s ease backwards;
 }
@@ -775,6 +777,7 @@ pre code.hljs {
     50%  {transform: scaleX(0.0001) scaleY(1);}
     100% {transform: scaleX(0.0001) scaleY(0);}
 }
+
 @keyframes zoomOut {
     0%   {transform: scale(0);}
     100% {transform: scale(1);}
@@ -783,6 +786,7 @@ pre code.hljs {
     0%   {transform: scale(1);}
     100% {transform: scale(0);}
 }
+
 @keyframes opacityOut {
     0%   {opacity: 0;}
     100% {opacity: 1;}
@@ -791,6 +795,7 @@ pre code.hljs {
     0%   {opacity: 1;}
     100% {opacity: 0;}
 }
+
 
 /* cbt */
 .cbt.good {
