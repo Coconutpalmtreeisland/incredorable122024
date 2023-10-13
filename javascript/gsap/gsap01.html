@@ -270,15 +270,15 @@ const box7 = document.querySelector("#section7 .parallax__item__img");
 const box8 = document.querySelector("#section8 .parallax__item__img");
 const box9 = document.querySelector("#section9 .parallax__item__img");
 
-// 01
+// 01 : 기본 애니메이션
 gsap.to(box1, {
-    duration: 2,
-    x: 500,
-    borderRadius : 100,
-    rotation: 360,
+    duration: 2,            // 애니메이션 지속 시간
+    x: 500,                 // x 좌표 이동
+    borderRadius : 100,     // border-radius 속성 변경
+    rotation: 360,          // 회전
 });
 
-// 02
+// 02 : ScrollTrigger를 사용한 애니메이션
 gsap.to(box2, {
     duration: 2,
     x: 500,
@@ -286,11 +286,11 @@ gsap.to(box2, {
     borderRadius: 100,
 
     scrollTrigger: {
-        trigger: box2
+        trigger: box2       // 애니메이션 트리거 요소
     }
 });
 
-// 03 : toggleActions
+// 03 : toggleActions를 사용한 애니메이션
 gsap.to(box3,{
     duration: 2,
     x: 500,
@@ -299,12 +299,13 @@ gsap.to(box3,{
 
     scrollTrigger: {
         trigger: box3,
-        toggleActions: 'play none reverse none' //play pause resume reverse restart reset complete none
-                                                //onEnter onLeave onEnterBack onLeaveBack
+        toggleActions: 'play none reverse none' // 트리거 진입, 트리거 나감, 트리거 되돌아옴, 트리거 되돌아옴 상태에서 수행할 동작 설정
+                                                // 종류 play pause resume reverse restart reset complete none
+                                                // 종류 onEnter onLeave onEnterBack onLeaveBack
     }
 });
 
-// 04 : start, end
+// 04 : start, end를 사용한 애니메이션
 gsap.to(box4,{
     duration: 2,
     x: 500,
@@ -313,14 +314,14 @@ gsap.to(box4,{
 
     scrollTrigger: {
         trigger: box4,
-        start: "top 50%",
-        end: "bottom 20%",
+        start: "top 50%",                           // 시작 위치 설정
+        end: "bottom 20%",                          // 종료 위치 설정
         toggleActions:"play none reverse none",
         markers: false
     }
 });
 
-// 05 : scrub
+// 05 : scrub를 사용한 애니메이션
 gsap.to(box5,{
     duration: 2,
     x: 500,
@@ -331,11 +332,11 @@ gsap.to(box5,{
         trigger: box5,
         start: "top 50%",
         end: "bottom 20%",
-        scrub: true
+        scrub: true                             // ScrollTrigger 스크럽(Scrubbing) 활성화
     }
 });
 
-// 06 : pin
+// 06 : pin을 사용한 애니메이션
 gsap.to(box6,{
     duration: 2,
     x: 500,
@@ -345,13 +346,13 @@ gsap.to(box6,{
     scrollTrigger: {
         trigger: box6,
         start: "top 50%",
-        end: "bottom 400px",
+        end: "bottom 400px",    // pin이 트리거 요소에서 벗어날 때 설정
         scrub: true,
-        pin: true
+        pin: true               // ScrollTrigger 항목을 고정
     }
 });
 
-// 07 : toggleClass
+// 07 : toggleClass를 사용한 애니메이션
 gsap.to(box7,{
     duration: 2,
     x: 500,
@@ -363,13 +364,13 @@ gsap.to(box7,{
         start: "top center",
         end: "bottom 20%",
         scrub: true,
-        toggleClass: "active",
-        id: "box7",
+        toggleClass: "active",          // 트리거 특정 범위 내에서 클래스 토글
+        id: "box7",                     // ScrollTrigger 식별자
         markers: true
     }
 });
 
-// 08 : callback
+// 08 : callback 함수를 사용한 애니메이션
 gsap.to(box8,{
     duration: 2,
     x: 500,
@@ -381,7 +382,7 @@ gsap.to(box8,{
         start: "top center",
         end: "bottom 20%",
         scrub: true,
-        // onEnter: () => {console.log("onEnter")},
+        // onEnter: () => {console.log("onEnter")},                                 // 트리거 진입 시 콜백 함수
         // onLeave: () => {console.log("onLeave")},
         // onEnterBack: () => {console.log("onEnterBack")},
         // onLeaveBack: () => {console.log("onLeaveBack")},
