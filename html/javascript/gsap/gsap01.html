@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GSAP Scroll Effect 01</title>
+
+    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="../../assets/css/default.min.css">
+    <link href="https://webfontworld.github.io/goodchoice/Jalnan.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        body {
+            color: #fff;
+            background-color: #000;
+            font-family: 'Jalnan';
+        }
+        #parallax__title {
+            position: fixed;
+            left: 20px;
+            top: 20px;
+            z-index: 10000;
+        }
+        #parallax__title h1 {
+            font-size: 30px;
+            border-bottom: 1px dashed #fff;
+            margin-top: 10px;
+            padding-bottom: 15px;
+            font-weight: 400;
+            display: inline-block;
+        }
+        #parallax__title p {
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        #parallax__title ul {
+            margin-top: 10px;
+        }
+        #parallax__title li {
+            display: inline;
+        }
+        #parallax__title li a {
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 1px dashed #fff;
+            text-align: center;
+            font-size: 12px;
+            line-height: 25px;
+            display: inline-block;
+        }
+        #parallax__title li.active a {
+            background-color: #fff;
+            color: #000
+        }
+
+        /* parallax__cont */
+        #parallax__cont {
+            overflow: hidden;
+        }
+        .parallax__item {
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .parallax__item:nth-child(2n) {
+            background-color: #222;
+        }
+        .parallax__item__num {
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+            font-size: 5vw;
+            line-height: 1;
+        }
+        .parallax__item__img {
+            width: 10vw;
+            height: 10vw;
+            background-color: #fff;
+            background-size: cover;
+            background-position: center;
+        }
+        .parallax__item:nth-child(1) .parallax__item__img {
+            background-image: url(img/imges01-min.jpg);
+        }
+        .parallax__item:nth-child(2) .parallax__item__img {
+            background-image: url(img/imges02-min.jpg);
+        }
+        .parallax__item:nth-child(3) .parallax__item__img {
+            background-image: url(img/imges03-min.jpg);
+        }
+        .parallax__item:nth-child(4) .parallax__item__img {
+            background-image: url(img/imges04-min.jpg);
+        }
+        .parallax__item:nth-child(5) .parallax__item__img {
+            background-image: url(img/imges05-min.jpg);
+        }
+        .parallax__item:nth-child(6) .parallax__item__img {
+            background-image: url(img/imges06-min.jpg);
+        }
+        .parallax__item:nth-child(7) .parallax__item__img {
+            background-image: url(img/imges08-min.jpg);
+        }
+        .parallax__item:nth-child(8) .parallax__item__img {
+            background-image: url(img/imges09-min.jpg);
+        }
+        .parallax__item:nth-child(9) .parallax__item__img {
+            background-image: url(img/imges10-min.jpg);
+        }
+        .parallax__item__img.active {
+            filter: hue-rotate(100deg);
+        }
+    </style>
+</head>
+<body>
+    <header id="parallax__title">
+        <h1>GSAP Parallax Effect01</h1>
+        <p>GSAP scrollTrigger - 애니메이션 기본 효과</p>
+        <ul>
+            <li class="active"><a href="gsap01.html">1</a></li>
+            <li><a href="gsap02.html">2</a></li>
+            <li><a href="gsap03.html">3</a></li>
+            <li><a href="gsap04.html">4</a></li>
+            <li><a href="gsap05.html">5</a></li>
+            <li><a href="gsap06.html">6</a></li>
+            <li><a href="gsap07.html">7</a></li>
+            <li><a href="gsap08.html">8</a></li>
+            <li><a href="gsap09.html">9</a></li>
+            <li><a href="gsap10.html">10</a></li>
+            <li><a href="gsap11.html">11</a></li>
+            <li><a href="gsap12.html">12</a></li>
+            <li><a href="gsap13.html">13</a></li>
+            <li><a href="gsap14.html">14</a></li>
+            <li><a href="gsap15.html">15</a></li>
+        </ul>
+    </header>
+    <main>
+        <section id="section1" class="parallax__item">
+            <span class="parallax__item__num">01</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section1 -->
+
+        <section id="section2" class="parallax__item">
+            <span class="parallax__item__num">02</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section2 -->
+
+        <section id="section3" class="parallax__item">
+            <span class="parallax__item__num">03</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section3 -->
+
+        <section id="section4" class="parallax__item">
+            <span class="parallax__item__num">04</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section4 -->
+
+        <section id="section5" class="parallax__item">
+            <span class="parallax__item__num">05</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section5 -->
+
+        <section id="section6" class="parallax__item">
+            <span class="parallax__item__num">06</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section6 -->
+
+        <section id="section7" class="parallax__item">
+            <span class="parallax__item__num">07</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section7 -->
+
+        <section id="section8" class="parallax__item">
+            <span class="parallax__item__num">08</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section8 -->
+
+        <section id="section9" class="parallax__item">
+            <span class="parallax__item__num">09</span>
+            <div class="parallax__item__img"></div>
+        </section>
+        <!-- section9 -->
+    </main>
+
+    <footer id="footer">
+        <div class="modal__wrap">
+            <div class="modal__btn">소스 보기</div>
+            <div class="modal__cont">
+                <div class="modal__box">
+                    <div class="title">
+                        <span class="dot" aria-label="true"></span>
+                        <div class="tabs">
+                            <div class="active">
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                                        <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                        <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>Javascript</em>
+                                <span class="close">
+                                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                                        <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                        <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>HTML</em>
+                                <span class="close">
+                                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                            <div>
+                                <span class="favicon" aria-label="true">
+                                    <svg width="16" height="16" viewBox="0 0 18 18" fill="none" aria-hidden="true" focusable="false">
+                                        <circle cx="9" cy="9" r="9" fill="#fff"></circle>
+                                        <path d="M18 9C18 13.9706 15.4688 3.09375 9 10.125C2.53125 17.1562 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="orange"></path>
+                                        <path d="M18 9C18 13.9706 14.9062 0.84375 8.29688 6.1875C1.6875 11.5312 0 13.9706 0 9C0 4.02944 4.02944 0 9 0C13.9706 0 18 4.02944 18 9Z" fill="yellow"></path>
+                                    </svg>
+                                </span>
+                                <em>CSS</em>
+                                <span class="close">
+                                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cont">
+                        <div class="active">
+<pre><code class="language-js">const box1 = document.querySelector("#section1 .parallax__item__img");
+const box2 = document.querySelector("#section2 .parallax__item__img");
+const box3 = document.querySelector("#section3 .parallax__item__img");
+const box4 = document.querySelector("#section4 .parallax__item__img");
+const box5 = document.querySelector("#section5 .parallax__item__img");
+const box6 = document.querySelector("#section6 .parallax__item__img");
+const box7 = document.querySelector("#section7 .parallax__item__img");
+const box8 = document.querySelector("#section8 .parallax__item__img");
+const box9 = document.querySelector("#section9 .parallax__item__img");
+
+// 01 : 기본 애니메이션
+gsap.to(box1, {
+    duration: 2,            // 애니메이션 지속 시간
+    x: 500,                 // x 좌표 이동
+    borderRadius : 100,     // border-radius 속성 변경
+    rotation: 360,          // 회전
+});
+
+// 02 : ScrollTrigger를 사용한 애니메이션
+gsap.to(box2, {
+    duration: 2,
+    x: 500,
+    rotation: 360,
+    borderRadius: 100,
+
+    scrollTrigger: {
+        trigger: box2       // 애니메이션 트리거 요소
+    }
+});
+
+// 03 : toggleActions를 사용한 애니메이션
+gsap.to(box3,{
+    duration: 2,
+    x: 500,
+    rotation: 360,
+    borderRadius: 100,
+
+    scrollTrigger: {
+        trigger: box3,
+        toggleActions: 'play none reverse none' // 트리거 진입, 트리거 나감, 트리거 되돌아옴, 트리거 되돌아옴 상태에서 수행할 동작 설정
+                                                // 종류 play pause resume reverse restart reset complete none
+                                                // 종류 onEnter onLeave onEnterBack onLeaveBack
+    }
+});
+
+// 04 : start, end를 사용한 애니메이션
+gsap.to(box4,{
+    duration: 2,
+    x: 500,
+    rotation: 360,
+    borderRadius: 100,
+
+    scrollTrigger: {
+        trigger: box4,
+        start: "top 50%",                           // 시작 위치 설정
+        end: "bottom 20%",                          // 종료 위치 설정
+        toggleActions:"play none reverse none",
+        markers: false
+    }
+});
+
+// 05 : scrub를 사용한 애니메이션
+gsap.to(box5,{
+    duration: 2,
+    x: 500,
+    rotation: 360,
+    borderRadius: 100,
+
+    scrollTrigger: {
+        trigger: box5,
+        start: "top 50%",
+        end: "bottom 20%",
+        scrub: true                             // ScrollTrigger 스크럽(Scrubbing) 활성화
+    }
+});
+
+// 06 : pin을 사용한 애니메이션
+gsap.to(box6,{
+    duration: 2,
+    x: 500,
+    rotation: 360,
+    borderRadius: 100,
+
+    scrollTrigger: {
+        trigger: box6,
+        start: "top 50%",
+        end: "bottom 400px",    // pin이 트리거 요소에서 벗어날 때 설정
+        scrub: true,
+        pin: true               // ScrollTrigger 항목을 고정
+    }
+});
+
+// 07 : toggleClass를 사용한 애니메이션
+gsap.to(box7,{
+    duration: 2,
+    x: 500,
+    rotation: 360,
+    borderRadius: 100,
+
+    scrollTrigger: {
+        trigger: box7,
+        start: "top center",
+        end: "bottom 20%",
+        scrub: true,
+        toggleClass: "active",          // 트리거 특정 범위 내에서 클래스 토글
+        id: "box7",                     // ScrollTrigger 식별자
+        markers: true
+    }
+});
+
+// 08 : callback 함수를 사용한 애니메이션
+gsap.to(box8,{
+    duration: 2,
+    x: 500,
+    rotation: 360,
+    borderRadius: 100,
+
+    scrollTrigger: {
+        trigger: box8,
+        start: "top center",
+        end: "bottom 20%",
+        scrub: true,
+        // onEnter: () => {console.log("onEnter")},                     // 트리거 진입 시 콜백 함수
+        // onLeave: () => {console.log("onLeave")},                     // 트리거 나감 시 콜백 함수
+        // onEnterBack: () => {console.log("onEnterBack")},             // 트리거 되돌아옴 시 콜백 함수
+        // onLeaveBack: () => {console.log("onLeaveBack")},             // 트리거 되돌아옴 상태에서 콜백 함수
+        onUpdate: (self) => {console.log("onUpdate", self.progress.toFixed(3))},        // 애니메이션 진행률 업데이트 시 콜백 함수(0부터 1까지의 값으로 애니메이션 진행률 표시, 진행률을 소수 셋째 자리까시 표시)
+        onToggle: (self) => {console.log("onToggle", self.isActive)}                    // 트리거 토글 시 콜백 함수(self.isActive는 ScrollTrigger가 활성화되었을 때 true를 반환, 비활성화되었을 때 false를 반환)
+    }
+});
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-js">&lt;section id="section1" class="parallax__item">
+    &lt;span class="parallax__item__num">01&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section1 -->
+
+&lt;section id="section2" class="parallax__item">
+    &lt;span class="parallax__item__num">02&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section2 -->
+
+&lt;section id="section3" class="parallax__item">
+    &lt;span class="parallax__item__num">03&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section3 -->
+
+&lt;section id="section4" class="parallax__item">
+    &lt;span class="parallax__item__num">04&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section4 -->
+
+&lt;section id="section5" class="parallax__item">
+    &lt;span class="parallax__item__num">05&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section5 -->
+
+&lt;section id="section6" class="parallax__item">
+    &lt;span class="parallax__item__num">06&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section6 -->
+
+&lt;section id="section7" class="parallax__item">
+    &lt;span class="parallax__item__num">07&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section7 -->
+
+&lt;section id="section8" class="parallax__item">
+    &lt;span class="parallax__item__num">08&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section8 -->
+
+&lt;section id="section9" class="parallax__item">
+    &lt;span class="parallax__item__num">09&lt;/span>
+    &lt;div class="parallax__item__img">&lt;/div>
+&lt;/section>
+<!-- section9 -->
+
+</code></pre>
+                        </div>
+                        <div>
+<pre><code class="language-js">* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+body {
+    color: #fff;
+    background-color: #000;
+    font-family: 'Jalnan';
+}
+#parallax__title {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 10000;
+}
+#parallax__title h1 {
+    font-size: 30px;
+    border-bottom: 1px dashed #fff;
+    margin-top: 10px;
+    padding-bottom: 15px;
+    font-weight: 400;
+    display: inline-block;
+}
+#parallax__title p {
+    margin-top: 15px;
+    font-size: 16px;
+}
+#parallax__title ul {
+    margin-top: 10px;
+}
+#parallax__title li {
+    display: inline;
+}
+#parallax__title li a {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    border: 1px dashed #fff;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+    display: inline-block;
+}
+#parallax__title li.active a {
+    background-color: #fff;
+    color: #000
+}
+
+/* parallax__cont */
+#parallax__cont {
+    overflow: hidden;
+}
+.parallax__item {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.parallax__item:nth-child(2n) {
+    background-color: #222;
+}
+.parallax__item__num {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 5vw;
+    line-height: 1;
+}
+.parallax__item__img {
+    width: 10vw;
+    height: 10vw;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+.parallax__item:nth-child(1) .parallax__item__img {
+    background-image: url(img/imges01-min.jpg);
+}
+.parallax__item:nth-child(2) .parallax__item__img {
+    background-image: url(img/imges02-min.jpg);
+}
+.parallax__item:nth-child(3) .parallax__item__img {
+    background-image: url(img/imges03-min.jpg);
+}
+.parallax__item:nth-child(4) .parallax__item__img {
+    background-image: url(img/imges04-min.jpg);
+}
+.parallax__item:nth-child(5) .parallax__item__img {
+    background-image: url(img/imges05-min.jpg);
+}
+.parallax__item:nth-child(6) .parallax__item__img {
+    background-image: url(img/imges06-min.jpg);
+}
+.parallax__item:nth-child(7) .parallax__item__img {
+    background-image: url(img/imges08-min.jpg);
+}
+.parallax__item:nth-child(8) .parallax__item__img {
+    background-image: url(img/imges09-min.jpg);
+}
+.parallax__item:nth-child(9) .parallax__item__img {
+    background-image: url(img/imges10-min.jpg);
+}
+.parallax__item__img.active {
+    filter: hue-rotate(100deg);
+}
+
+</code></pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal__close">
+                    <svg width="18" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true" focusable="false">
+                        <path d="M12.5 3.5L3.5 12.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        <path d="M12.5 12.5L3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- //footer -->
+
+    <script src="../../assets/js/highlight.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script>
+        const box1 = document.querySelector("#section1 .parallax__item__img");
+        const box2 = document.querySelector("#section2 .parallax__item__img");
+        const box3 = document.querySelector("#section3 .parallax__item__img");
+        const box4 = document.querySelector("#section4 .parallax__item__img");
+        const box5 = document.querySelector("#section5 .parallax__item__img");
+        const box6 = document.querySelector("#section6 .parallax__item__img");
+        const box7 = document.querySelector("#section7 .parallax__item__img");
+        const box8 = document.querySelector("#section8 .parallax__item__img");
+        const box9 = document.querySelector("#section9 .parallax__item__img");
+
+        // 01
+        gsap.to(box1, {
+            duration: 2,
+            x: 500,
+            borderRadius : 100,
+            rotation: 360,
+        });
+
+        // 02
+        gsap.to(box2, {
+            duration: 2,
+            x: 500,
+            rotation: 360,
+            borderRadius: 100,
+
+            scrollTrigger: {
+                trigger: box2
+            }
+        });
+
+        // 03 : toggleActions
+        gsap.to(box3,{
+            duration: 2,
+            x: 500,
+            rotation: 360,
+            borderRadius: 100,
+
+            scrollTrigger: {
+                trigger: box3,
+                toggleActions: 'play none reverse none' //play pause resume reverse restart reset complete none
+                                                        //onEnter onLeave onEnterBack onLeaveBack
+            }
+        });
+
+        // 04 : start, end
+        gsap.to(box4,{
+            duration: 2,
+            x: 500,
+            rotation: 360,
+            borderRadius: 100,
+
+            scrollTrigger: {
+                trigger: box4,
+                start: "top 50%",
+                end: "bottom 20%",
+                toggleActions:"play none reverse none",
+                markers: false
+            }
+        });
+
+        // 05 : scrub
+        gsap.to(box5,{
+            duration: 2,
+            x: 500,
+            rotation: 360,
+            borderRadius: 100,
+
+            scrollTrigger: {
+                trigger: box5,
+                start: "top 50%",
+                end: "bottom 20%",
+                scrub: true
+            }
+        });
+
+        // 06 : pin
+        gsap.to(box6,{
+            duration: 2,
+            x: 500,
+            rotation: 360,
+            borderRadius: 100,
+
+            scrollTrigger: {
+                trigger: box6,
+                start: "top 50%",
+                end: "bottom 400px",
+                scrub: true,
+                pin: true
+            }
+        });
+
+        // 07 : toggleClass
+        gsap.to(box7,{
+            duration: 2,
+            x: 500,
+            rotation: 360,
+            borderRadius: 100,
+
+            scrollTrigger: {
+                trigger: box7,
+                start: "top center",
+                end: "bottom 20%",
+                scrub: true,
+                toggleClass: "active",
+                id: "box7",
+                markers: true
+            }
+        });
+
+        // 08 : callback
+        gsap.to(box8,{
+            duration: 2,
+            x: 500,
+            rotation: 360,
+            borderRadius: 100,
+
+            scrollTrigger: {
+                trigger: box8,
+                start: "top center",
+                end: "bottom 20%",
+                scrub: true,
+                // onEnter: () => {console.log("onEnter")},
+                // onLeave: () => {console.log("onLeave")},
+                // onEnterBack: () => {console.log("onEnterBack")},
+                // onLeaveBack: () => {console.log("onLeaveBack")},
+                onUpdate: (self) => {console.log("onUpdate", self.progress.toFixed(3))},
+                onToggle: (self) => {console.log("onToggle", self.isActive)}
+            }
+        });
+    </script>
+</body>
+</html>
