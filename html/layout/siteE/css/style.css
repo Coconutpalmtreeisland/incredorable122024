@@ -1,0 +1,481 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 800;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'NanumSquareNeo';
+    font-weight: 900;
+    font-style: normal;
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot');
+    src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot?#iefix') format('embedded-opentype'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff2') format('woff2'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff') format('woff'),
+         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.ttf') format("truetype");
+    font-display: swap;
+} 
+
+@font-face {
+    font-family: 'Wooridaum';
+    font-weight: 300;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumL.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Wooridaum';
+    font-weight: 400;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumR.ttf') format("truetype");
+    font-display: swap;
+} 
+@font-face {
+    font-family: 'Wooridaum';
+    font-weight: 700;
+    font-style: normal;
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.eot');
+    src: url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.eot?#iefix') format('embedded-opentype'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.woff2') format('woff2'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.woff') format('woff'),
+         url('https://cdn.jsdelivr.net/gh/webfontworld/woori/WooridaumB.ttf') format("truetype");
+    font-display: swap;
+} 
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-family: 'NanumSquareNeo';
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+img {
+    width: 100%;
+    display: block;
+}
+
+/* wrap */
+#wrap {
+    width: 100%;
+}
+
+/* main */
+#main {
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+}
+
+/* header */
+#header {
+    width: 200px;
+    height: 100%;
+    background-color: #c9f1ec;
+}
+#header .logo {
+    width: 100%;
+    text-align: center;
+}
+#header .logo a {
+    padding: 24px;
+    display: block;
+    color: #0ec4ab;
+    font-family: 'Wooridaum';
+}
+#header .nav {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    z-index: 1000;
+}
+#header .nav > ul > li {
+    text-align: center;
+    position: relative;
+}
+#header .nav > ul > li > a {
+    padding: 10px;
+    display: inline-block;
+    background-color: #2fdac3;
+    width: 100%;
+    box-sizing: border-box;
+    color: #fff;
+}
+#header .nav > ul > li > a:hover {
+    background-color: #69dbcc;
+}
+#header .nav > ul > li > ul {
+    position: absolute;
+    right: -200px;
+    top: 0;
+    width: 200px;
+    display: none;
+}
+#header .nav > ul > li > ul > li a {
+    padding: 10px;
+    display: inline-block;
+    background-color: #02cfb4;
+    width: 100%;
+    color: #fff;
+    box-sizing: border-box;
+}
+#header .nav > ul > li > ul > li a:hover {
+    background-color: #04b69e;
+}
+
+/* contents */
+#contents {
+    width: 400px;
+}
+
+/* contents : banner */
+#contents .banner {
+    width: 100%;
+    height: 15%;
+    background: url(../images/img07.jpg) no-repeat center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#contents .banner h3 {
+    color: #ffefef;
+    font-size: 24px;
+}
+#contents .banner a {
+    color: #fff;
+    background-color: #2fdac3c1;
+    padding: 10px 20px;
+    border-radius: 40px;
+    margin-left: 10px;
+}
+#contents .banner a:hover {
+    background-color: #2fdac3;
+}
+
+/* contents : notice */
+#contents .notice {
+    width: 100%;
+    height: 35%;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+#contents .notice h3 {
+    background-color: #2fdac3;
+    color: #fff;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+}
+#contents .notice li {
+    display: flex;
+    position: relative;
+    padding-left: 10px;
+    line-height: 1.6;
+}
+#contents .notice li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: #2fdac3;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    border-radius: 50%;
+}
+#contents .notice li a {
+    width: 70%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+#contents .notice li a:hover {
+    text-decoration: underline;
+}
+#contents .notice li span {
+    width: 30%;
+    text-align: right;
+}
+#contents .notice .more {
+    position: absolute;
+    right: 26px; 
+    top: 26px;
+    color: #fff;
+}
+
+/* contents : gallery */
+#contents .gallery {
+    width: 100%;
+    height: 35%;
+    background-color: #e4fffb;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+#contents .gallery h3 {
+    background-color: #2fdac3;
+    color: #fff;
+    padding: 4px 10px;
+    margin-bottom: 10px;
+}
+#contents .gallery ul {
+    display: flex;
+    justify-content: space-between;
+}
+#contents .gallery li {
+    width: 110px;
+    height: 150px;
+    background-size: cover;
+}
+#contents .gallery li:nth-child(1){
+    background-image: url(../images/img04.jpg);
+}
+#contents .gallery li:nth-child(2){
+    background-image: url(../images/img05.jpg);
+}
+#contents .gallery li:nth-child(3){
+    background-image: url(../images/img06.jpg);
+}
+#contents .gallery li a {
+    display: block;
+    background-color: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+#contents .gallery li a:hover {
+    background-color: rgba(0,0,0,0.1);
+}
+#contents .gallery .more {
+    position: absolute;
+    right: 26px; 
+    top: 26px;
+    color: #fff;
+}
+
+/* contents : link */
+#contents .link {
+    width: 100%;
+    height: 15%;
+    overflow: hidden;
+}
+#contents .link h3 {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+#contents .link ul {
+    display: flex;
+    padding: 0 10px;
+}
+#contents .link li {
+    width: 25%;
+    padding: 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+#contents .link li:hover a span {
+    color: #2fdac3;
+}
+
+/* slider */
+#slider {
+    width: calc(100% - 600px);
+    height: 100%;
+    overflow: hidden;
+}
+#slider .sliderWrap {
+    width: 400%;
+    height: 100%;
+    display: flex;
+}
+#slider .sliderWrap .slider {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#slider .sliderWrap .slider .text {
+    background-color: #2fdac3c1;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 50%;
+}
+#slider .sliderWrap .slider .text h3 {
+    color: #fff;
+    font-size: 20px;
+}
+#slider .sliderWrap .slider .text p {
+    color: #fff;
+    margin-top: 5px;
+}
+#slider .sliderWrap .slider.s1 {
+    background-image: url(../images/img01.jpg);
+}
+#slider .sliderWrap .slider.s2 {
+    background-image: url(../images/img02.jpg);
+}
+#slider .sliderWrap .slider.s3 {
+    background-image: url(../images/img03.jpg);
+}
+
+/* footer */
+#footer {
+    width: 100%;
+    display: flex;
+    background-color: #efefef;
+}
+#footer .footer1 {
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .footer1 h4 {
+    font-size: 24px;
+    color: #979797;
+}
+#footer .footer2 {
+    width: calc(100% - 400px);
+}
+#footer .footer2 .footer2-1 {
+    width: 100%;
+    height: 60px;
+    text-align: center;
+}
+#footer .footer2 .footer2-1 ul {
+    padding-top: 10px;
+}
+#footer .footer2 .footer2-1 li {
+    display: inline-block;
+}
+#footer .footer2 .footer2-1 li::after {
+    content: '|';
+}
+#footer .footer2 .footer2-1 li:last-child:after {
+    content: '';
+}
+#footer .footer2 .footer2-1 li a {
+    padding: 10px;
+    display: inline-block;
+}
+#footer .footer2 .footer2-1 li a:hover {
+    text-decoration: underline;
+}
+#footer .footer2 .footer2-2 {
+    width: 100%;
+    height: 60px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .footer3 {
+    width: 200px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#footer .footer3 select {
+    width: 90%;
+    height: 30px;
+}
+
+/* popup */
+.popup-view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background-color: #c9f1ec;
+    border: 4px solid #2fdac3;
+    padding: 20px;
+    display: none;
+}
+.popup-view h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0ec4ab;
+    color: #0ec4ab;
+}
+.popup-close {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #2fdac3;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+}
