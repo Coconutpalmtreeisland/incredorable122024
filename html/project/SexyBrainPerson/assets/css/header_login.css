@@ -1,0 +1,38 @@
+#header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--main-neo);
+    margin: 71px 40px 0 40px;
+}
+.nav ul {
+    display: flex;
+}  
+.nav ul li a {
+    display: inline-block;
+    padding-right: 60px;
+    color: var(--primary-color);
+}
+.nav ul li:hover a{
+    color: var(--);
+}
+.header__right {
+    display: flex;
+}
+.header__right .logout {
+    width: 105px;
+    height: 48px;
+    background-color: var(--primary-color);
+    border: 0;
+    border-radius: 30px;
+    color: var(--colorSM);
+}
+.header__right .propile {
+    width: 48px;
+    height: 48px;
+    border: 0;
+    border-radius: 50%;
+    background-color: var(--colorB);
+    text-align: center;
+}

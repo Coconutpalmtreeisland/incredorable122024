@@ -1,0 +1,19 @@
+:root {
+    --bgc: #FAF7F0;
+    --colorB: #F2E2DE;
+    --colorBD: #C5AAA4;
+    --colorS: #E9F3FC;
+    --colorSM: #CEDFFD;
+    --colorSD: #A7BEE7;
+    --colorSB: #555D8A;
+    --colorR: #9E3436;
+    --colorRD: #E62D46;
+
+    --primary-color: #283269;
+
+    --main-neo: "nanumSquareNeo";
+
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
