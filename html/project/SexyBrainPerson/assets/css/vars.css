@@ -11,9 +11,7 @@
 
     --primary-color: #283269;
 
-    --main-neo: "nanumSquareNeo";
+    --white: #fff;
 
-    font-size: 20px;
-    line-height: 1.5;
-    font-weight: 400;
+    --main-neo: "nanumSquareNeo";
 }
