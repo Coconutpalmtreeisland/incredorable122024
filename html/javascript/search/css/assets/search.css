@@ -310,3 +310,7 @@ a {
 .search__list li.hide {
     display: none;
 }
+.search__list span.active {
+    background-color: #363636;
+    color: #fff;
+}

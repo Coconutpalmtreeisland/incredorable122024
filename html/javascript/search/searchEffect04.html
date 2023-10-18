@@ -139,17 +139,47 @@
         ]
 
         const searchList = document.querySelector(".search__list");
+        const searchSelect = document.querySelectorAll(".search__list span");
         const searchInfo = document.querySelector(".search__info");
         const searchBox = document.querySelector(".search__box input");
         const searchBoxResult = document.querySelector(".search__box__result");
         const searchButton = document.querySelector(".search__click");
+        // 변수를 설정하여 이전에 활성화된 요소를 추적
+        let preActive = null;
 
-        // 츌력하기
+        // 출력하기
         cssProperty.map((element, index) => {
             searchList.innerHTML += `<span data-name="${element.name}">${element.name}</span>`;
         });
 
-        // 검색 버튼 클릭했을 때 검색되기
+        // 검색 또는 클릭으로 찾기
+        function performSearch(searchData) {
+            if (!searchData) {
+                searchData = searchBox.value;
+            }
+
+            const targetData = cssProperty.find((data) => data.name === searchData);    // 위의 map과 같은 원리
+
+            if (targetData == null) {
+                searchBoxResult.textContent = "해당 속성은 존재하지 않습니다. 다시 한번 검색해주세요!";
+            } else {
+                searchBoxResult.textContent = targetData.desc;
+            }
+
+            // 이전에 활성화된 요소에서 active 클래스를 제거
+            if (preActive) {
+                preActive.classList.remove("active");
+            }
+
+            // 검색 또는 클릭한 검색 결과 항목에 active 클래스를 추가
+            const selectedElement = document.querySelector(`[data-name="${searchData}"]`);
+            if (selectedElement) {
+                selectedElement.classList.add("active");
+                preActive = selectedElement;
+            }
+        }
+
+        // 검색 버튼 클릭 이벤트
         searchButton.addEventListener("click", () => {
             performSearch();
         });
@@ -161,45 +191,14 @@
             }
         });
 
-        //
-        function performSearch() {
-            const searchWord = searchBox.value;
-            findProperty(searchWord);
-        }
-       
-        // 속성 검색으로 찾기
-        function findProperty(searchData){
-            const targetData = cssProperty.find((data) => data.name === searchData);           // 위의 map과 같음
-
-            if(targetData == null){
-                searchBoxResult.textContent = "해당 속성은 존재하지 않습니다. 다시 한번 검색해주세요!";
-                return
-            } else {
-                searchBoxResult.textContent = targetData.desc;
-                selectedResult(searchData);
-            }
-        }
-
         // 속성 클릭으로 찾기
         searchList.addEventListener("click", (event) => {
             const targetName = event.target.getAttribute("data-name");
 
             if (targetName) {
-                findProperty(targetName);
-                }
+                performSearch(targetName);
+            }
         });
-
-        // 검색 시 나온 설명에 맞는 searchList (active)선택 표시하기
-        function selectedResult(selectedName){
-            const searchResult = document.querySelectorAll(".search__list span");
-            searchResult.forEach((result) => {
-                if(result.getAttribute("data-name") === selectedName){
-                    result.classList.add("active");
-                } else {
-                    result.classList.remove("active");
-                }
-            })
-        }
     </script>
 </body>
 </html>
