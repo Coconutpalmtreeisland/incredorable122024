@@ -1,0 +1,30 @@
+
+#footer {
+}
+.footerwrap {
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    align-items: center;
+    height: 130px;
+    background-color: #283269;
+}
+.footer__logo {}
+.footer2 {
+    display: flex;
+}
+
+.footer_us {
+}
+.footer_us ul{
+    display: flex;
+    margin-right: 40px;
+}
+.footer_us ul li{}
+.footer_us ul li a{
+    color: #fff;
+    font-weight: lighter;
+    padding: 10px 30px;
+}
+.copylight {}
