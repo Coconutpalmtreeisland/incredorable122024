@@ -9,26 +9,24 @@
 <body>
     <div class="wrap">
         <header id="header">
-            <nav class="nav">
+            <nav class="header__nav">
                 <ul>
-                    <li><a href="home.html">홈</a></li>
                     <li><a href="#">문제</a></li>
                     <li><a href="#">커뮤니티</a></li>
                 </ul>
             </nav>
-            <h2 class="logo">
+            <div class="header__logo">
                 <a href="home.html"><img src="assets/img/logo.png" alt="뇌섹남녀" href></a>
-            </h2>
+            </div>
             <div class="header__right">
-                <div class="allSearchWrap">
-                    <input type="search" class="search" name="allSearchValue" autocomplete="off" role="combobox" placeholder="검색" aria-live="polite"> <!-- aria-controls="matches" aria-expanded="false"  -->
-                </div>
+                <input type="search" class="search" name="allSearchValue" autocomplete="off" role="combobox" placeholder="검색" aria-live="polite"> <!-- aria-controls="matches" aria-expanded="false"  -->
                 <a class="logout" href="#">로그아웃</a>
                 <a class="propile" href="#">뇌섹</a>
                 <!-- <img src="" alt="프로필"> -->
             </div>
         </header>
         <!-- //header -->
+
         <main>
             <header class="intro__box">
                 <h2>
@@ -146,6 +144,7 @@
                         </div>
                     </div>
                     <!-- //board__page -->
+
                     <div class="board__pages">
                         <ul>
                             <li><a href="#">&lt;</a></li>
@@ -162,7 +161,7 @@
                             <li><a href="#">></a></li>
                         </ul>
                     </div>
-                    <!-- //footer -->
+                    <!-- //board__pages -->
                 </article>
                 <!-- //board__wrap -->
 
@@ -192,19 +191,21 @@
             </section>
             <!-- //section -->
         </main>
+        <!-- //main -->
+
         <footer id="footer">
-            <div class="logo">
+            <div class="footer__logo">
                 <a href="home.html"><img src="assets/img/footer_logo.png" alt="뇌섹남녀" href></a>
             </div>
-            <div class="creater">
-                <ul>
+            <div class="footer__info">
+                <ul class="footer__creater">
                     <li>권초록</li>
                     <li>오종석</li>
                     <li>이원영</li>
                     <li>이혜민</li>
                 </ul>
+                <div class="footer__copyright">© 2023 뇌섹남녀</div>
             </div>
-            <div class="copyright">© 2023 뇌섹남녀</div>
         </footer>
     </div>
 </body>

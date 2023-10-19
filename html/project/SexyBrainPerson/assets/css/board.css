@@ -2,7 +2,8 @@ body {
     background-color: var(--bgc);
 }
 .container {
-    padding: 0 304px;
+    margin: 0 auto;
+    width: 70%
 }
 
 .intro__box {

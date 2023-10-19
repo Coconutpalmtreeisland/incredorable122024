@@ -171,13 +171,10 @@
             let starItem = "";
 
             for(const data of list){
-                listItem += `<li><strong>${data.name}</strong> : ${data.desc}</li>`
+                const stars = "★".repeat(data.star) + "☆".repeat(5 - data.star);
+                listItem += `<li><strong>${data.name}</strong> : ${data.desc} <i>${stars}</i></li>`;
             }
             searchList.innerHTML = listItem;
-
-            for(const data of star){
-                starItem += `<li>${data.star}</li>`
-            }
 
             /* 
                 searchList.innerText = "";
