@@ -41,7 +41,7 @@
                         <input type="text" id="searchbox" name="searchbox" placeholder="CSS 속성을 검색하면 설명이 나옵니다.">
                         <button class="search__click">검색</button>
                         <div class="search__box__result">
-                            animation은 애니메이션과 관련된 속성을 일괄적으로 설정합니다.
+                            해당 속성의 설명
                         </div>
                     </div>
                 </div>
@@ -139,12 +139,12 @@
         ]
 
         const searchList = document.querySelector(".search__list");
-        const searchSelect = document.querySelectorAll(".search__list span");
         const searchInfo = document.querySelector(".search__info");
         const searchBox = document.querySelector(".search__box input");
         const searchBoxResult = document.querySelector(".search__box__result");
         const searchButton = document.querySelector(".search__click");
-        // 변수를 설정하여 이전에 활성화된 요소를 추적
+        
+        /* // 변수를 설정하여 이전에 활성화된 요소를 추적
         let preActive = null;
 
         // 출력하기
@@ -198,6 +198,49 @@
             if (targetName) {
                 performSearch(targetName);
             }
+        }); */
+
+        // 출력하기
+        cssProperty.map((element, index) => {
+            searchList.innerHTML += `<span>${element.name}</span>`;
+        })
+
+        // 검색하기
+        function findProperty(searchKeyword){
+            const targetData = cssProperty.find((data) => data.name === searchKeyword);
+            const listItem = searchList.querySelectorAll("span");
+            
+            // active 제거
+            listItem.forEach(item => item.classList.remove("active"));
+
+            if(targetData == null){
+                searchBoxResult.textContent = "해당 속성이 존재하지 않습니다.";
+                return          // break 반복문에서 사용 보통 switch 문에
+            } else {
+                searchBoxResult.textContent = targetData.desc;
+
+                // active 추가
+                listItem.forEach((item)=> {
+                    if(item.textContent === searchKeyword){
+                        item.classList.add("active");
+                    }
+                });
+                
+            }
+        }
+
+        // 속성 클릭하기
+        document.querySelectorAll(".search__list span").forEach(span => {
+            span.addEventListener("click", () => {
+                const keyword = span.innerText;
+                findProperty(keyword);
+            })
+        })
+
+        // 검색 버튼 클릭하기
+        searchButton.addEventListener("click", () =>{
+            const keyword = searchBox.value;
+            findProperty(keyword);
         });
     </script>
 </body>

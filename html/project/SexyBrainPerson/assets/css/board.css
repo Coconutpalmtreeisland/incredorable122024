@@ -144,20 +144,6 @@ input::-webkit-search-results-decoration{
 .filter__type {
     margin-bottom: 32px;
 }
-/* .type__check input[type = 'checkbox'] {
-    width: 20px;
-    height: 20px;
-    border: 1px solid var(--colorS);
-    border-radius: 5px;
-    margin-right: 18px;
-}
-.type__check input[type = 'checkbox']:hover {
-    border: 1px solid var(--colorSD);
-}
-.type__check input[type = 'checkbox']:checked {
-    border: 1px solid var(--colorSD);
-    background-color: var(--colorS);
-} */
 .type__check .checkbox {
     display: block;
     position: relative;
@@ -239,9 +225,44 @@ input::-webkit-search-results-decoration{
     justify-content: center;
 }
 .board__pages li {
-    background-color: #fff;
-    line-height: 16px;
+    width: 35px;
+    height: 35px;
+    margin-left: 18px;
+    line-height: 2.3;
+    text-align: center;
+    cursor: pointer;
+}
+.board__pages li:hover,
+.board__pages li:active {
+    width: 35px;
+    height: 35px;
+    line-height: 2.3;
+    text-align: center;
+    color: var(--colorS);
+}
+.board__pages li a {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--colorSM);
+}
+.board__pages li a:hover {
+    color: var(--colorSD);
+}
+.board__pages ul li:first-child a {
+    line-height: 1.5;
+    font-size: 25px;
+    padding-right: 2px;
+}
+.board__pages ul li:last-child a {
+    line-height: 1.5;
+    font-size: 25px;
+    padding-left: 2px;
+}
+.board__pages ul li:first-child,
+.board__pages ul li:last-child {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    background-color: var(--colorS);
     border-radius: 50%;
-    padding: 20px 22px;
-    margin-left: 28px;
 }

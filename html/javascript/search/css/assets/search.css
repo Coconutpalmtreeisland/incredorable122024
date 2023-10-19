@@ -75,14 +75,44 @@ a {
 .blind {
     display: none;
 }
-.search__list > .active {
-    background-color: #363636;
-    color: #fff;
-}
 .line1 {
     width: 100%;
     border-top: 3px solid #363636;
     border-bottom: 3px solid #363636;
+}
+.line2 {
+    width: 100%;
+    border-bottom: 3px solid #363636;
+}
+.circle {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #363636;
+}
+.circle2 {
+    position: relative;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #363636;
+    align-items: end;
+}
+.circle2::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    left: 33px;
+    border: 0;
+    border-radius: 50%;
+    background-color: #363636;
 }
 
 .wrap {
@@ -153,154 +183,43 @@ a {
 
 /* search__box */
 .search__box {
-    padding: 25px;
+    padding: 25px 0;
     width: 100%
 }
-.search__box .circle {
-    position: relative;
-    display: block;
-    width: 20px;
-    height: 20px;
-    border: 0;
-    border-radius: 50%;
-    background-color: #363636;
-}
-.search__box .circle2 {
-    position: relative;
-    display: block;
-    width: 20px;
-    height: 20px;
-    border: 0;
-    border-radius: 50%;
-    background-color: #363636;
-}
-.search__box .circle2::after {
-    position: absolute;
-    content: '';
-    display: block;
-    width: 20px;
-    height: 20px;
-    left: 30px;
-    border: 0;
-    border-radius: 50%;
-    background-color: #363636;
-}
 .search__box input {
-    width: 45%;
-    height: 50px;
+    width: 35%;
+    height: 30px;
     margin-top: 25px;
+    margin-left: 8px;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid #363636;
+    font-size: 16px;
+    font-weight: 600;
+    color: #363636;
+    background: none;
+    cursor: pointer;
 }
 .search__box input::-webkit-input-placeholder {
-    font-size: 90%;
-    padding: 0;
-    margin: 0;
+    font-size: 16px;
+    align-items: center;
     color: #363636;
+
 }
 .search__box input:hover, .search__box input:focus, .search__box input:active {
     outline: none;
-    border-bottom: 2px solid #363636;
-}
-/* #header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 35px;
-}
-#header a {
-    font-family: "LotteriaDdag";
-}
-#header nav {
-} */
-/* #header nav ul {
-    display: flex;
-    padding: 20px 10px 10px 10px;
-    margin: 5px;
-} */
-/* #header nav li {
-    display: inline;
-    position: relative;
-}
-#header nav li a{
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 0;
-    border: 1px solid #2ea2d8;
-    color: #2ea2d8;
-    text-align: center;
-    line-height: 35px;
-    margin: 0 5px;
-}
-#header nav li.active a {
-    background-color: #2ea2d8;
-    color: #fff;
-}
-
-.search_head {
-    background-color: #52c4f8;
-    text-align: center;
-    padding: 40px;
-    color: #fff;
-}
-.search__title span {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 20px;
-    letter-spacing: 2px;
-} */
-
-/* .search__box input {
-    width: 400px;
-    height: 45px;
-    border: 2px solid #1eaaeb;
-    margin-bottom: 5px;
-    padding: 18px;
-}
-.search__box input::placeholder {
-    font-size: 16px;
-}
-.search__box p {
-    margin-top: 10px;
-}
-.search__box p em {
-    text-decoration: underline;
-    text-underline-position: under;
-    font-style: normal;
-}
-.search__select {
-    margin: 30px 0 20px 0;
-}
-.search__select span {
-    padding: 10px;
-    border: 1px solid #1eaaeb;
-}
-.search__select span:hover {
-    background-color: #fff;
-    color: #1eaaeb;
+    border-bottom: none;
 }
 
 .search__info {
-    display: block;
-    top: 0;
-    right: 0;
-    
+    padding: 25px 0;
+    display: flex;
+    justify-content: flex-end;
 }
-
-.search__list li.show {
-    display: block;
+.search__info .circle2 {
 }
-.search__list li.hide {
-    display: none;
+.count {
+    margin-top: 25px;
 }
-
-#footer {
-
-} */
-
 
 /* script */
 .search__list li.show {
@@ -312,5 +231,5 @@ a {
 }
 .search__list span.active {
     background-color: #363636;
-    color: #fff;
+    color: #e6dbcf;
 }

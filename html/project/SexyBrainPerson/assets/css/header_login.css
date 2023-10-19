@@ -4,7 +4,10 @@
     justify-content: space-between;
     align-items: center;
     font-family: var(--main-neo);
-    margin: 53px 40px 0 40px;
+    margin: 53px 38px 0 38px;
+}
+.nav {
+    width: 30%;
 }
 .nav ul {
     display: flex;
@@ -17,6 +20,10 @@
 .nav ul li:hover a{
     color: var(--colorR);
 }
+
+.logo {
+    width: 40%;
+}
 #header .logo img {
     position: absolute;
     left: 50%;
@@ -27,6 +34,7 @@
 /* header__right */
 .header__right {
     display: flex;
+    width: 30%;
 }
 
 /* header__right allSearchWrap */
@@ -69,8 +77,8 @@ input[type = 'search']::-webkit-search-cancel-button {
     background-size: 17px;
 }
 .header__right input:hover, .header__right input:focus, .header__right input:active {
-    outline: var(--colorB);
-    border: 2px solid var(--colorSM);
+    outline: none;
+    border: none;
 }
 
 /* input 기본 설정 초기화 */
@@ -110,4 +118,29 @@ input::-webkit-search-results-decoration{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+@media (max-width: 400px){
+    #header {
+        
+    }
+    .nav ul {
+        display: block;
+    }
+    .nav ul li a {
+        padding-right: 20px;
+    }
+    .header__right .logout {
+        margin: 0;
+        width: 800px;
+        height: 45px;
+        border-radius: 25px;
+    }
+    .header__right .logout a {
+        font-size: 8px;
+    }
+    .header__right input,
+    .header__right .propile {
+        display: none;
+    }
 }
