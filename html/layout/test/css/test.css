@@ -1,0 +1,149 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+body {
+    background-color: #fff;
+    color: #333;
+}
+a {
+    text-decoration: none;
+    color: #333;
+}
+li {
+    list-style: none;
+}
+img {
+    vertical-align: top;
+    width: 100%;
+}
+
+.wrap {
+    width: 1200px;
+}
+#header {
+    width: 100%;
+    display: flex;
+}
+#header .logo {
+    width: 20%;
+    height: 100px;
+    background-color: #ffe3c4;
+    position: relative;
+}
+#header .logo img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#header .nav {
+    width: 80%;
+    height: 100px;
+    position: relative;
+    z-index: 1000;
+    background-color: #ffd29f;
+    display: flex;
+}
+#header .nav > ul {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    height: 100%;
+}
+#header .nav > ul > li {
+    position: relative;
+    width: 15%;
+}
+#header .nav > ul > li > a {
+    background-color: #ffb25b;
+    color: #bb874b;
+    display: block;
+    padding: 10px 0;
+    
+}
+#header .nav > ul > li > a:hover {
+    background-color: #e7b67e;
+}
+#header .nav > ul > li > ul {
+    position: absolute;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    display: none;
+}
+#header .nav > ul >  li > ul > li {
+    width: 20%;
+    background-color: #bb874b;
+}
+#header .nav > ul > li > ul > li > a {
+    display: block;
+    color: #f0b26c;
+}
+#header .nav > ul > li > ul > li > a:hover {
+    background-color: #f0b26c;
+    color: #bb874b;
+}
+
+#slider {
+    width: 100%;
+    height: 300px;
+}
+#slider .sliderWrap {
+    position: relative;
+}
+#slider .sliderWrap .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+#slider .sliderWrap .slider .text {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffe4c4a9;
+}
+
+#contents {
+    width: 100%;
+    display: flex;
+}
+#contents .info {
+    width: 33.333%;
+    height: 200px;
+    background-color: #575656;
+}
+#contents .banner {
+    width: 33.333%;
+    height: 200px;
+    background-color: #6d6d6d;
+}
+#contents .link {
+    width: 33.333%;
+    height: 200px;
+    background-color: #858585;
+}
+
+#footer {
+    width: 100%;
+    display: flex;
+}
+#footer .logo {
+    width: 20%;
+    height: 100px;
+    background-color: #a8a8a8;
+}
+#footer .copyright {
+    width: 80%;
+    height: 100px;
+    background-color: #535353;
+}
+#footer .SNS {
+    width: 20%;
+    height: 100px;
+    background-color: #a8a8a8;
+}

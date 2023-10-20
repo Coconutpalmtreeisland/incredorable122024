@@ -150,3 +150,25 @@ address {
   font-weight: 700;
   font-style: normal;
 }
+
+/* input 기본 설정 초기화 */
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button,
+input::-webkit-search-results-button,
+input::-webkit-search-results-decoration{
+    appearance: none;
+    position: absolute;
+    right: 0;
+}
+
+/* select 기본 설정 초기화 */
+/* IE */
+select::-ms-expand { 
+	display: none;
+}
+select {
+  -o-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

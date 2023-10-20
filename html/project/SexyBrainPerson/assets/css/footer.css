@@ -1,4 +1,3 @@
-
 #footer {
     display: flex;
     height: 129px;    
@@ -33,18 +32,25 @@
     float: right;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 850px) {
     #footer {
-        padding: 38px 0;
-        height: 80px;
-        display: block;
+        padding: 0px 10px;
+        height: 60px;
         margin: 0 auto;
+        height: 80px
     }
-    .footer__logo img{
-        
-        
+    .footer__logo{
+        position: relative;
+    }
+    .footer__logo img {
+        position: absolute;
+        width: 60px;
+        top: -15px;
     }
     .footer__creater {
         display: none;
+    }
+    .footer__copyright {
+        font-size: 0.7rem;
     }
 }
