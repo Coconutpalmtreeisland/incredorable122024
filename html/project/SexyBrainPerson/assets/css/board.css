@@ -141,7 +141,7 @@ body {
 /* board__filter */
 .board__filter {
     width: 22%;
-    height: 260px;
+    height: 300px;
     border: 2px solid var(--colorSM);
     border-radius: 10px;
     margin-left: 48px;
@@ -285,6 +285,9 @@ body {
     }
 
 @media (max-width: 1200px) {
+    .container {
+        width: 85%
+    }
     .board__wrap {
         flex-direction: column-reverse;
     }
@@ -391,6 +394,59 @@ body {
     
 }
 
+@media (max-width: 650px){
+    
+    /* 말머리 검색 설정 바꾸기*/
+    .board__filter {
+        display: flex;
+        height: 20px;
+        padding: 0;
+        border: 0;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .filter__button {
+        display: none;
+    }
+    .type__check .checkbox {
+        display: none;
+    }
+    select {
+        font-size: 10px;
+        font-weight: 600;
+        margin-left: 8px;
+    }
+    .hidden-select {
+        position: relative;
+        display: block;
+        width: 50px;
+        height: 20px;
+        padding: 1px 0px 1px 5px;
+        border: 1px solid var(--primary-color);
+        border-radius: 4px;
+        outline: 0 none;
+        background-color: rgba(0, 0, 0, 0);
+    }
+    .hidden-select option {
+        background: var(--bgc);
+        color: var(--primary-color);
+        padding: 3px 0;
+        font-size: 12px;
+        font-weight: 600;
+    }
+    .iconArrow {
+        position: absolute;
+        left: 85px;
+        top: 5px;
+        display: block;
+        width: 10px;
+        height: 10px;
+        background: url('../img/arrow.svg') no-repeat;
+        background-size: 9px 9px;
+        transform: scaleY(-1);
+        z-index: -1;
+    }
+}
+
 @media (max-width: 550px){
     .intro__box h2{
         font-size: 1.2rem;
@@ -453,34 +509,5 @@ body {
         top: 11px;
         left: 6px;
         font-size: 18px;
-    }
-    
-
-    /* 말머리 검색 설정 바꾸기*/
-    .board__filter {
-        height: 20px;
-        padding: 0;
-        border: 0;
-        background-color: rgba(0, 0, 0, 0);
-    }
-    .filter__button {
-        display: none;
-    }
-    .type__check .checkbox {
-        display: none;
-    }
-    .hidden-select {
-        display: block;
-        width: 150px;
-        height: 35px;
-        
-        padding: 5px 30px 5px 10px;
-        border-radius: 4px;
-        outline: 0 none;
-    }
-    .hidden-select option {
-        background: black;
-        color: #fff;
-        padding: 3px 0;
     }
 }

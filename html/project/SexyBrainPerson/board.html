@@ -222,49 +222,34 @@
                         <label for="filter-toggle1" class="checkbox">
                           <input type="checkbox" id="filter-toggle1">
                           <span class="on"></span>
-                          <p>공지</p>
+                          <p>전체</p>
                         </label>
                         <label for="filter-toggle2" class="checkbox">
                             <input type="checkbox" id="filter-toggle2">
                             <span class="on"></span>
+                            <p>공지</p>
+                          </label>
+                        <label for="filter-toggle3" class="checkbox">
+                            <input type="checkbox" id="filter-toggle3">
+                            <span class="on"></span>
                             <p>질문</p>
                           </label>
-                          <label for="filter-toggle3" class="checkbox">
-                            <input type="checkbox" id="filter-toggle3">
+                          <label for="filter-toggle4" class="checkbox">
+                            <input type="checkbox" id="filter-toggle4">
                             <span class="on"></span>
                             <p>자유</p>
                           </label>
                       </div>
                       <select id="filter-select" class="hidden-select">
+                        <option value="공지">전체</option>
                         <option value="공지">공지</option>
                         <option value="질문">질문</option>
                         <option value="자유">자유</option>
                       </select>
+                      <span class="iconArrow"></span>
                     </div>
                     <button class="filter__button">검색</button>
                   </aside>
-                <!-- <aside class="board__filter">
-                    <div class="filter__head">말머리</div>
-                    <div class="filter__type">
-                        <div class="type__check">
-                            <label for="checkbox1" class="checkbox">
-                                <input type="checkbox" id="checkbox1">
-                                <span class="on"></span>
-                                공지
-                            </label>
-                            <label for="checkbox2" class="checkbox">
-                                <input type="checkbox" id="checkbox2">
-                                <span class="on"></span>
-                                질문
-                            </label><label for="checkbox3" class="checkbox">
-                                <input type="checkbox" id="checkbox3">
-                                <span class="on"></span>
-                                자유
-                            </label>
-                        </div>
-                    </div>
-                    <button class="filter__button">검색</button>
-                </aside> -->
                 <!-- //board__filter -->
             </section>
             <!-- //section -->
@@ -286,5 +271,33 @@
             </div>
         </footer>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+    /* $(document).ready(function() {
+    // 체크박스 라벨 추가 또는 삭제 시 높이 조절
+    $('input[type="checkbox"]').on('change', function() {
+        adjustFilterHeight();
+    });
+
+    // 초기 페이지 로드 시 높이 조절
+    adjustFilterHeight();
+
+    function adjustFilterHeight() {
+        let totalHeight = 300;
+
+        // 모든 체크박스의 높이를 합산
+        $('input[type="checkbox"]').each(function() {
+            let labelHeight = parseInt($(this).next('.checkbox').css('height'));
+            let labelMarginBottom = parseInt($(this).next('.checkbox').css('margin-bottom'));
+                totalHeight += labelHeight + labelMarginBottom;
+        });
+        totalHeight += parseInt($('.filter__button').css('height'));
+
+        // 높이 조절
+        $('.board__filter').css('height', totalHeight + 'px');
+    }
+}); */
+    </script>
 </body>
 </html>

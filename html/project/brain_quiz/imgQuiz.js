@@ -168,10 +168,10 @@ let quizInfo = [
         ]
     },
     {
-        question: "광역시 2곳",
+        question: "광역시",
         choices: [
             { img: "assets/img/img19-1.jpg", correct: false },
-            { img: "assets/img/img19-2.jpg", correct: true },
+            { img: "assets/img/img19-2.jpg", correct: false },
             { img: "assets/img/img19-3.jpg", correct: true },
             { img: "assets/img/img19-4.jpg", correct: false }
         ]
