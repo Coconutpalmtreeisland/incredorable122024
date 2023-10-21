@@ -11,7 +11,7 @@ body {
         var(--colorB) 20%,
         var(--colorS) 80%
     );
-    padding: 85px 0 26px 0;
+    padding: 85px 0 40px 0;
     margin: 28px 0 126px 0;
     text-align: center;
 }
@@ -25,17 +25,17 @@ body {
 .intro__box p {
     font-size: 20px;
     color: var(--primary-color);
-    margin-bottom: 29px;
+    margin-bottom: 45px;
 }
-.intro__box .write__go {
-    width: 140px;
-    height: 56px;
-    border: 0;
+.intro__box a {
+    padding: 18px 47px;
+    border: 1px solid var(--primary-color);
     border-radius: 30px;
     text-align: center;
     color: var(--colorS);
     background-color: var(--primary-color);
     cursor: pointer;
+    font-size: 16px;
 }
 
 /* board__wrap */
@@ -244,18 +244,10 @@ body {
     text-align: center;
     cursor: pointer;
 }
-.board__pages li:hover,
-.board__pages li:active {
-    width: 35px;
-    height: 35px;
-    line-height: 2.3;
-    text-align: center;
-    color: var(--colorS);
-}
 .board__pages li a {
     font-size: 16px;
     font-weight: bold;
-    color: var(--colorSM);
+    color: var(--primary-color);
 }
 .board__pages li a:hover {
     color: var(--colorSD);
@@ -269,14 +261,6 @@ body {
     line-height: 1.5;
     font-size: 25px;
     padding-left: 2px;
-}
-.board__pages ul li:first-child,
-.board__pages ul li:last-child {
-    width: 35px;
-    height: 35px;
-    text-align: center;
-    background-color: var(--colorS);
-    border-radius: 50%;
 }
 
 /* 기본적으로 숨겨진 선택 메뉴 */

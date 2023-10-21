@@ -6,9 +6,6 @@
     font-family: var(--main-neo);
     margin: 53px 38px 0 38px;
 }
-.header__nav {
-
-}
 .header__nav ul {
     display: flex;
 }  
