@@ -249,7 +249,8 @@ body {
     font-weight: bold;
     color: var(--primary-color);
 }
-.board__pages li a:hover {
+.board__pages li:hover a,
+.board__pages li.active a {
     color: var(--colorSD);
 }
 .board__pages ul li:first-child a {
@@ -362,9 +363,8 @@ body {
         font-size: 1.1rem;
         margin-bottom: 1.1rem;
     }
-    .intro__box .write__go {
-        width: 5.5rem;
-        height: 2.5rem;
+    .intro__box a {
+        padding: 8px 25px;
         font-size: 0.9rem;
     }
     .filter__button {

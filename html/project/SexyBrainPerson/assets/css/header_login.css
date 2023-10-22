@@ -17,7 +17,8 @@
 .header__nav ul li:last-child {
     padding-right: 0;
 }
-.header__nav ul li:hover a{
+.header__nav ul li:hover a,
+.header__nav ul li.active a {
     color: var(--colorR);
 }
 
