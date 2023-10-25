@@ -9,5 +9,6 @@
 /* 섹션별 설정 */
 @import "header_login.css";
 @import "board.css";
+@import "card.css";
 @import "quizList.css";
 @import "footer.css";

@@ -17,10 +17,13 @@
 .header__nav ul li:last-child {
     padding-right: 0;
 }
-.header__nav ul li:hover a,
 .header__nav ul li.active a {
+    color: var(--colorSD);
+}
+.header__nav ul li:hover a {
     color: var(--colorR);
 }
+
 
 .header__logo {
     position: absolute;
@@ -97,6 +100,10 @@ input::-webkit-search-results-decoration{
     margin: 0 23px;
     cursor: pointer;
 }
+.header__right button {
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+}
 
 /* header__right propile */
 .header__right .propile {
@@ -138,6 +145,7 @@ input::-webkit-search-results-decoration{
         transform: translateY(12%);
         width: 5.7rem;
         height: 2.6rem;
+        margin-bottom: 9px;
     }
     .header__right .propile {
         width: 3.2rem;
@@ -169,6 +177,7 @@ input::-webkit-search-results-decoration{
         width: 5rem;
         height: 2rem;
         margin-left: 5px;
+        margin-bottom: 12px;
     }
     .header__right .propile {
         margin-right: 5px;
