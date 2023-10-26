@@ -38,11 +38,11 @@
                     </div>
                     <div class="search__star">
                         <ul>
-                            <li>★☆☆☆☆ <span>사용 안함</span></li>
-                            <li>★★☆☆☆ <span>가끔 사용</span></li>
-                            <li>★★★☆☆ <span>보통 사용</span></li>
-                            <li>★★★★☆ <span>자주 사용</span></li>
-                            <li>★★★★★ <span>필수 사용</span></li>
+                            <li data-star="1" data-desc=" 사용 안함">★☆☆☆☆</li>
+                            <li data-star="2" data-desc=" 가끔 사용">★★☆☆☆</li>
+                            <li data-star="3" data-desc=" 보통 사용">★★★☆☆</li>
+                            <li data-star="4" data-desc=" 자주 사용">★★★★☆</li>
+                            <li data-star="5" data-desc=" 필수 사용">★★★★★</li>
                         </ul>
                     </div>
                     <div class="search__info">
@@ -59,7 +59,7 @@
         <!-- //main -->
     
         <footer id="footer">
-            <a href="malito:adorableness1215@naver.com">adorableness1215@naver.com</a>
+            <a href="mailto:adorableness1215@naver.com">adorableness1215@naver.com</a>
         </footer>
         <!-- //footer -->
     </div>
@@ -156,37 +156,32 @@
         ]
 
         const searchList = document.querySelector(".search__list ul");
-        const searchInfo = document.querySelector(".search__info");
-        const searchBox = document.querySelector(".search__box input");
-        const searchBoxResult = document.querySelector(".search__box__result");
-        const searchButton = document.querySelector(".search__click");
-        const cssStar = document.querySelectorAll(".search__star ul");
-
-        // 숫자 별로 변환
-        
+        const searchStarItems = document.querySelectorAll(".search__star li");
+        const searchCount = document.querySelector(".search__info .num");
 
         // 출력하기
         function listUpdate(list){
             let listItem = "";
-            let starItem = "";
 
             for(const data of list){
-                const stars = "★".repeat(data.star) + "☆".repeat(5 - data.star);
-                listItem += `<li><strong>${data.name}</strong> : ${data.desc} <i>${stars}</i></li>`;
+                let listStar = searchStarItems[data.star-1].innerText;
+                listItem +=`<li><strong>${data.name}</strong> : ${data.desc} <em>${listStar}</em></li>`;
             }
             searchList.innerHTML = listItem;
-
-            /* 
-                searchList.innerText = "";
-
-                cssProperty.forEach(property => {
-                const listItem = document.createElement("li");
-                listItem.innerHTML = `<strong>${property.name}</strong> : ${property.desc} <i>${property.star}</i>`;
-                searchList.appendChild(listItem);
-            }) */
-            
+            searchCount.textContent = list.length;
         }
         listUpdate(cssProperty);
+
+        // 클릭하기
+        searchStarItems.forEach(star => {
+            star.addEventListener("click", () => {
+                const target = star.dataset.star;   // data-star 가져오기
+                // const filterList = cssProperty.filter(data => data.star == target); // 숫자랑 별이랑 같으면 찾기
+                const filterList = cssProperty.filter(data => data.star >= target); // filter는 한번 더 거를 수 있음 조건식(~개 이상) 사용 가능
+                listUpdate(filterList);
+            })
+        });
+        
 
     </script>
 </body>

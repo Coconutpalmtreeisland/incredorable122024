@@ -64,7 +64,7 @@ body {
     width: 100%;
     background-color: #e6dbcf;
     color: #363636;
-    margin: 30px 20px;
+    overflow-x: hidden;
 }
 li, ul {
     list-style: none;
@@ -116,8 +116,11 @@ a {
 }
 
 .wrap {
-    width: 1400px;
-    margin: 0 auto;
+    width: 98%;
+    height: 100vh;
+}
+.container {
+    margin: 30px 20px;
 }
 
 /* #header */
@@ -177,7 +180,7 @@ a {
     src: url("https://webfontworld.github.io/LotteriaDdag/LotteriaDdag.css");
     font-weight: normal;
     font-size: 110px;
-    letter-spacing: 10px;
+    letter-spacing: 12px;
     line-height: 1.1;
 }
 
@@ -220,6 +223,19 @@ a {
 .count {
     margin-top: 25px;
     
+}
+
+/* search__star */
+.search__star li:hover {
+    background-color: #fff;
+    color: #363636;
+    cursor: pointer;
+}
+.search__star li:hover span {
+    color: #363636;
+}
+.search__star li::after {
+    content: attr(data-desc);
 }
 
 /* script */
