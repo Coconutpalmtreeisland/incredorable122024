@@ -22,5 +22,13 @@ $(function(){
     $(".nav > ul > li").mouseout(function(){
         $(".nav > ul > li > ul").stop().fadeOut(400);
     });
+
+    // 팝업
+    $(".popup-btn").click(function(){
+        $(".popup-view").show();
+    });
+    $(".popup-close").click(function(){
+        $(".popup-view").hide();
+    });
 });
 

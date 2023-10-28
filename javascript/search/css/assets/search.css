@@ -121,6 +121,7 @@ a {
 }
 .container {
     margin: 30px 20px;
+    box-sizing: border-box;
 }
 
 /* #header */

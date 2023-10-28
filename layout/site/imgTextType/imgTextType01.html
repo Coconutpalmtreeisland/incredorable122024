@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지/텍스트 유형01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+        .blind {
+            width: 0;
+            height: 0;
+            line-height: 0;
+            overflow: hidden;
+            position: absolute;
+            text-indent: -9999px;
+        }
+        
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        
+        /* imgTextType */
+        .imgText__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .imgText__inner > div {
+            width: 32%;
+            height: 500px;
+        }
+
+        .imgText__txt .small {
+            font-size: 16px;
+            color: #666;
+            text-decoration: underline;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .imgText__txt .title {
+            font-size: 50px;
+            font-weight: 300;
+            word-break: keep-all;
+            line-height: 1.4;
+            margin-bottom: 20px;
+        }
+        .imgText__txt .desc {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 10px;
+            word-break: keep-all;
+        }
+        .imgText__txt .list {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        .imgText__txt .list li {
+            position: relative;
+            padding-left: 20px;
+        }
+        .imgText__txt .list li::before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            background: #666;
+            border-radius: 50%;
+            position: absolute;
+            left: 5px;
+            top: 9px;
+        }
+        .imgText__txt .list li a {
+            color: #666;
+        }
+
+        .imgText__img {
+           border-radius: 10px;
+           position: relative;
+        }
+        .imgText__img a {
+            background-color: #9D9D9D;
+            color: #fff;
+            padding: 10px 30px;
+            font-size: 18px;
+            border-radius: 30px;
+            display: inline-block;
+            position: absolute;
+            left: 30px;
+            bottom: 30px;
+        }
+        .imgText__img a.deep {
+            background-color: #0D1113;
+        }
+        .imgText__img.img1 {
+            background: url(img/imgText01.jpg) no-repeat center / cover;
+        }
+        .imgText__img.img2 {
+            background: url(img/imgText02.jpg) no-repeat center / cover;
+        }
+    </style>
+</head>
+<body>
+    <section id="imgTextType" class="imgText__wrap section nexon">
+        <h2 class="blind">이미지 텍스트 유형</h2>
+        <div class="imgText__inner container">
+            <div class="imgText__txt">
+                <span class="small">이미지 텍스트 유형01</span>
+                <h3 class="title">김준수 뮤지컬 작품 살펴보기</h3>
+                <p class="desc">김준수는 올해로 가수 데뷔 20주년, 뮤지컬 데뷔 13주년을 맞이했다. 뮤지컬 배우로서 2010년부터 2023년까지 총 9개의 작품을 통해 9명의 삶을 연기했다.</p>
+                <ul class="list">
+                    <li><a href="/">2010 뮤지컬 ‘모차르트!’ - 모차르트</a></li>
+                    <li><a href="/">2011 뮤지컬 ‘천국의 눈물’ - 준</a></li>
+                    <li><a href="/">2012 뮤지컬 ‘엘리자벳’ - 토드</a></li>
+                    <li><a href="/">2013 뮤지컬 ‘디셈버’ - 지욱</a></li>
+                    <li><a href="/">2014 뮤지컬 ‘드라큘라’ - 드라큘라</a></li>
+                    <li><a href="/">2015 뮤지컬 ‘데스노트’ – 엘(L)</a></li>
+                    <li><a href="/">2016 뮤지컬 ‘도리안 그레이’ – 도리안</a></li>
+                    <li><a href="/">2019 뮤지컬 ‘엑스칼리버’ – 아더</a></li>
+                    <li><a href="/">2022 뮤지컬 '웨스트 사이드 스토리' - 토니</a></li>
+                </ul>
+            </div>
+            <div class="imgText__img img1">
+                <a href="/">팬송 'Red Diamond'</a>
+            </div>
+            <div class="imgText__img img2">
+                <a class="deep" href="/">김준수 뮤지컬 총망라</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
