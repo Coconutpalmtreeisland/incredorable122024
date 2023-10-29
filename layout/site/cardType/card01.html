@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 유형01</title>
+    <style>
+        /* fonts */
+        @import url('https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css');
+
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        .img {
+            width: 100%;
+        }
+        
+
+        /* common */
+        .container {
+            width: 1160px;
+            padding: 0 20px;
+            margin: 0 auto;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section > h2 {
+            font-size: 50px;
+            font-weight: 400;
+            line-height: 1;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .section > p {
+            font-size: 22px;
+            color: #666;
+            line-height: 1.5;
+            font-weight: 300;
+            text-align: center;
+            margin-bottom: 70px;
+        }
+
+        /* cardType */
+        .card_wrap {
+        }
+        .card__inner {
+            display: flex;
+            justify-content: space-between;
+        }
+        .card{
+            width: 32%;
+            background-color: #f5f5f5;
+        }
+        .card__header {}
+        .card__body {
+            padding: 24px;
+        }
+        .title { 
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .desc {
+            font-size: 18px;
+            line-height: 1.4;
+            color: #666;
+            margin-bottom: 20px;
+            font-weight: 300;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 4; 
+            -webkit-box-orient: vertical;
+        }
+        .btn {
+            font-size: 16px;
+            color: #222;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="cardType" class="card_wrap nexon section">
+        <h2>김준수의 콘서트</h2>
+        <p>
+            김준수의 브랜드 콘서트를 소개하는 사이트입니다.<br>
+            NEXON Lv1 Gothic OTF 22px 150% #666
+        </p>
+        <div class="card__inner container">
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card01.jpg" alt="Ballad & Musical Concert with Orchestra">
+                </figure>
+                <div class="card__body">
+                    <h3 class="title">Ballad & Musical Concert with Orchestra</h3>
+                    <p class="desc">
+                        뮤지컬을 시작한 후 매년 연말 시즌에 열리는 콘서트이다.
+                        1부는 해당 년도에 한 뮤지컬 중 주요 넘버를 골라 뮤지컬을 요약한 구성이다.
+                        1부와 2부 사이에 팬들의 3가지 소원을 들어주는 지니타임이 있으며,
+                        2부는 김준수의 발라드나 OST를 부르거나, 타가수의 발라드를 커버한다.
+                        앵콜로 Incredible이나 사쿠란보 같은 댄스곡을 넣는다.
+                    </p>
+                    <a href="/" class="btn">더 자세히 보기
+                        <span aria-hidden="true">
+                        <svg width="51" height="8" viewBox="0 0 51 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50.3536 4.35355C50.5488 4.15829 50.5488 3.84171 50.3536 3.64645L47.1716 0.464466C46.9763 0.269204 46.6597 0.269204 46.4645 0.464466C46.2692 0.659728 46.2692 0.976311 46.4645 1.17157L49.2929 4L46.4645 6.82843C46.2692 7.02369 46.2692 7.34027 46.4645 7.53553C46.6597 7.7308 46.9763 7.7308 47.1716 7.53553L50.3536 4.35355ZM0 4.5H50V3.5H0V4.5Z" fill="black"/>
+                            </svg>
+                        </span>
+                    </a>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header">
+                    <img src="img/card02.jpg" alt="XIA Fanmeeting Tour &lt;COCOTIME>">
+                </figure>
+                <div class="card__body">
+                    <h3 class="title">XIA Fanmeeting Tour &lt;COCOTIME></h3>
+                    <p class="desc">
+                        데뷔 20주년을 맞아 개최된 콘서트로 팬덤 이름 '코코넛'과 시그니처 코너 '지니타임'을 합쳐 코코타임이라는 이름으로 지어진 팬미팅 콘서트이다.
+                        각 나라를 돌며 하는 투어 형식으로 한국 뿐만 아니라 일본, 대만에서도 개최되었다.
+                        오직 팬들만을 위한 vcr과 김준수에 대해 알아볼 수 있는 대화와 소통을 통해 추억을 공유하며 앞으로의 미래도 함께 꿈꾸는 시간을 선사했다.
+                    </p>
+                    <a href="/" class="btn">더 자세히 보기
+                        <span aria-hidden="true">
+                            <svg width="51" height="8" viewBox="0 0 51 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50.3536 4.35355C50.5488 4.15829 50.5488 3.84171 50.3536 3.64645L47.1716 0.464466C46.9763 0.269204 46.6597 0.269204 46.4645 0.464466C46.2692 0.659728 46.2692 0.976311 46.4645 1.17157L49.2929 4L46.4645 6.82843C46.2692 7.02369 46.2692 7.34027 46.4645 7.53553C46.6597 7.7308 46.9763 7.7308 47.1716 7.53553L50.3536 4.35355ZM0 4.5H50V3.5H0V4.5Z" fill="black"/>
+                                </svg>
+                            </span>
+                    </a>
+                </div>
+            </article>
+            <article class="card">
+                <figure class="card__header"s>
+                    <img src="img/card03.jpg" alt="PALMTREE ISLAND GALA CONCERT">
+                </figure>
+                <div class="card__body">
+                    <h3 class="title">PALMTREE ISLAND GALA CONCERT</h3>
+                    <p class="desc">
+                        김준수가 소속사의 대표로서 콘서트를 기획하고 참여하는 콘서트이다.
+                        자신의 소속사 배우들과 함께 대표 넘버나 부르고 싶었던 넘버 등을 부르는 다양한 구성으로 되어있다.
+                        이 콘서트는 김준수가 소속사의 배우만으로 하나의 콘텐츠를 만들 수 있다는 바람을 가지고 시작한 콘서트이다.
+                        소속 배우들의 다양한 모습과 가족같은 모습을 볼 수 있으며 올해로 2회를 맞이했다.
+                    </p>
+                    <a href="/" class="btn">더 자세히 보기
+                        <span aria-hidden="true">
+                            <svg width="51" height="8" viewBox="0 0 51 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M50.3536 4.35355C50.5488 4.15829 50.5488 3.84171 50.3536 3.64645L47.1716 0.464466C46.9763 0.269204 46.6597 0.269204 46.4645 0.464466C46.2692 0.659728 46.2692 0.976311 46.4645 1.17157L49.2929 4L46.4645 6.82843C46.2692 7.02369 46.2692 7.34027 46.4645 7.53553C46.6597 7.7308 46.9763 7.7308 47.1716 7.53553L50.3536 4.35355ZM0 4.5H50V3.5H0V4.5Z" fill="black"/>
+                                </svg>
+                            </span>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>
