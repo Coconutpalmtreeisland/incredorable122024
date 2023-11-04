@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+.clearfix::before,
+.clearfix::after {
+    display: block;
+    content: '';
+    clear: both;
+}
