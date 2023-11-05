@@ -26,3 +26,198 @@ img {
     content: '';
     clear: both;
 }
+
+#wrap {
+    width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+/* aside */
+#aside {
+    float: left;
+    width: 270px;
+}
+#aside h1 {
+    margin-bottom: 30px;
+}
+#aside h1 img {
+    width: 150px;
+}
+#aside .nav {}
+#aside .nav li {
+    padding-bottom: 5px;
+    padding: 10px;
+}
+#aside .nav li a {
+    font-size: 23px;
+}
+#aside .nav li a:hover {
+    text-decoration: underline;
+}
+#aside .nav li.active a {
+    color: blueviolet;
+}
+#aside .nav li ul.submenu {
+    display: none;
+}
+#aside .nav li ul.submenu li a {
+    display: block;
+    font-size: 20px;
+    color: #333;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+#aside .nav li ul.submenu li a:hover {
+    text-decoration: none;
+}
+
+/* banner */
+.banner {
+    height: 384px;
+    /* overflow: hidden; */
+}
+.slideList {
+    width: 700px;
+    position: relative;
+}
+.slideList .slideImg {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.slideList .slideImg h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+/* tab */
+.tab {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    padding: 40px 0;
+}
+.tab img {
+    width: 100px;
+}
+.tab ul {
+    text-align: center;
+}
+.tab ul li {
+    display: inline;
+    padding: 5px;
+}
+.tab ul li a {
+    font-size: 24px;
+    color: #999;
+}
+.tab ul li.active a {
+    color: #000;
+}
+.tab ul li ul {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 100px;
+    overflow: hidden;
+}
+.tab ul li ul li {
+    width: 20%;
+    float: left;
+    box-sizing: border-box;
+}
+.tab ul li ul li a {
+    font-size: 12px;
+}
+.tab ul li ul li a span {
+    display: block;
+    margin-top: 10px;
+}
+
+/* layer */
+.layer {
+    background: #f7f7f7;
+    padding: 15px;
+}
+.layer > div {
+    position: relative;
+    float: left;
+    width: 32%;
+    padding: 6% 3%;
+    text-align: center;
+    margin-right: 2%;
+    background: #fff;
+    border: 2px solid #ccc;
+    box-sizing: border-box;
+}
+.layer > div:last-child {
+    margin-right: 0;
+}
+.layer > div img {
+    width: 100px;
+    padding: 20px 0;
+}
+.layer > div ul li {
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 5px;
+}
+.layer > div .more {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    width: 27px;
+    height: 20px;
+    box-sizing: border-box;
+    padding: 0px 2px 25px;
+}
+
+/* contents */
+#contents {
+    float: right;
+    width: 700px;
+}
+
+/* footer */
+#footer {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    background: #edf2f8;
+}
+#footer h2 {
+    float: left;
+}
+#footer h2  img {
+    width: 80px;
+}
+#footer address {
+    float: left;
+    font-style: normal;
+    padding: 20px 0 0 20px;
+}
+#footer .sns {
+    float: right;
+    margin-top: 20px;
+}
+#footer .sns ul {
+    overflow: hidden;
+}
+#footer .sns li {
+    float: left;
+    padding-bottom: 5px;
+}
+#footer .sns li img {
+    width: 60px;
+}
