@@ -4,55 +4,59 @@
     font-style: normal;
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot');
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.eot?#iefix') format('embedded-opentype'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff2') format('woff2'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff') format('woff'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.ttf') format("truetype");
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-aLt.ttf') format("truetype");
     font-display: swap;
-} 
+}
+
 @font-face {
     font-family: 'NanumSquareNeo';
     font-weight: 400;
     font-style: normal;
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot');
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.eot?#iefix') format('embedded-opentype'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff2') format('woff2'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff') format('woff'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.ttf') format("truetype");
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-bRg.ttf') format("truetype");
     font-display: swap;
-} 
+}
+
 @font-face {
     font-family: 'NanumSquareNeo';
     font-weight: 700;
     font-style: normal;
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot');
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.eot?#iefix') format('embedded-opentype'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff2') format('woff2'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff') format('woff'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.ttf') format("truetype");
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-cBd.ttf') format("truetype");
     font-display: swap;
-} 
+}
+
 @font-face {
     font-family: 'NanumSquareNeo';
     font-weight: 800;
     font-style: normal;
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot');
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.eot?#iefix') format('embedded-opentype'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2') format('woff2'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff') format('woff'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf') format("truetype");
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-dEb.ttf') format("truetype");
     font-display: swap;
-} 
+}
+
 @font-face {
     font-family: 'NanumSquareNeo';
     font-weight: 900;
     font-style: normal;
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot');
     src: url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.eot?#iefix') format('embedded-opentype'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff2') format('woff2'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff') format('woff'),
-         url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.ttf') format("truetype");
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff2') format('woff2'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.woff') format('woff'),
+        url('https://webfontworld.github.io/NanumSquareNeo/NanumSquareNeo-eHv.ttf') format("truetype");
     font-display: swap;
-} 
+}
 
 * {
     margin: 0;
@@ -60,30 +64,38 @@
     box-sizing: border-box;
     font-family: "NanumSquareNeo";
 }
+
 body {
     width: 100%;
     background-color: #e6dbcf;
     color: #363636;
     overflow-x: hidden;
 }
-li, ul {
+
+li,
+ul {
     list-style: none;
 }
+
 a {
     text-decoration: none;
 }
+
 .blind {
     display: none;
 }
+
 .line1 {
     width: 100%;
     border-top: 3px solid #363636;
     border-bottom: 3px solid #363636;
 }
+
 .line2 {
     width: 100%;
     border-bottom: 3px solid #363636;
 }
+
 .circle {
     position: relative;
     display: block;
@@ -93,6 +105,7 @@ a {
     border-radius: 50%;
     background-color: #363636;
 }
+
 .circle2 {
     position: relative;
     display: block;
@@ -102,7 +115,9 @@ a {
     border-radius: 50%;
     background-color: #363636;
     align-items: end;
+    right: 130px;
 }
+
 .circle2::after {
     position: absolute;
     content: '';
@@ -119,6 +134,7 @@ a {
     width: 98%;
     height: 100vh;
 }
+
 .container {
     margin: 30px 20px;
     box-sizing: border-box;
@@ -129,33 +145,40 @@ a {
     width: 100%;
     display: flex;
 }
+
 #header h1 {
     width: 50%;
     padding: 15px 0;
 }
+
 #header h1 span {
     display: block;
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 5px;
 }
+
 #header h1 a {
     font-weight: 800;
     font-size: 50px;
     color: #363636;
 }
+
 #header nav {
     width: 50%;
     padding: 15px;
     font-size: 22px;
 }
+
 #header nav ul {
     display: flex;
     justify-content: space-between;
 }
+
 #header nav li {
     margin-left: 20px;
 }
+
 #header nav li a {
     color: #363636;
 }
@@ -165,10 +188,12 @@ a {
 .search__head {
     width: 50%;
 }
-.search__title{
+
+.search__title {
     margin-top: 20px;
     margin-bottom: 40px;
 }
+
 .search__title span {
     display: block;
     font-size: 25px;
@@ -176,6 +201,7 @@ a {
     letter-spacing: 5px;
     margin-bottom: 25px;
 }
+
 .search__title h1 {
     font-family: "LotteriaDdag";
     src: url("https://webfontworld.github.io/LotteriaDdag/LotteriaDdag.css");
@@ -190,11 +216,11 @@ a {
     padding: 25px 0;
     width: 100%
 }
+
 .search__box input {
     width: 35%;
     height: 30px;
     margin-top: 25px;
-    margin-left: 8px;
     box-sizing: border-box;
     border: none;
     font-size: 16px;
@@ -203,13 +229,17 @@ a {
     background: none;
     cursor: pointer;
 }
+
 .search__box input::-webkit-input-placeholder {
     font-size: 16px;
     align-items: center;
     color: #363636;
 
 }
-.search__box input:hover, .search__box input:focus, .search__box input:active {
+
+.search__box input:hover,
+.search__box input:focus,
+.search__box input:active {
     outline: none;
     border-bottom: none;
 }
@@ -217,13 +247,15 @@ a {
 .search__info {
     padding: 25px 0;
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
 }
-.search__info .circle2 {
-}
+
+.search__info .circle2 {}
+
 .count {
     margin-top: 25px;
-    
+    font-weight: bold;
 }
 
 /* search__star */
@@ -232,9 +264,11 @@ a {
     color: #363636;
     cursor: pointer;
 }
+
 .search__star li:hover span {
     color: #363636;
 }
+
 .search__star li::after {
     content: attr(data-desc);
 }
@@ -247,6 +281,7 @@ a {
 .search__list li.hide {
     display: none;
 }
+
 .search__list span.active {
     background-color: #363636;
     color: #e6dbcf;
