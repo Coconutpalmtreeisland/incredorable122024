@@ -1,22 +1,25 @@
 .card__inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     margin-bottom: 100px;
 }
-.card__inner.column4 > div {
+
+.card__inner.column4>div {
     width: 23%
 }
+
 .card {
     width: 24%;
-    height: 25vh;
+    height: 26vh;
     background-color: var(--white);
     border: 0;
     border-radius: 10px;
-    margin-bottom: 26px;
+    margin: 0 1% 26px;
     padding: 9px;
     overflow: hidden;
 }
+
 .card figure {
     width: 100%;
     height: 60%;
@@ -28,36 +31,42 @@
     margin-bottom: 6px;
     background-color: var(--primary-color);
 }
+
 .card__text h3 {
     display: flex;
     justify-content: space-between;
     text-align: center;
     align-items: center;
 }
+
 .card__text h3 p {
     font-size: 0.75rem;
     color: var(--colorSD);
-    margin-right: 2px;
 }
-.card__text h3 > div {
+
+.card__text h3>div {
     display: flex;
     justify-content: flex-end;
 }
-.card__text h3 > div p {
+
+.card__text h3>div p {
     font-size: 0.9rem;
     color: var(--primary-color);
 }
-.card__text h3 > div p:first-child {
-    max-width: 70%;
+
+.card__text h3>div p:first-child {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-right: 2px;
+    margin-right: 5px;
 }
+
 .card__text h4 {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
 }
+
 .card__text h4 a {
     max-width: 70%;
     font-size: 1.1rem;
@@ -68,13 +77,15 @@
     text-overflow: ellipsis;
     margin-right: 2px;
 }
+
 .card__text h4 p {
     font-size: 0.9rem;
     font-weight: 700;
     color: var(--primary-color);
 }
+
 .card__desc {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: var(--colorSD);
     overflow: hidden;
     text-overflow: ellipsis;
@@ -83,27 +94,47 @@
     -webkit-box-orient: vertical;
 }
 
-@media (max-width: 1700px){
-    .card__inner.column4 > div {
-        width: 32%
+@media (max-width: 1700px) {
+    .card__inner.column4>div {
+        width: 30%
     }
 }
-@media (max-width: 1300px){
-    .card__inner.column4 > div {
-        width: 49%
+
+@media (max-width: 1300px) {
+    .card__inner.column4>div {
+        width: 47%
     }
+
     .card__inner {
         margin-bottom: 36px;
     }
 }
-@media (max-width: 550px){
+
+@media (max-width: 1250px) {
+    .card__inner.column4>div {
+        width: 23%
+    }
+}
+
+@media (max-width: 1040px) {
+    .card__inner.column4>div {
+        width: 30%
+    }
+}
+
+@media (max-width: 850px) {
+    .card__inner.column4>div {
+        width: 47%
+    }
+}
+
+@media (max-width: 550px) {
     .card {
-        height: 13vh;
+        height: 11vh;
+        margin-bottom: 5px;
     }
-    .card__inner.column4 > div {
+
+    .card__inner.column4>div {
         width: 100%
-    }
-    .card__desc {
-        display: none;
     }
 }

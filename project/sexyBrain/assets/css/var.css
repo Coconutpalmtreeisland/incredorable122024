@@ -8,10 +8,10 @@
     --colorSB: #555D8A;
     --colorR: #9E3436;
     --colorRD: #E62D46;
-
     --primary-color: #283269;
-
     --white: #fff;
-
     --main-neo: "nanumSquareNeo";
+
+    --colorSD_hover: #a7bee7bb;
+    --colorSB_focus: #555d8abb;
 }

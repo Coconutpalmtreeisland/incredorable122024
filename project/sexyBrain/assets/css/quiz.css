@@ -1,0 +1,436 @@
+#quiz_section {
+    padding: 50px;
+    position: relative;
+}
+
+.q_question em {
+    font-family: "Cafe24Classic";
+    color: #9E3436;
+    font-size: 5rem;
+    margin-right: 2rem;
+}
+
+.quiz_q_wrap {
+    max-width: 900px;
+    margin: 3rem auto 2rem;
+    padding: 50px 50px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.quiz_q_wrap p {
+    font-size: 2rem;
+}
+
+label {
+    display: none;
+}
+
+.question_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* quiz_url */
+.quiz_url {
+    padding: 1rem;
+}
+
+/* q_answer */
+.q_answer {
+    display: inline-block;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    position: relative;
+
+}
+
+.q_answer {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+.q_answer .quiz__answer {
+    width: 75%;
+    font-size: 1.5rem;
+    padding: 40px 150px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    border: 0;
+    margin-right: 2%;
+}
+
+.q_answer .quiz__submit {
+    width: 18%;
+    font-size: 1.5rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 20px;
+    background-color: var(--bgc);
+    color: var(--primary-color);
+}
+
+.q_answer .quiz__submit:hover,
+.q_answer .quiz__submit:focus {
+    background-color: var(--primary-color);
+    color: var(--bgc);
+    cursor: pointer;
+}
+
+.quiz_url {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+.q_answer::after {
+    content: '😃정답:';
+    position: absolute;
+    z-index: 2;
+    font-size: 1.5rem;
+    top: 50%;
+    left: 50px;
+    transform: translatey(-50%);
+}
+
+/* input 초기화 */
+input.quiz__answer:hover,
+input.quiz__submit:hover,
+input.quiz__answer:focus,
+input.quiz__submit:focus,
+input.quiz__answer:active,
+input.quiz__submit:active,
+textarea.quiz__answer:hover,
+textarea.quiz__submit:hover {
+    outline: none;
+    border: 0;
+    box-shadow: none;
+}
+
+#q_em {
+    display: none;
+    font-style: normal;
+}
+
+/* .answerImg {
+    width: 90%;
+} */
+
+@media (max-width:1250px) {
+    #quiz_section {
+        padding: 40px;
+    }
+
+    .q_question em {
+        font-size: 2.5rem;
+    }
+
+    .quiz_q_wrap p {
+        font-size: 1.7rem;
+    }
+
+    .q_answer .quiz__answer {
+        font-size: 1.6rem;
+        padding: 30px 155px;
+
+    }
+
+    .quiz_url {
+        font-size: 7rem;
+    }
+
+    .q_answer::after {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width:850px) {
+    #quiz_section {
+        padding: 20px;
+    }
+
+    .q_question em {
+        font-size: 2rem;
+        margin-right: 10px;
+    }
+
+    .quiz_q_wrap p {
+        font-size: 1.1rem;
+    }
+
+    .q_answer .quiz__answer {
+        font-size: 1.1rem;
+        padding: 25px 120px;
+
+    }
+
+    .quiz_url {
+        font-size: 3rem;
+    }
+
+    .q_answer::after {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:550px) {
+    .question_wrap {
+        flex-direction: column;
+    }
+
+    .quiz_q_wrap {
+        padding: 20px;
+    }
+
+    .q_question em {
+        display: block;
+        border-radius: 100%;
+        text-align: center;
+    }
+
+    #q_em {
+        display: inline-block;
+        margin-bottom: 10px;
+    }
+}
+
+.img_wrap {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.img_wrap img {
+    width: 100%;
+}
+
+/* .quiz_timer */
+.quiz_timer {
+    text-align: center;
+    font-weight: 800;
+    color: var(--white);
+    font-size: 1.2rem;
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    display: inline;
+    z-index: 500;
+    background-color: #5a68ad77;
+}
+
+/* quizModal */
+.quizModal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.quizModal-content {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    background-color: var(--bgc);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--primary-color);
+    width: 500px;
+    height: 400px;
+}
+
+.quizClose {
+    color: var(--primary-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 10;
+    position: relative;
+}
+
+.quizClose:hover,
+.quizClose:focus {
+    color: var(--colorR);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.quizModal #result {
+    transform: translateX(17px);
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 23px;
+    color: var(--primary-color);
+}
+
+.quizModal-content .btns {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.quizModal-content .btns #likeButton {
+    background-color: var(--bgc);
+
+}
+
+#answerText,
+#hintText {
+    padding: 0 4px;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary-color);
+    max-height: 60%;
+    overflow: auto;
+    text-align: center;
+}
+
+#answerText img {
+    margin: 0 auto;
+}
+
+.quiz__btn {
+    padding: 4px 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background: none;
+    color: var(--primary-color);
+}
+
+.quiz__btn:hover,
+.quiz__btn:active,
+.quiz__btn:focus {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--bgc);
+}
+
+/* .quizModal-content a {
+    padding: 4px 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    color: var(--primary-color);
+} */
+
+/* .quizModal-content a:hover,
+.quizModal-content a:active,
+.quizModal-content a:focus {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--bgc);
+} */
+
+.quizModal-content #likeButton {
+    display: flex;
+    padding: 4px 16px;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    background: none;
+    color: var(--primary-color);
+    margin-top: 5px;
+}
+
+.quizModal-content #likeButton:hover,
+.quizModal-content #likeButton:active,
+.quizModal-content #likeButton:focus {
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    color: var(--bgc);
+}
+
+.quizModal-content #likeButton em {
+    display: none;
+}
+
+.quizModal-content #likeButton:focus em {
+    display: block;
+    position: relative;
+    top: 2px;
+    margin-left: 7px;
+}
+
+
+@media (max-width:550px) {
+    .quizModal-content {
+        transform: translate(-50%, -100%);
+        width: 298px;
+        height: 350px;
+    }
+
+    .quizModal #result {
+        transform: translateX(14px);
+        font-size: 20px;
+    }
+
+    .quiz__btn {
+        padding: 4px 2px;
+        font-size: 15px;
+        border: 0;
+    }
+
+    .quiz__btn:hover,
+    .quiz__btn:active,
+    .quiz__btn:focus {
+        color: var(--colorR);
+        border-radius: 0;
+        background-color: var(--bgc);
+    }
+
+    .quizModal-content #likeButton {
+        padding: 4px 2px;
+        font-size: 15px;
+        border: 0;
+    }
+
+    .quizModal-content #likeButton:hover,
+    .quizModal-content #likeButton:active,
+    .quizModal-content #likeButton:focus {
+        color: var(--colorR);
+        border-radius: 0;
+        background-color: var(--bgc);
+    }
+
+    /* .quizModal-content a {
+        padding: 4px 2px;
+        font-size: 15px;
+        border: 0;
+    } */
+
+    /* .quizModal-content a:hover,
+    .quizModal-content a:active,
+    .quizModal-content a:focus {
+        color: var(--colorR);
+        border-radius: 0;
+        background-color: var(--bgc);
+    } */
+}
+
+/* 스크롤 */
+#answerText::-webkit-scrollbar,
+#hintText::-webkit-scrollbar {
+    width: 10px;
+}
+
+#answerText::-webkit-scrollbar-thumb,
+#hintText::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+#answerText::-webkit-scrollbar-track,
+#hintText::-webkit-scrollbar-track {
+    background-color: var(--colorSD);
+    border-radius: 10px;
+}

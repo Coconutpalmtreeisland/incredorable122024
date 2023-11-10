@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>게시글 수정</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+    <div id="boardWrap">
+        <header id="header">
+            <nav class="header__nav1">
+                <ul>
+                    <li><a href="#">문제</a></li>
+                    <li><a href="board.html">커뮤니티</a></li>
+                </ul>
+            </nav>
+            <div class="header__logo1">
+                <a href="main.html"><img src="../assets/img/logo.png" alt="뇌섹남녀" href></a>
+            </div>
+            <div class="header__right">
+                <input type="search" class="search" name="allSearchValue" autocomplete="off" role="combobox"
+                    placeholder="검색" aria-live="polite">
+                <button><a class="logout" href="#">로그아웃</a></button>
+                <a class="propile" href="#">뇌섹</a>
+                <!-- <img src="" alt="프로필"> -->
+            </div>
+        </header>
+        <!-- //header -->
+
+        <main id="boardMain">
+            <div id="b_write_wrap">
+                <div class="write_board"></div>
+                <form action="boardWriteSave.html" name="boardWriteSave" method="post" class="board_write b_p">
+                    <fieldset>
+                        <legend>글 수정하기</legend>
+                        <div>
+                            <label id="b_title" class="label_text" for="title">제목 <span class="red_t">*</span></label>
+                            <input type="text" id="boardTitle" name="boardTitle" class="input__style input__board"
+                                placeholder="제목을 입력해주세요">
+                        </div>
+                        <div id="weite_box2">
+                            <label id="boardContents_w" class="label_text" for="boardContents">내용 작성하기</label>
+                            <textarea name="boardContents" id="boardContents" rows="20" class="input__style"></textarea>
+                        </div>
+                        <div class="board__btns">
+                            <button type="submit" class="btn__style03">수정하기</button>
+                            <button type="submit" class="btn__style03 m10aa">삭제하기</button>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </main>
+        <!-- main -->
+
+        <footer id="footer">
+            <div class="footer__logo"></div>
+            <div class="footer__info">
+                <ul class="footer__creater">
+                    <li>권초록</li>
+                    <li>오종석</li>
+                    <li>이원영</li>
+                    <li>이혜민</li>
+                </ul>
+                <div class="footer__copyright">© 2023 뇌섹남녀</div>
+            </div>
+        </footer>
+        <!-- //footer -->
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+.quiz__wrap {
+    display: flex;
+    margin-top: 28px;
+    padding: 20px 168px;
+}
+
+.quiz__typeList {
+    position: sticky;
+    width: 300px;
+    height: 625px;
+    font-size: 14px;
+    color: var(--primary-color);
+    padding-top: 48px;
+    margin-bottom: 60px;
+}
+
+.quiz__type {
+    margin: 17px 20px 0 0;
+    width: 268px;
+}
+
+.quiz__type a {
+    display: block;
+    font-size: 18px;
+    padding: 15px 19px;
+    width: 268px;
+    height: 54px;
+    margin-bottom: 17px;
+}
+
+.quiz__type {
+    border-bottom: 1px solid var(--colorBD);
+}
+
+.quiz__type a:active,
+.quiz__type a:focus {
+    background-color: var(--colorSM);
+    border-radius: 15px;
+}
+
+.quiz__typeList+.quiz__list {
+    position: relative;
+    padding-left: 20px;
+}
+
+.quiz__typeList+.quiz__list::before {
+    content: '';
+    border-right: 2px solid var(--colorBD);
+    position: absolute;
+    height: 95%;
+    left: 0;
+    top: 0;
+}
+
+.quiz__list {
+    width: 1252px;
+    padding-top: 48px;
+}
+
+.quiz__list .list__header h4 {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 7px;
+}
+
+.quiz__list .list__header h5 {
+    font-size: 12px;
+    color: var(--colorSD);
+    margin-bottom: 16px;
+}
+
+.quiz__list .like__wrap {
+    display: flex;
+    width: 95%;
+    height: 88px;
+    background: linear-gradient(45deg, var(--colorB), var(--colorS));
+    border-radius: 14px;
+    padding: 25px 32px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz__list .like__wrap p {
+    font-size: 14px;
+    color: var(--primary-color);
+}
+
+.quiz__list .like__wrap a {
+    font-size: 16px;
+    color: var(--colorSM);
+    padding: 13px 25px;
+    border-radius: 30px;
+    background-color: var(--primary-color);
+}
+
+.quiz__list .quizes {
+    max-height: 395px;
+    margin-top: 34px;
+    overflow: auto;
+}
+
+.quiz__list .quizes::-webkit-scrollbar {
+    width: 10px;
+}
+
+.quiz__list .quizes::-webkit-scrollbar-thumb {
+    background-color: var(--colorSM);
+    border-radius: 10px;
+}
+
+.quiz__list .quizes::-webkit-scrollbar-track {
+    background-color: #E9F3FC;
+    border-radius: 10px;
+}
+
+.quiz__list .quizes label {
+    display: block;
+}

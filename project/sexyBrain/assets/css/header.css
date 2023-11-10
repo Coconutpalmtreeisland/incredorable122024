@@ -1,0 +1,158 @@
+#mainHeader {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+}
+
+.header__nav ul {
+    display: flex;
+}
+
+.header__nav ul li a {
+    display: inline-block;
+    padding: 20px;
+    color: #283269;
+}
+
+.header__logo {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    margin-top: 15px;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    position: absolute;
+}
+
+.header__logo img {
+    width: 100%;
+}
+
+.loginnav ul {
+    display: flex;
+    position: relative;
+}
+
+li.active_nav a {
+    background-color: #283269;
+    color: #fff !important;
+    border-radius: 30px;
+}
+
+.loginnav ul li:nth-child(1)::after {
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: #283269;
+    border-radius: 100%;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.loginnav ul li:nth-child(1) {
+    margin-right: 30px;
+}
+
+.loginnav ul li a {
+    display: inline-block;
+    padding: 12px 25px;
+    color: #283269;
+}
+
+@media (max-width: 850px) {
+    #maineader {
+        height: 70px;
+        padding: 5px;
+        font-size: 0.9rem;
+    }
+
+    .header__nav ul li a {
+        padding: 8px 15px;
+    }
+
+    .loginnav ul li a {
+        padding: 8px 15px;
+    }
+
+    .loginnav ul li:nth-child(1)::after {
+        height: 4px;
+        width: 4px;
+    }
+}
+
+@media (max-width: 550px) {
+    #mainHeader {
+        height: 50px;
+        position: relative;
+    }
+
+    .loginnav {
+        width: 100%;
+    }
+
+    .loginnav ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .loginnav ul li a {
+        padding: 3px 10px;
+        font-size: 0.8rem;
+    }
+
+    .header__nav {
+        position: absolute;
+        width: 146px;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .header__nav ul li a {
+        padding: 3px 10px;
+        font-size: 0.8rem;
+    }
+
+    .header__logo {
+        width: 70px;
+        top: 29%;
+    }
+
+    .loginnav ul li:nth-child(1)::after {
+        display: none;
+    }
+
+    .loginnav ul li:nth-child(1) {
+        margin-right: 5px;
+    }
+
+    .header__nav {
+        width: 100%;
+    }
+
+    .down_nav {
+        background-color: #CEDFFD;
+        justify-content: center;
+        padding: 3px;
+        z-index: 1000 !important;
+        align-content: center;
+    }
+
+    .down_nav ul {
+        margin: 0 auto;
+    }
+}
+
+.loginnav ul li:hover a {
+    color: red !important;
+}
+
+.header__nav ul li a:hover {
+    color: red;
+}

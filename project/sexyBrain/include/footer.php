@@ -1,7 +1,5 @@
 <footer id="footer">
-    <div class="footer__logo">
-        <a href="home.html"><img src="assets/img/footer_logo.png" alt="뇌섹남녀" href></a>
-    </div>
+    <div class="footer__logo"></div>
     <div class="footer__info">
         <ul class="footer__creater">
             <li>권초록</li>
@@ -12,4 +10,3 @@
         <div class="footer__copyright">© 2023 뇌섹남녀</div>
     </div>
 </footer>
-<!-- //footer -->

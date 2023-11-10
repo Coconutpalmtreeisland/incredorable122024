@@ -1,0 +1,77 @@
+/* profil */
+.profil__inner {
+    width: 600px;
+    height: calc(100vh - 10rem);
+    min-height: 670px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo__wrap {
+    position: relative;
+}
+
+.photo__wrap>h3 {
+    color: #283269;
+    font-size: 1.56rem;
+    font-weight: 800;
+    margin-bottom: 2.8rem;
+    word-break: keep-all;
+    margin-bottom: 7rem;
+    margin-top: 7rem;
+}
+
+.photo__wrap>h2 {
+    color: #283269;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.photo {
+    width: 175px;
+    height: 175px;
+    border-radius: 50%;
+    background-color: #E9F3FC;
+}
+
+.photo__wrap>button {
+    position: absolute;
+    right: 70px;
+    top: 40%;
+}
+
+.locate__wrap {
+    width: 540px;
+    margin-top: 2rem;
+}
+
+.profil__btn {
+    margin-top: 2rem;
+    /* margin-left: 4.3rem; */
+}
+
+#layer {
+    position: fixed;
+    overflow: hidden;
+    z-index: 1;
+    -webkit-overflow-scrolling: touch;
+}
+
+#layer img {
+    position: absolute;
+    right: -3px;
+    top: -3px;
+    width: 20px;
+    height: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.duple {
+    position: relative;
+}
+
+.join__duple {
+    position: absolute;
+}

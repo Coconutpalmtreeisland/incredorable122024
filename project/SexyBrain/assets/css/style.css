@@ -1,13 +1,23 @@
-@charset "UTF-8";
-
-/* 기본 설정 */
 @import "reset.css";
 @import "fonts.css";
-@import "vars.css";
-@import "commons.css";
+@import "common.css";
+@import "var.css";
 
-/* 섹션별 설정 */
-@import "header_login.css";
+@import "header.css";
+@import "header__login.css";
+@import "footer.css";
+@import "join.css";
+@import "login.css";
+@import "my_page.css";
+@import "profilModify.css";
 @import "board.css";
 @import "card.css";
-@import "footer.css";
+@import "boardpage.css";
+@import "quizList.css";
+@import "quizHome.css";
+@import "quiz.css";
+
+@import "index.css";
+@import "index2.css";
+@import "main.css";
+@import "mainscript.css";
