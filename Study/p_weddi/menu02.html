@@ -144,7 +144,7 @@
                         </ul>
                     </li>
                     <li><a href="#">메뉴4</a>
-                        <ul>
+                        <ul class="submenu">
                             <li><a href="#">서브메뉴4-1</a></li>
                             <li><a href="#">서브메뉴4-2</a></li>
                             <li><a href="#">서브메뉴4-3</a></li>
@@ -176,4 +176,15 @@
     </div>
     <!-- //wrap -->
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".nav > ul > li").mouseover(function(){
+            $("nav > ul > li > ul").stop().slideDown(400);
+        });
+        $(".nav > ul > li").mouseout(function(){
+            $("nav > ul > li > ul").stop().slideUp(200);
+        });
+    });
+</script>
 </html>

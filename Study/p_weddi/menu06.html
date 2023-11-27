@@ -90,8 +90,9 @@
         }
 
         /* nav */
-        .nav {}
-        .nav > ul {
+        .nav {
+            position: relative;
+            z-index: 10;
         }
         .nav > ul > li {
             position: relative;
@@ -110,12 +111,35 @@
             left: 200px;
             top: 0;
             width: 500px;
+            display: none;
         }
         .nav > ul > li > ul > li {
             display: inline;
         }
         .nav > ul > li > ul > li > a {
-            
+            padding: 10px;
+            display: inline-block;
+            width: 100px;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background-color: #888;
+        }
+        #main {
+            position: relative;
+        }
+        #main::after {
+            position: absolute;
+            content: '';
+            width: 0%;
+            height: 164px;
+            background-color: #333;
+            left: 0;
+            top: 100px;
+            z-index: 1;
+            transition: all 0.3s;
+        }
+        #main.on::after {
+            width: 100%;
         }
     </style>
 </head>
@@ -188,4 +212,17 @@
     </div>
     <!-- //wrap -->
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".nav > ul > li").mouseover(function(){
+            $(".nav > ul > li > ul").stop().fadeIn(500);
+            $("#main").addClass("on");
+        });
+        $(".nav > ul > li").mouseout(function(){
+            $(".nav > ul > li > ul").stop().fadeOut(100);
+            $("#main").removeClass("on");
+        });
+    });
+</script>
 </html>

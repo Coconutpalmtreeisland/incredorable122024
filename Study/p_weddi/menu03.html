@@ -195,4 +195,17 @@
     </div>
     <!-- //wrap -->
 </body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    $(function(){
+        $(".nav > ul > li").mouseover(function(){
+            $(".nav > ul > li > ul").stop().slideDown(500);
+            $("#header").addClass("on");
+        });
+        $(".nav > ul > li").mouseout(function(){
+            $(".nav > ul > li > ul").stop().slideUp(100);
+            $("#header").removeClass("on");
+        });
+    });
+</script>
 </html>
