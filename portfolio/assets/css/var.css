@@ -1,0 +1,35 @@
+:root {
+    --bgc: #FAEEE0;
+    --primarycolor: #6B51FE;
+    --r: #FFADAD;
+    --rd: #FF9191;
+    --o: #FFC48C;
+    --od: #FFAD6C;
+    --y: #FFE375;
+    --yd: #FFD755;
+    --g: #96F1C6;
+    --gd: #77EAAF;
+    --b: #9DECFA;
+    --bd: #7FE3F7;
+
+    --black: #000;
+    --white: #fff;
+
+    --mainEng-font: "Montserrat";
+    --mainKor-font: "SCoreDream";
+
+    /* 기본 폰트 설정 */
+    font-family: var(--mainEng-font), var(--mainKor-font);
+    font-size: 25px;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /* 폰트를 부드럽게 렌더링하기 위한 속성  */
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    /* 아이폰 가로 모드에서 글씨 확대 금지 */
+    -webkit-text-size-adjust: 100%;
+}

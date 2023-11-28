@@ -1,0 +1,30 @@
+@import url('https://fonts.cdnfonts.com/css/shrikhand');
+@import url('https://fonts.cdnfonts.com/css/montserrat');
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.cdnfonts.com/css/dancing-script');
+@import url('https://webfontworld.github.io/netmarble/Netmarble.css');
+@import url('https://webfontworld.github.io/score/SCoreDream.css');
+
+.shrink {
+    font-family: "Shrikhand";
+}
+
+.mont {
+    font-family: "Montserrat";
+}
+
+.nun {
+    font-family: "Nunito";
+}
+
+.dancing {
+    font-family: "Dancing Script";
+}
+
+.net {
+    font-family: "Netmarble";
+}
+
+.score {
+    font-family: "SCoreDream";
+}
