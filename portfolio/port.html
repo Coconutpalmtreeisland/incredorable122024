@@ -18,52 +18,53 @@
     </header>
     <nav id="parallax__nav">
         <ul>
-            <li class="title"><a href="#top">Portfolio</a></li>
+            <li class="title"><a href="#">Portfolio</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
     <main id="main">
-        <div id="top" class="container">
-            <h1>Incrdorable</h1>
+        <div id="top">
+            <h1 class="tooltip">
+                Incrdorable
+                <span class="sticker sticker01">Adorable</span>
+                <span class="sticker sticker02">Incredible</span>
+                <span class="sticker sticker03">Bubbly</span>
+                <span class="sticker sticker04">Creative</span>
+                <span class="sticker sticker05">Enthusiastic</span>
+            </h1>
             <div class="desc">
                 <p>놀라운 성과와 사랑스러운 매력을 두루 갖춘 열정적인 개발자를 목표로</p>
                 <p>밝은 에너지로 상황을 긍정적으로 바꾸며, 끊임없이 웹 프론트엔드 솔루션을 창조하기 위해 노력합니다.</p>
-            </div>
-            <div class="keyword__sticker">
-                <div class="sticker01 sticker">Adorable</div>
-                <div class="sticker02 sticker">Incredible </div>
-                <div class="sticker03 sticker">Bubbly </div>
-                <div class="sticker04 sticker">Creative</div>
-                <div class="sticker05 sticker">Enthusiastic</div>
             </div>
         </div>
     </main>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script>
-    $(function(){
-        $("#profil__img").mouseover(function(){
-            $(this).find("#img1").stop().mouseover(function(){
+    $(function () {
+        $("#profil__img").mouseover(function () {
+            $(this).find("#img1").stop().mouseover(function () {
                 $("#img1").fadeIn(200).addClass("on");
             });
-            $(this).find("#img1").stop().mouseout(function(){
+            $(this).find("#img1").stop().mouseout(function () {
                 $("#img1").removeClass("on");
             });
-            $(this).find("#img2").stop().mouseover(function(){
+            $(this).find("#img2").stop().mouseover(function () {
                 $("#img2").fadeIn(200).addClass("on");
             });
-            $(this).find("#img2").stop().mouseout(function(){
+            $(this).find("#img2").stop().mouseout(function () {
                 $("#img2").removeClass("on");
             });
-            $(this).find("#img3").stop().mouseover(function(){
+            $(this).find("#img3").stop().mouseover(function () {
                 $("#img3").fadeIn(200).addClass("on");
             });
-            $(this).find("#img3").stop().mouseout(function(){
+            $(this).find("#img3").stop().mouseout(function () {
                 $("#img3").removeClass("on");
             });
         });
     });
 </script>
+
 </html>

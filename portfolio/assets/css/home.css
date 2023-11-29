@@ -1,13 +1,15 @@
 /* header */
 #profil__img {
     margin-top: 62px;
-    margin-bottom: 316px;
+    padding: 0 0px 22vh;
 }
+
 #profil__img ul {
     display: flex;
     justify-content: flex-end;
     margin-right: 78px;
 }
+
 #profil__img .header__img {
     width: 68px;
     height: 68px;
@@ -17,23 +19,29 @@
     background-size: cover;
     transition: all 0.3s;
 }
-#img1.header__img{
+
+#img1.header__img {
     background-image: url(../img/head__img05.jpg);
 }
-#img1.header__img.on{
+
+#img1.header__img.on {
     background-image: url(../img/head__img06.jpg);
 }
-#img2.header__img{
+
+#img2.header__img {
     background-image: url(../img/head__img03.jpg);
     margin: 0 13px;
 }
-#img2.header__img.on{
+
+#img2.header__img.on {
     background-image: url(../img/head__img04.jpg);
 }
-#img3.header__img{
+
+#img3.header__img {
     background-image: url(../img/head__img01.jpg);
 }
-#img3.header__img.on{
+
+#img3.header__img.on {
     background-image: url(../img/head__img02.jpg);
 }
 
@@ -45,113 +53,149 @@
     z-index: 1000;
     width: 614px;
     height: 68px;
-    background-color: #F8E6D2;
+    background-color: rgba(252, 232, 210, 0.45);
+    backdrop-filter: blur(20px);
     border-radius: 50px;
     padding: 20px 46px;
 }
+
 #parallax__nav ul {
     display: flex;
     text-align: center;
+    align-items: center;
     justify-content: space-between;
 }
+
 #parallax__nav li {
     display: inline;
 }
+
 #parallax__nav li a {
     display: inline-block;
     padding: 0px 10px;
     font-size: 18px;
     font-weight: 500;
-    text-align: center;
+    display: flex;
+    align-items: center;
     line-height: 1;
     transition: all 0.3s;
     color: #5F45F2;
 }
+
 #parallax__nav li a.active {
     background-color: var(--primarycolor);
     color: var(--white);
     padding: 10px 20px;
     border-radius: 50px;
 }
+
 #parallax__nav li.title a {
     font-size: 29.4px;
     font-weight: 600;
 }
 
-#main {
-    box-sizing: border-box;
-}
+/* main */
+#main {}
 
 /* top */
 #top {
-    position: relative;
-    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
+
 #top h1 {
     font-family: "Shrikhand";
-    font-size: 250px;
+    font-size: 10vw;
     color: #6B51FE;
+    line-height: 0.6;
+    cursor: default;
 }
-#top .desc {
-    position: absolute;
-    text-align: right;
-    bottom: -15px;
-    right: 19%;
-}
-#top .desc p {
+
+#top .tooltip {
+    position: relative;
     display: block;
-    font-size: 30px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: var(--primarycolor);
+    margin-bottom: 1.5vw;
 }
-.keyword__sticker {
+
+#top .tooltip .sticker {
+    font-family: var(--mainEng-font);
     color: var(--primarycolor);
     font-weight: 500;
-    font-size: 20px;
-}
-.keyword__sticker .sticker {
-    position: fixed;
+    font-size: 1.2vw;
     border-radius: 15px;
-    padding: 11px 12px;
+    padding: 0.9vw 0.8vw;
+    height: 2.5vw;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
 }
-.keyword__sticker .sticker01 {
-    top: 688px;
-    left: 520px;
-    background-color: var(--r);
-    width: 122px;
-    height: 50px;
+
+#top .tooltip .sticker01 {
+    top: 82%;
+    left: 1%;
+    width: 9vw;
     transform: rotate(-10deg);
+    background-color: #FFADAD;
+    position: absolute;
+    z-index: 1;
 }
-.keyword__sticker .sticker02 {
-    top: 410px;
-    right: 740px;
-    background-color: var(--o);
-    width: 142px;
-    height: 50px;
+
+#top .tooltip .sticker02 {
+    top: -100%;
+    right: 12%;
+    width: 9.1vw;
     transform: rotate(-9deg);
+    background-color: #FFC48C;
+    position: absolute;
+    z-index: 1;
 }
-.keyword__sticker .sticker03 {
-    top: 840px;
-    left: 840px;
-    background-color: var(--y);
-    width: 117px;
-    height: 50px;
+
+#top .tooltip .sticker03 {
+    top: 200%;
+    left: 23%;
+    width: 7vw;
     transform: rotate(4deg);
+    background-color: #FFE375;
+    position: absolute;
+    z-index: 1;
 }
-.keyword__sticker .sticker04 {
-    top: 695px;
-    left: 1180px;
-    background-color: var(--g);
-    width: 127px;
-    height: 50px;
+
+#top .tooltip .sticker04 {
+    top: 88%;
+    left: 42%;
+    width: 7vw;
     transform: rotate(7deg);
+    background-color: #96F1C6;
+    position: absolute;
+    z-index: 1;
 }
-.keyword__sticker .sticker05 {
-    top: 860px;
-    right: 460px;
-    background-color: var(--b);
-    width: 182px;
-    height: 50px;
+
+#top .tooltip .sticker05 {
+    bottom: -150%;
+    right: -8%;
+    width: 10.2vw;
     transform: rotate(-8deg);
+    background-color: #9DECFA;
+    position: absolute;
+    z-index: 1;
+}
+
+#top .tooltip:hover .sticker {
+    opacity: 1;
+}
+
+#top .desc {
+    display: flex;
+    width: 63vw;
+    line-height: 1.6;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#top .desc p {
+    display: block;
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: var(--primarycolor);
 }
