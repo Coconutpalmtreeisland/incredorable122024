@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,62 +10,75 @@
             margin: 0;
             padding: 0;
         }
+
         #wrap {
             width: 1200px;
             margin: 0 auto;
         }
+
         #header {
             width: 100%;
             display: flex;
         }
+
         #header .logo {
             width: 20%;
             height: 100px;
             background-color: #efefef;
         }
+
         #header .nav {
             width: 80%;
             height: 100px;
             background-color: #e3e3e3;
         }
+
         #slider {
             width: 100%;
             height: 300px;
             background-color: #d9d9d9;
         }
+
         #contents {
             width: 100%;
             display: flex;
         }
+
         #contents .content1 {
             width: 33.3333%;
             height: 200px;
             background-color: #d1d1d1;
         }
+
         #contents .content2 {
             width: 33.3333%;
             height: 200px;
             background-color: #c7c7c7;
         }
+
         #contents .content3 {
             width: 33.3333%;
             height: 200px;
             background-color: #bcbcbc;
         }
+
         #footer {
             width: 100%;
             display: flex;
         }
+
         #footer .footer1 {
             width: 20%;
             height: 100px;
             background-color: #b1b1b1;
         }
+
         #footer .footer2 {
             width: 60%;
             height: 100px;
             background-color: #a3a3a3;
         }
+
         #footer .footer3 {
             width: 20%;
             height: 100px;
@@ -75,20 +89,25 @@
         .sliderWrap {
             position: relative;
         }
-        .sliderWrap > div {
+
+        .sliderWrap>div {
             display: none;
         }
-        .sliderWrap > div:first-child {
+
+        .sliderWrap>div:first-child {
             display: block;
         }
+
         .sliderWrap .slider {
             position: absolute;
             left: 0;
             top: 0;
         }
+
         .sliderWrap .slider img {
             vertical-align: top;
         }
+
         .sliderWrap .slider span {
             position: absolute;
             left: 50%;
@@ -100,6 +119,7 @@
         }
     </style>
 </head>
+
 <body>
     <div id="wrap">
         <header id="header">
@@ -142,5 +162,20 @@
     </div>
     <!-- //wrap -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(function () {
+            let currentIndex = 0;
+
+            setInterval(function () {
+                let nextIndex = (currentIndex + 1) % 3;
+
+                $(".slider").eq(currentIndex).fadeOut(1200);
+                $(".slider").eq(nextIndex).fadeIn(1200);
+
+                currentIndex = nextIndex;
+            }, 3000)
+        })
+    </script>
 </body>
+
 </html>
