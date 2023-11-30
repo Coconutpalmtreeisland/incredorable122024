@@ -51,12 +51,10 @@
     left: 80px;
     top: 62px;
     z-index: 1000;
-    width: 614px;
-    height: 68px;
     background-color: rgba(252, 232, 210, 0.45);
     backdrop-filter: blur(20px);
     border-radius: 50px;
-    padding: 20px 46px;
+    padding: 0 15px;
 }
 
 #parallax__nav ul {
@@ -72,7 +70,7 @@
 
 #parallax__nav li a {
     display: inline-block;
-    padding: 0px 10px;
+    padding: 0px 19px;
     font-size: 18px;
     font-weight: 500;
     display: flex;
@@ -92,6 +90,7 @@
 #parallax__nav li.title a {
     font-size: 29.4px;
     font-weight: 600;
+    padding: 20px 30px;
 }
 
 /* main */
@@ -105,17 +104,33 @@
 }
 
 #top h1 {
-    font-family: "Shrikhand";
-    font-size: 10vw;
+    font-family: "Playfair Display";
+    font-size: 12vw;
     color: #6B51FE;
-    line-height: 0.6;
+    line-height: 1.2;
     cursor: default;
+    /* position: relative; */
 }
+
+/* #top h1::before {
+    content: 'Incredorable';
+    font-size: inherit;
+    position: absolute;
+    left: 4px;
+    top: 0px;
+}
+
+#top h1::after {
+    content: 'Incredorable';
+    font-size: inherit;
+    position: absolute;
+    left: 2px;
+    top: 0px;
+} */
 
 #top .tooltip {
     position: relative;
     display: block;
-    margin-bottom: 1.5vw;
 }
 
 #top .tooltip .sticker {
@@ -124,7 +139,7 @@
     font-weight: 500;
     font-size: 1.2vw;
     border-radius: 15px;
-    padding: 0.9vw 0.8vw;
+    padding: 0.68vw 0.8vw;
     height: 2.5vw;
     text-align: center;
     opacity: 0;
@@ -132,8 +147,8 @@
 }
 
 #top .tooltip .sticker01 {
-    top: 82%;
-    left: 1%;
+    top: 70%;
+    left: 2%;
     width: 9vw;
     transform: rotate(-10deg);
     background-color: #FFADAD;
@@ -142,8 +157,8 @@
 }
 
 #top .tooltip .sticker02 {
-    top: -100%;
-    right: 12%;
+    top: -50%;
+    right: 10%;
     width: 9.1vw;
     transform: rotate(-9deg);
     background-color: #FFC48C;
@@ -152,8 +167,8 @@
 }
 
 #top .tooltip .sticker03 {
-    top: 200%;
-    left: 23%;
+    top: 147%;
+    left: 24%;
     width: 7vw;
     transform: rotate(4deg);
     background-color: #FFE375;
@@ -162,7 +177,7 @@
 }
 
 #top .tooltip .sticker04 {
-    top: 88%;
+    top: 72%;
     left: 42%;
     width: 7vw;
     transform: rotate(7deg);
@@ -172,8 +187,8 @@
 }
 
 #top .tooltip .sticker05 {
-    bottom: -150%;
-    right: -8%;
+    bottom: -72%;
+    right: -7%;
     width: 10.2vw;
     transform: rotate(-8deg);
     background-color: #9DECFA;
@@ -187,7 +202,7 @@
 
 #top .desc {
     display: flex;
-    width: 63vw;
+    width: 74vw;
     line-height: 1.6;
     flex-direction: column;
     align-items: flex-end;
@@ -195,7 +210,70 @@
 
 #top .desc p {
     display: block;
-    font-size: 1.2vw;
+    font-size: 1.5vw;
     font-weight: 400;
     color: var(--primarycolor);
+    text-align: right;
+}
+
+@media (max-width: 1040px) {
+    #profil__img {
+        padding: 0 0px 13vh;
+    }
+
+    #profil__img ul {
+        margin-right: 65px;
+    }
+
+    #profil__img .header__img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #parallax__nav {
+        left: 55px;
+    }
+
+    #parallax__nav li a {
+        font-size: 14px;
+        padding: 6px 15px;
+    }
+
+    #parallax__nav li.title a {
+        font-size: 20px;
+        padding: 15px 15px;
+    }
+
+}
+
+@media (max-width: 750px) {
+    #profil__img {
+        display: none;
+    }
+
+    #top {
+        padding: 22vh 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #parallax__nav {
+        display: flex;
+        justify-content: center;
+        left: 1rem;
+        right: 1rem;
+    }
+
+    #top .tooltip .sticker {
+        display: none;
+    }
+
+    #top .desc {
+        text-align: center;
+        align-items: normal;
+    }
+
+    #top .desc p {
+        font-size: 1.4vw;
+    }
 }
