@@ -1,7 +1,6 @@
 /* header */
 #profil__img {
     margin-top: 62px;
-    padding: 0 0px 22vh;
 }
 
 #profil__img ul {
@@ -96,14 +95,16 @@
 /* main */
 #main {}
 
-/* top */
-#top {
+/* section1 */
+#section1 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
+    height: 100vh;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
-#top h1 {
+#section1 h1 {
     font-family: "Playfair Display";
     font-size: 12vw;
     color: #6B51FE;
@@ -128,12 +129,12 @@
     top: 0px;
 } */
 
-#top .tooltip {
+#section1 .tooltip {
     position: relative;
     display: block;
 }
 
-#top .tooltip .sticker {
+#section1 .tooltip .sticker {
     font-family: var(--mainEng-font);
     color: var(--primarycolor);
     font-weight: 500;
@@ -146,7 +147,7 @@
     transition: opacity 0.6s ease-in-out;
 }
 
-#top .tooltip .sticker01 {
+#section1 .tooltip .sticker01 {
     top: 70%;
     left: 2%;
     width: 9vw;
@@ -156,7 +157,7 @@
     z-index: 1;
 }
 
-#top .tooltip .sticker02 {
+#section1 .tooltip .sticker02 {
     top: -50%;
     right: 10%;
     width: 9.1vw;
@@ -166,7 +167,7 @@
     z-index: 1;
 }
 
-#top .tooltip .sticker03 {
+#section1 .tooltip .sticker03 {
     top: 147%;
     left: 24%;
     width: 7vw;
@@ -176,7 +177,7 @@
     z-index: 1;
 }
 
-#top .tooltip .sticker04 {
+#section1 .tooltip .sticker04 {
     top: 72%;
     left: 42%;
     width: 7vw;
@@ -186,7 +187,7 @@
     z-index: 1;
 }
 
-#top .tooltip .sticker05 {
+#section1 .tooltip .sticker05 {
     bottom: -72%;
     right: -7%;
     width: 10.2vw;
@@ -196,11 +197,11 @@
     z-index: 1;
 }
 
-#top .tooltip:hover .sticker {
+#section1 .tooltip:hover .sticker {
     opacity: 1;
 }
 
-#top .desc {
+#section1 .desc {
     display: flex;
     width: 74vw;
     line-height: 1.6;
@@ -208,7 +209,7 @@
     align-items: flex-end;
 }
 
-#top .desc p {
+#section1 .desc p {
     display: block;
     font-size: 1.5vw;
     font-weight: 400;
@@ -250,10 +251,6 @@
     #profil__img {
         display: none;
     }
-
-    #top {
-        padding: 22vh 0 0;
-    }
 }
 
 @media (max-width: 480px) {
@@ -264,16 +261,82 @@
         right: 1rem;
     }
 
-    #top .tooltip .sticker {
+    #section1 .tooltip .sticker {
         display: none;
     }
 
-    #top .desc {
+    #section1 .desc {
         text-align: center;
         align-items: normal;
     }
 
-    #top .desc p {
+    #section1 .desc p {
         font-size: 1.4vw;
     }
+}
+
+
+#section2 {
+    width: 100%;
+    height: 100vh;
+}
+#section2 .rollingbanner {
+    width: 100%;
+    font-size: 8vw;
+    font-weight: 700;
+    color: var(--primarycolor);
+}
+
+#section2 .rollingbanner .wrap .text {
+    font-family: "Montserrat";
+}
+#section2 .rollingbanner .banner01 {
+    background-color: #9DECFA;
+    padding: 5vh 0;
+    transform: rotate(1.47deg);
+}
+#section2 .rollingbanner .wrap {
+    display: flex;
+}
+#section2 .rollingbanner .icon1 {
+    width: 130px;
+    height: 130px;
+    background-image: url(../img/star.svg);
+}
+#section2 .rollingbanner .banner02 {
+    background-color: #FFADAD;
+    padding: 5vh 0;
+    transform: rotate(-1.33deg);
+}
+#section2 .rollingbanner .banner03 {
+    background-color: #FFE375;
+    padding: 5vh 0;
+    transform: rotate(1.33deg);
+}
+
+#section3 {
+    width: 100%;
+    height: 100vh;
+}
+
+#section3 .tag {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 17px;
+    border-radius: 35px;
+    background-color: #FFADAD;
+}
+#section3 .tag .tagtext {
+    color: var(--primarycolor);
+    font-size: 1.2vw;
+    font-weight: 700;
+    font-family: "Nunito";
+}
+#section3 .tagicon01 {
+    background-image: url(../img/heart.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 26px;
+    height: 21px;
 }
