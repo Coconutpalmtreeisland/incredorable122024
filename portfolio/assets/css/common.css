@@ -11,13 +11,11 @@ body {
 .container {
     width: 100%;
     padding: 0 306px;
-    align-items: center;
     box-sizing: border-box;
 }
 
 .container2 {
     width: 100%;
     padding: 0 386px;
-    align-items: center;
     box-sizing: border-box;
 }
