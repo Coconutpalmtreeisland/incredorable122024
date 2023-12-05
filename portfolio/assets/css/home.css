@@ -413,13 +413,14 @@
 
 
 .polaroidphoto {
-    margin-top: 90px;
+    margin-top: 10vw;
     position: relative;
     width: 33vw;
     height: 40vw;
     padding: 0.5vw;
     background-color: #fff;
     border-radius: 30px;
+    margin-bottom: 10vw;
 }
 
 .polaroidphoto::before {
@@ -444,14 +445,14 @@
     color: var(--primarycolor);
 }
 
-.window {
+#section3 .window {
     position: absolute;
     z-index: 2;
     top: 37vw;
     right: 13vw;
 }
 
-.window-container {
+#section3 .window-container {
     position: relative;
     background-color: #FFE375;
     padding: 12vw 25vw;
@@ -459,7 +460,7 @@
     overflow: hidden;
 }
 
-.window-container::before {
+#section3 .window-container::before {
     position: absolute;
     content: '';
     opacity: 0.5;
@@ -469,7 +470,7 @@
     border-bottom: 1rem solid #FFD755;
 }
 
-.window-container::after {
+#section3 .window-container::after {
     position: absolute;
     content: '';
     opacity: 0.5;
@@ -478,12 +479,12 @@
     inset: 0;
 }
 
-.window-container .window-bar {
+#section3 .window-container .window-bar {
     width: 100%;
     border-radius: 40px 40px 0px 0px;
 }
 
-.window-bar .window-tag {
+#section3 .window-bar .window-tag {
     position: absolute;
     left: 0;
     top: 0;
@@ -492,44 +493,93 @@
     background-color: #FFE375;
 }
 
-.window-bar .window-tag span:nth-child(1) {
+#section3 .window-bar .window-tag span {
     position: absolute;
-    display: block;
     top: 0;
     left: 0;
-    margin-left: 1vw;
-    margin-top: 1vw;
-    padding: 0.8vw 2vw;
+    margin-left: 1.2vw;
+    margin-top: 1.2vw;
+    padding: 0.2vw 2.3vw;
     background-color: #FFE375;
     border-radius: 50px;
     z-index: 2;
+    display: flex;
+    color: var(--primarycolor);
+    font-size: 1.3vw;
+    font-family: 'Nunito';
+    align-items: center;
 }
 
-.window-tag .hi__icon {
+#section3 .window-tag .hi__icon {
     background-image: url(../img/hi.svg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
-    width: 1vw;
-    height: 1vw;
+    width: 1.4vw;
+    height: 1.4vw;
+    display: block;
+    margin-left: 0.4vw;
+    transform: rotate(-22deg)
 }
 
-.rollingbanner {
+#section4 {
+    width: 100%;
+}
+
+#section4 .rollingbanner {
     width: 100%;
     display: flex;
     justify-content: center;
     font-size: 8vw;
     font-weight: 700;
     color: var(--primarycolor);
+    margin-bottom: 5vw;
 }
 
-.rollingbanner .wrap {
+#section4 .rollingbanner .wrap {
     font-family: "Montserrat";
     width: 100%;
 }
 
-.rollingbanner .banner01 {
+#section4 .rollingbanner .banner01 {
     background-color: #9DECFA;
     padding: 4.5vh 0;
     transform: rotate(1.47deg);
+}
+
+#section5 {
+    width: 100%;
+    height: 120vh;
+    position: relative;
+}
+
+#section5 .window-container .window-bar {
+    width: 100%;
+    border-radius: 40px 40px 0px 0px;
+}
+
+#section5 .window-bar .window-tag {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2vw;
+    height: 1vw;
+    background-color: #FFE375;
+}
+
+#section5 .window-bar .window-tag span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1.2vw;
+    margin-top: 1.2vw;
+    padding: 0.2vw 2.3vw;
+    background-color: #FFE375;
+    border-radius: 50px;
+    z-index: 2;
+    display: flex;
+    color: var(--primarycolor);
+    font-size: 1.3vw;
+    font-family: 'Nunito';
+    align-items: center;
 }
