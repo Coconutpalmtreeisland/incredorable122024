@@ -591,41 +591,118 @@
 #section5 {
     width: 100%;
     height: 120vh;
+    padding: 10vw;
     position: relative;
 }
 
 #section5 .window {
     position: absolute;
     z-index: 2;
-    top: 37vw;
-    right: 13vw;
 }
-
-#section5 .window-container {
-    position: relative;
-    background-color: #FFE375;
-    padding: 12vw 25vw;
-    border-radius: 2vw;
+#section5 .view01 {
+    position: absolute;
+    top: 27vw;
+    left: 13vw;
+    background-color: #96F1C6;
     overflow: hidden;
+    border-radius: 2vw;
 }
-
-#section5 .window-container::before {
+#section5 .view01::before {
     position: absolute;
     content: '';
     opacity: 0.5;
     filter: blur(3px);
     mix-blend-mode: multiply;
     inset: 0;
-    border-bottom: 1vw solid #FFD755;
+    border-bottom: 1vw solid #77EAAF;
 }
-
-#section5 .window-container::after {
+#section5 .view01::after{
     position: absolute;
     content: '';
     opacity: 0.5;
     mix-blend-mode: multiply;
-    border-top: 4.8vw solid #FFD755;
+    border-top: 4.8vw solid #77EAAF;
     inset: 0;
+}
+#section5 .view02 {
+    position: absolute;
+    top: 21vw;
+    left: 42vw;
+    background-color: #9DECFA;
+    overflow: hidden;
+    border-radius: 2vw;
+}
+#section5 .view02::before {
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    filter: blur(3px);
+    mix-blend-mode: multiply;
+    inset: 0;
+    border-bottom: 1vw solid #7FE3F7;
+}
+#section5 .view02::after{
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    border-top: 4.8vw solid #7FE3F7;
+    inset: 0;
+}
+#section5 .view03 {
+    position: absolute;
+    top: 27vw;
+    left: 56.3vw;
+    background-color: #FFC48C;
+    overflow: hidden;
+    border-radius: 2vw;
+}
+#section5 .view03::before {
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    filter: blur(3px);
+    mix-blend-mode: multiply;
+    inset: 0;
+    border-bottom: 1vw solid #FFAD6C;
+}
+#section5 .view03::after{
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    border-top: 4.8vw solid #FFAD6C;
+    inset: 0;
+}
+#section5 .view04 {
+    position: absolute;
+    top: 10vw;
+    left: 32vw;
+    background-color: #FFADAD;
+    overflow: hidden;
+    border-radius: 2vw;
+}
+#section5 .view04::before {
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    filter: blur(3px);
+    mix-blend-mode: multiply;
+    inset: 0;
+    border-bottom: 1vw solid #FF9191;
+}
+#section5 .view04::after{
+    position: absolute;
+    content: '';
+    opacity: 0.5;
+    mix-blend-mode: multiply;
+    border-top: 4.8vw solid #FF9191;
+    inset: 0; 
+}
+
+#section5 .window-container {
+    position: relative;
+    padding: 4vw 6vw 4vw 4vw;
 }
 
 #section5 .window-container .window-bar {
@@ -637,19 +714,26 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 2vw;
-    height: 1vw;
-    background-color: #FFE375;
 }
-
+#section5 .view01 span {
+    background-color: #96F1C6;
+}
+#section5 .view02 span {
+    background-color: #9DECFA;
+}
+#section5 .view03 span {
+    background-color: #FFC48C;
+}
+#section5 .view04 span {
+    background-color: #FFADAD;
+}
 #section5 .window-bar .window-tag span {
     position: absolute;
     top: 0;
     left: 0;
     margin-left: 1.2vw;
     margin-top: 1.2vw;
-    padding: 0.2vw 2.3vw;
-    background-color: #FFE375;
+    padding: 0.2vw 2.8vw;
     border-radius: 50px;
     z-index: 2;
     display: flex;
@@ -657,4 +741,24 @@
     font-size: 1.3vw;
     font-family: 'Nunito';
     align-items: center;
+}
+
+#section5 .window-tag .icon {
+    background-image: url(../img/tool.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    width: 2vw;
+    height: 2vw;
+    display: block;
+    margin-right: 0.4vw;
+}
+
+#section5 .window-bottom .content {
+    color: var(--primarycolor);
+    font-family: 'Montserrat Alternates';
+    font-size: 5vw;
+    font-weight: 700;
+    padding: 3vw 0 0 0;
+    box-sizing: border-box;
 }
