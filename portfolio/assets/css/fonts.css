@@ -5,7 +5,7 @@
 @import url('https://fonts.cdnfonts.com/css/dancing-script');
 @import url('https://webfontworld.github.io/netmarble/Netmarble.css');
 @import url('https://webfontworld.github.io/score/SCoreDream.css');
-
+@import url('https://webfontworld.github.io/gmarket/GmarketSans.css');
 @import url('https://fonts.googleapis.com/css2?family=Birthstone&family=Galada&family=Kaushan+Script&family=Mr+Dafoe&family=Yellowtail&family=Yesteryear&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400;500;600;700&family=Neonderthaw&family=Tilt+Neon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,900&display=swap');
@@ -47,4 +47,8 @@
 
 .score {
     font-family: "SCoreDream";
+}
+
+.shrink {
+    font-family: "GmarketSans";
 }
